@@ -1,0 +1,226 @@
+\doxysection{Motor Class Reference}
+\hypertarget{class_motor}{}\label{class_motor}\index{Motor@{Motor}}
+
+
+Class definition for a motor driver/controller.  
+
+
+
+
+{\ttfamily \#include $<$Motor.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_motor_a3190d10cf16b26293ae6a8a7cc6f9a7c}{Motor}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}htim, TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}htim2, int32\+\_\+t Ch1, int32\+\_\+t Ch2)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_motor}{Motor} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motor_ae041b9de81167d779e707e35571e7be2}{Enable}} (int32\+\_\+t new\+En)
+\begin{DoxyCompactList}\small\item\em Method to enable/disable motor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motor_a9d7fe6d75f5d4fdba765c2d14d557662}{duty}} (int32\+\_\+t new\+Duty)
+\begin{DoxyCompactList}\small\item\em Method to set duty cycle of motor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motor_aeebacb3410fcf6fd74e975214b328984}{Control}} (int32\+\_\+t new\+Set)
+\begin{DoxyCompactList}\small\item\em Method to implement a PID control loop for the motor object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motor_ac3edc48cd9375328a110a5d209729262}{set\+Gains}} (float n\+Kp, float n\+Ki, float n\+Kd)
+\begin{DoxyCompactList}\small\item\em Method to change PID gains for control loop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motor_acaf15733cbb06206652de484efd96dbf}{zero\+Errors}} ()
+\begin{DoxyCompactList}\small\item\em Method to zero errors for control loop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_motor_a2d78e1dd7a81217ea192b9d8a8919db5}{Variable\+Control}} (int32\+\_\+t new\+Set, float n\+Kp, float n\+Ki, int32\+\_\+t int\+Error)
+\begin{DoxyCompactList}\small\item\em Method to implement modified PI control loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_motor_a1867a8b2977e1babab19e7e87db8ce07}\label{class_motor_a1867a8b2977e1babab19e7e87db8ce07} 
+TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} {\bfseries tim}
+\begin{DoxyCompactList}\small\item\em Pointer to timer object controlling PWM signal for motor drive pins. \end{DoxyCompactList}\item 
+\Hypertarget{class_motor_afe8c85d61882b063517c04fbfd46bd86}\label{class_motor_afe8c85d61882b063517c04fbfd46bd86} 
+TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} {\bfseries entim}
+\begin{DoxyCompactList}\small\item\em Pointer to timer object interpreting quadrature encoder feedback. \end{DoxyCompactList}\item 
+\Hypertarget{class_motor_a32426f87fadadcce23bd936daf27070b}\label{class_motor_a32426f87fadadcce23bd936daf27070b} 
+int32\+\_\+t {\bfseries Fwd\+Ch}
+\begin{DoxyCompactList}\small\item\em Integer representing Forward channel of drive timer. \end{DoxyCompactList}\item 
+\Hypertarget{class_motor_a2bc952e0a163cfce19910382aa29e3c5}\label{class_motor_a2bc952e0a163cfce19910382aa29e3c5} 
+int32\+\_\+t {\bfseries Rev\+Ch}
+\begin{DoxyCompactList}\small\item\em Integer representing Reverse channel of drive timer. \end{DoxyCompactList}\item 
+\Hypertarget{class_motor_aa6350dfc7ecdabe983b3e9daa28c5a9c}\label{class_motor_aa6350dfc7ecdabe983b3e9daa28c5a9c} 
+int32\+\_\+t {\bfseries En}
+\begin{DoxyCompactList}\small\item\em Enable value for motor object. \end{DoxyCompactList}\item 
+\Hypertarget{class_motor_a98874168e7395ecd24077dffb1f045fd}\label{class_motor_a98874168e7395ecd24077dffb1f045fd} 
+int32\+\_\+t {\bfseries Duty}
+\begin{DoxyCompactList}\small\item\em Current Duty Cycle for motor object. \end{DoxyCompactList}\item 
+\Hypertarget{class_motor_a913de2f1a084b5eaa30278c3a70dbc0a}\label{class_motor_a913de2f1a084b5eaa30278c3a70dbc0a} 
+int32\+\_\+t {\bfseries Pos}
+\begin{DoxyCompactList}\small\item\em Current Position Value for motor object. \end{DoxyCompactList}\item 
+\Hypertarget{class_motor_adf4a9300dd9db97cee93305fbe324827}\label{class_motor_adf4a9300dd9db97cee93305fbe324827} 
+float {\bfseries Kp}
+\begin{DoxyCompactList}\small\item\em Proportional gain for control loop. \end{DoxyCompactList}\item 
+\Hypertarget{class_motor_a435009b7289c271f82abe4a48f4f3465}\label{class_motor_a435009b7289c271f82abe4a48f4f3465} 
+float {\bfseries Ki}
+\begin{DoxyCompactList}\small\item\em Integral gain for control loop. \end{DoxyCompactList}\item 
+\Hypertarget{class_motor_a6c87513f80d274f8d44b170cae3be677}\label{class_motor_a6c87513f80d274f8d44b170cae3be677} 
+float {\bfseries Kd}
+\begin{DoxyCompactList}\small\item\em Derivative gain for control loop. \end{DoxyCompactList}\item 
+\Hypertarget{class_motor_ab6855c76809c900fcc0ceb51325fbbf7}\label{class_motor_ab6855c76809c900fcc0ceb51325fbbf7} 
+int32\+\_\+t {\bfseries setpoint}
+\begin{DoxyCompactList}\small\item\em Set Point for control loop. \end{DoxyCompactList}\item 
+\Hypertarget{class_motor_afc65daba01d22bb441ccaa2fd2c50c32}\label{class_motor_afc65daba01d22bb441ccaa2fd2c50c32} 
+int32\+\_\+t {\bfseries error}
+\begin{DoxyCompactList}\small\item\em Current position error from set point. \end{DoxyCompactList}\item 
+\Hypertarget{class_motor_aa9ee5b69fdbff22dffda9204190685ee}\label{class_motor_aa9ee5b69fdbff22dffda9204190685ee} 
+int32\+\_\+t {\bfseries esum}
+\begin{DoxyCompactList}\small\item\em integral of past error from set point \end{DoxyCompactList}\item 
+\Hypertarget{class_motor_aae158f1e157fdcf8025816a680f55be1}\label{class_motor_aae158f1e157fdcf8025816a680f55be1} 
+int32\+\_\+t {\bfseries derror}
+\begin{DoxyCompactList}\small\item\em derivative of past error from set point \end{DoxyCompactList}\item 
+\Hypertarget{class_motor_a17dda9f9427518acfc75b1a93dfef5de}\label{class_motor_a17dda9f9427518acfc75b1a93dfef5de} 
+int16\+\_\+t {\bfseries oldticks}
+\begin{DoxyCompactList}\small\item\em last timer count value \end{DoxyCompactList}\item 
+\Hypertarget{class_motor_a1488c62593760ccd830dd139a226d149}\label{class_motor_a1488c62593760ccd830dd139a226d149} 
+int16\+\_\+t {\bfseries ticks}
+\begin{DoxyCompactList}\small\item\em timer count value \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class definition for a motor driver/controller. 
+
+This contains the attribute definitions and the function prototypes for the motor driver. The motors take a PWM signal from two channels representing the forward and reverse channels. The encoders return two square waves which are 90 degrees out of phase to allow for a full quadrature setup.
+
+In addition to the method allowing for setting a static duty cycle, the class has two additional methods which when called on every pass through a loop (no more than 10 ms between calls) allow for closed loop position control. There are also methods to change the gains, to zero out the errors and to enable/disable the motors. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_motor_a3190d10cf16b26293ae6a8a7cc6f9a7c}\label{class_motor_a3190d10cf16b26293ae6a8a7cc6f9a7c} 
+\index{Motor@{Motor}!Motor@{Motor}}
+\index{Motor@{Motor}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{Motor()}{Motor()}}
+{\footnotesize\ttfamily Motor\+::\+Motor (\begin{DoxyParamCaption}\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{htim1,  }\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{htim2,  }\item[{int32\+\_\+t}]{Ch1,  }\item[{int32\+\_\+t}]{Ch2 }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_motor}{Motor} class. 
+
+This creates a \doxylink{class_motor}{Motor} object connected to the timers specified
+
+
+\begin{DoxyParams}{Parameters}
+{\em htim1} & This is the pointer to the timer channel controlling the PWM drive signals to the motor \\
+\hline
+{\em htim2} & This is the pointer to the timer channel running in encoder mode to measure the position of the motor \\
+\hline
+{\em Ch1} & This is an integer representing the channel of the PWM timer connected to the forward direction of the motor \\
+\hline
+{\em Ch2} & This is an integer representing the channel of the PWM timer connected to the reverse direction of the motor \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_motor_aeebacb3410fcf6fd74e975214b328984}\label{class_motor_aeebacb3410fcf6fd74e975214b328984} 
+\index{Motor@{Motor}!Control@{Control}}
+\index{Control@{Control}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{Control()}{Control()}}
+{\footnotesize\ttfamily void Motor\+::\+Control (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{new\+Set }\end{DoxyParamCaption})}
+
+
+
+Method to implement a PID control loop for the motor object. 
+
+This implements a PID control loop for the object where the duty cycle is updated each time this function is called. For stability, this should not be less often than once every 20 ms.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Set} & This is the new desired set point for the motor controller \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_motor_a9d7fe6d75f5d4fdba765c2d14d557662}\label{class_motor_a9d7fe6d75f5d4fdba765c2d14d557662} 
+\index{Motor@{Motor}!duty@{duty}}
+\index{duty@{duty}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{duty()}{duty()}}
+{\footnotesize\ttfamily void Motor\+::duty (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{new\+Duty }\end{DoxyParamCaption})}
+
+
+
+Method to set duty cycle of motor. 
+
+This sets the duty cycle of the PWM channels controlling the motor
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Duty} & This is the new desired duty cycle as a percent(-\/100 to 100) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_motor_ae041b9de81167d779e707e35571e7be2}\label{class_motor_ae041b9de81167d779e707e35571e7be2} 
+\index{Motor@{Motor}!Enable@{Enable}}
+\index{Enable@{Enable}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{Enable()}{Enable()}}
+{\footnotesize\ttfamily void Motor\+::\+Enable (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{new\+En }\end{DoxyParamCaption})}
+
+
+
+Method to enable/disable motor. 
+
+This enables/disables the motor using a pseudo-\/boolean
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+En} & This is a pseudo-\/boolean controlling the enable status of the motors. A value of 1 is enables the motors, a value of 0 disables the motors \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_motor_ac3edc48cd9375328a110a5d209729262}\label{class_motor_ac3edc48cd9375328a110a5d209729262} 
+\index{Motor@{Motor}!setGains@{setGains}}
+\index{setGains@{setGains}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{setGains()}{setGains()}}
+{\footnotesize\ttfamily void Motor\+::set\+Gains (\begin{DoxyParamCaption}\item[{float}]{n\+Kp,  }\item[{float}]{n\+Ki,  }\item[{float}]{n\+Kd }\end{DoxyParamCaption})}
+
+
+
+Method to change PID gains for control loop. 
+
+This allows for the setting of the Proportional, Integral, and Derivative gains for the control loop
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Kp} & This is the new Proportional Gain value\\
+\hline
+{\em n\+Ki} & This is the new Integral Gain value\\
+\hline
+{\em n\+Kd} & This is the new Derivative Gain value \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_motor_a2d78e1dd7a81217ea192b9d8a8919db5}\label{class_motor_a2d78e1dd7a81217ea192b9d8a8919db5} 
+\index{Motor@{Motor}!VariableControl@{VariableControl}}
+\index{VariableControl@{VariableControl}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{VariableControl()}{VariableControl()}}
+{\footnotesize\ttfamily void Motor\+::\+Variable\+Control (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{new\+Set,  }\item[{float}]{n\+Kp,  }\item[{float}]{n\+Ki,  }\item[{int32\+\_\+t}]{int\+Error }\end{DoxyParamCaption})}
+
+
+
+Method to implement modified PI control loop. 
+
+This implements a modified PI control loop where the Integral gain can be enabled after the error is below a set threshold. This allows for better control for large set point values. As with the standard PID loop, this must be called each time it is desired to update the actuation value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Set} & This is the new set point for the system\\
+\hline
+{\em n\+Kp} & This is the proportional gain to be implemented immediately\\
+\hline
+{\em n\+Ki} & This is the integral gain to be implemented after error falls below a set threshold\\
+\hline
+{\em int\+Error} & This is the integral error threshold after which integration of the error will begin. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_motor_acaf15733cbb06206652de484efd96dbf}\label{class_motor_acaf15733cbb06206652de484efd96dbf} 
+\index{Motor@{Motor}!zeroErrors@{zeroErrors}}
+\index{zeroErrors@{zeroErrors}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{zeroErrors()}{zeroErrors()}}
+{\footnotesize\ttfamily void Motor\+::zero\+Errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to zero errors for control loop. 
+
+This allows for the zeroing of all error values when setting a new setpoint 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Src/\mbox{\hyperlink{_motor_8h}{Motor.\+h}}\item 
+Src/\mbox{\hyperlink{_motor_8cpp}{Motor.\+cpp}}\end{DoxyCompactItemize}

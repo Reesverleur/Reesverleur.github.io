@@ -1,0 +1,100 @@
+\doxysection{CSens Class Reference}
+\hypertarget{class_c_sens}{}\label{class_c_sens}\index{CSens@{CSens}}
+
+
+Class definition for an I2C color Sensor Driver.  
+
+
+
+
+{\ttfamily \#include $<$CSens.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_sens_ae46e479c302727c5c0b9d255f53dc525}{CSens}} (I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}hi2c)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_c_sens}{CSens} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_sens_a4f6a194a321d5e50883bc19add1067b4}{get\+Cdata}} ()
+\begin{DoxyCompactList}\small\item\em Method to get new color data from the sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_c_sens_abde882476a99649f3ab7e77de065964f}\label{class_c_sens_abde882476a99649f3ab7e77de065964f} 
+static uint8\+\_\+t {\bfseries Cdata} \mbox{[}27\mbox{]}
+\begin{DoxyCompactList}\small\item\em Data collected from device. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_sens_aa66efdc9555b448606dc65cea90795cc}\label{class_c_sens_aa66efdc9555b448606dc65cea90795cc} 
+static I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} {\bfseries i2c}
+\begin{DoxyCompactList}\small\item\em Pointer to i2c object. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_sens_a96bf5467865d3114c8615064c7819b28}\label{class_c_sens_a96bf5467865d3114c8615064c7819b28} 
+static uint16\+\_\+t {\bfseries Clr\+\_\+\+Val}
+\begin{DoxyCompactList}\small\item\em 16 bit color value for clear channel \end{DoxyCompactList}\item 
+\Hypertarget{class_c_sens_a5ecef084ece6e281c72789920f7412dc}\label{class_c_sens_a5ecef084ece6e281c72789920f7412dc} 
+static uint16\+\_\+t {\bfseries Red\+\_\+\+Val}
+\begin{DoxyCompactList}\small\item\em 16 bit color value for red channel \end{DoxyCompactList}\item 
+\Hypertarget{class_c_sens_abf222dae6f684d88df32237e3a8315be}\label{class_c_sens_abf222dae6f684d88df32237e3a8315be} 
+static uint16\+\_\+t {\bfseries Grn\+\_\+\+Val}
+\begin{DoxyCompactList}\small\item\em 16 bit color value for green channel \end{DoxyCompactList}\item 
+\Hypertarget{class_c_sens_aa99d02835daf65e4baa53f817778a4af}\label{class_c_sens_aa99d02835daf65e4baa53f817778a4af} 
+static uint16\+\_\+t {\bfseries Blu\+\_\+\+Val}
+\begin{DoxyCompactList}\small\item\em 16 bit color value for blue channel \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_c_sens_ad7bf06677399ec1ed5a406aa537f61b3}\label{class_c_sens_ad7bf06677399ec1ed5a406aa537f61b3} 
+int16\+\_\+t {\bfseries Address} = 0x0029 $<$$<$ 1
+\begin{DoxyCompactList}\small\item\em I2C Address of color sensor. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_sens_af53cda980242c8157481250149f9f64e}\label{class_c_sens_af53cda980242c8157481250149f9f64e} 
+int16\+\_\+t {\bfseries Mem\+Addr} = 0x0003
+\begin{DoxyCompactList}\small\item\em Memory address to request data from. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_sens_a482786ce0e9d5da99ce243c13500374a}\label{class_c_sens_a482786ce0e9d5da99ce243c13500374a} 
+int16\+\_\+t {\bfseries Length} = 27
+\begin{DoxyCompactList}\small\item\em Number of bytes to fetch. \end{DoxyCompactList}\item 
+\Hypertarget{class_c_sens_a954998c99aaddec66864fae3ac90ff60}\label{class_c_sens_a954998c99aaddec66864fae3ac90ff60} 
+uint8\+\_\+t {\bfseries Init} \mbox{[}1\mbox{]} = \{0b00000011\}
+\begin{DoxyCompactList}\small\item\em Initialization byte to be written to 0x00. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class definition for an I2C color Sensor Driver. 
+
+This contains the attribute definitions and the function prototypes for the I2C based color sensor driver. The color sensor gives 16 bit numbers for each of 4 channels (clear, red, green, blue). The class accesses the appropriate locations in the memory of the I2C device and sets class attributes accordingly.
+
+The communication protocol for this class does not appear to match the standard I2C protocol. It appears that memory can only be accessed starting from byte 0. Additionally the memory read command must request data starting from byte 3 in order for the last 8 bytes (which contain the color data) to be populated.
+
+The color scales also appear to be very non-\/linear with the red channel having a much higher response than the blue and green. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_c_sens_ae46e479c302727c5c0b9d255f53dc525}\label{class_c_sens_ae46e479c302727c5c0b9d255f53dc525} 
+\index{CSens@{CSens}!CSens@{CSens}}
+\index{CSens@{CSens}!CSens@{CSens}}
+\doxysubsubsection{\texorpdfstring{CSens()}{CSens()}}
+{\footnotesize\ttfamily CSens\+::\+CSens (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{hi2c }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_c_sens}{CSens} class. 
+
+This creates a \doxylink{class_c_sens}{CSens} object connected to the I2C port specified 
+\begin{DoxyParams}{Parameters}
+{\em hi2c} & This is the pointer to the I2C port connected to the Color sensor \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_c_sens_a4f6a194a321d5e50883bc19add1067b4}\label{class_c_sens_a4f6a194a321d5e50883bc19add1067b4} 
+\index{CSens@{CSens}!getCdata@{getCdata}}
+\index{getCdata@{getCdata}!CSens@{CSens}}
+\doxysubsubsection{\texorpdfstring{getCdata()}{getCdata()}}
+{\footnotesize\ttfamily void CSens\+::get\+Cdata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to get new color data from the sensor. 
+
+This retrieves the data from the color sensor by using the HAL implementation of the I2C communication protocol. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Src/\mbox{\hyperlink{_c_sens_8h}{CSens.\+h}}\item 
+Src/\mbox{\hyperlink{_c_sens_8cpp}{CSens.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,361 @@
+\doxysection{Src/main.c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{Src/main.c@{Src/main.c}}
+
+
+\+: Main program body  
+
+
+{\ttfamily \#include \"{}main.\+h\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \"{}CSens.\+h\"{}}\newline
+{\ttfamily \#include \"{}Motor.\+h\"{}}\newline
+{\ttfamily \#include \"{}Pixy2\+\_\+\+Driver.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_ae89fdd15729ad41a66911190fcbab23a}{MX\+\_\+\+GPIO\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em GPIO Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_af952250b2d49718b385e14a76fa7c1b8}{MX\+\_\+\+TIM2\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em TIM2 Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_a62f4b77e20bccafe98a183771749c20c}{MX\+\_\+\+USART1\+\_\+\+UART\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em USART1 Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_a1d1beb7da60021ee1adbca294f28ba88}{MX\+\_\+\+TIM1\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em TIM1 Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_af71812af4fbb9ebbe0f681165b657433}{MX\+\_\+\+I2\+C2\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em I2\+C2 Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_aaa163e37853e6fc971474824d9f655ca}{MX\+\_\+\+ADC1\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em ADC1 Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_ade0c8abfcfc1615647bfdd244bd1ee00}{MX\+\_\+\+SPI2\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em SPI2 Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_a73ff2ff527606fb2be261e9f85aab83c}{MX\+\_\+\+TIM3\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em TIM3 Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_aa33f0698b12657979eb254584682d30d}{MX\+\_\+\+TIM4\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em TIM4 Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_a7583181f2ba856da53571c33665f2c2d}{MX\+\_\+\+TIM5\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em TIM5 Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_a284e0acb11e822670ea98cfa77bab7ba}{MX\+\_\+\+TIM10\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em TIM10 Initialization Function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8c_a22b804736f5648d52f639b2647d4ed13}\label{main_8c_a22b804736f5648d52f639b2647d4ed13} 
+ADC\+\_\+\+Handle\+Type\+Def {\bfseries hadc1}
+\item 
+\Hypertarget{main_8c_ac379bcc152d860f08b1279fd3e232295}\label{main_8c_ac379bcc152d860f08b1279fd3e232295} 
+I2\+C\+\_\+\+Handle\+Type\+Def {\bfseries hi2c2}
+\item 
+\Hypertarget{main_8c_ab9da65f935e805137e2eb4e18c5ab224}\label{main_8c_ab9da65f935e805137e2eb4e18c5ab224} 
+SPI\+\_\+\+Handle\+Type\+Def {\bfseries hspi2}
+\item 
+\Hypertarget{main_8c_a25fc663547539bc49fecc0011bd76ab5}\label{main_8c_a25fc663547539bc49fecc0011bd76ab5} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim1}
+\item 
+\Hypertarget{main_8c_a2c80fd5510e2990a59a5c90d745c716c}\label{main_8c_a2c80fd5510e2990a59a5c90d745c716c} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim2}
+\item 
+\Hypertarget{main_8c_aac3d2c59ee0e3bbae1b99529a154eb62}\label{main_8c_aac3d2c59ee0e3bbae1b99529a154eb62} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim3}
+\item 
+\Hypertarget{main_8c_a85788cec5a97ee377e4ee2e74f026484}\label{main_8c_a85788cec5a97ee377e4ee2e74f026484} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim4}
+\item 
+\Hypertarget{main_8c_acefaeaaa3856ddddae7083b2d220fe4b}\label{main_8c_acefaeaaa3856ddddae7083b2d220fe4b} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim5}
+\item 
+\Hypertarget{main_8c_a3c386e4f1937c518c1beccddef92045e}\label{main_8c_a3c386e4f1937c518c1beccddef92045e} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim10}
+\item 
+\Hypertarget{main_8c_a2cf715bef37f7e8ef385a30974a5f0d5}\label{main_8c_a2cf715bef37f7e8ef385a30974a5f0d5} 
+UART\+\_\+\+Handle\+Type\+Def {\bfseries huart1}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Main program body 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2023 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\label{main_8c_a1730ffe1e560465665eb47d9264826f9} 
+\index{main.c@{main.c}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_aaa163e37853e6fc971474824d9f655ca}\label{main_8c_aaa163e37853e6fc971474824d9f655ca} 
+\index{main.c@{main.c}!MX\_ADC1\_Init@{MX\_ADC1\_Init}}
+\index{MX\_ADC1\_Init@{MX\_ADC1\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_ADC1\_Init()}{MX\_ADC1\_Init()}}
+{\footnotesize\ttfamily static void MX\+\_\+\+ADC1\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ADC1 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Configure the global features of the ADC (Clock, Resolution, Data Alignment and number of conversion)
+
+Configure for the selected ADC regular channel its corresponding rank in the sequencer and its sample time.\Hypertarget{main_8c_ae89fdd15729ad41a66911190fcbab23a}\label{main_8c_ae89fdd15729ad41a66911190fcbab23a} 
+\index{main.c@{main.c}!MX\_GPIO\_Init@{MX\_GPIO\_Init}}
+\index{MX\_GPIO\_Init@{MX\_GPIO\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_GPIO\_Init()}{MX\_GPIO\_Init()}}
+{\footnotesize\ttfamily static void MX\+\_\+\+GPIO\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+GPIO Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_af71812af4fbb9ebbe0f681165b657433}\label{main_8c_af71812af4fbb9ebbe0f681165b657433} 
+\index{main.c@{main.c}!MX\_I2C2\_Init@{MX\_I2C2\_Init}}
+\index{MX\_I2C2\_Init@{MX\_I2C2\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_I2C2\_Init()}{MX\_I2C2\_Init()}}
+{\footnotesize\ttfamily static void MX\+\_\+\+I2\+C2\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+I2\+C2 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_ade0c8abfcfc1615647bfdd244bd1ee00}\label{main_8c_ade0c8abfcfc1615647bfdd244bd1ee00} 
+\index{main.c@{main.c}!MX\_SPI2\_Init@{MX\_SPI2\_Init}}
+\index{MX\_SPI2\_Init@{MX\_SPI2\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_SPI2\_Init()}{MX\_SPI2\_Init()}}
+{\footnotesize\ttfamily static void MX\+\_\+\+SPI2\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+SPI2 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_a284e0acb11e822670ea98cfa77bab7ba}\label{main_8c_a284e0acb11e822670ea98cfa77bab7ba} 
+\index{main.c@{main.c}!MX\_TIM10\_Init@{MX\_TIM10\_Init}}
+\index{MX\_TIM10\_Init@{MX\_TIM10\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_TIM10\_Init()}{MX\_TIM10\_Init()}}
+{\footnotesize\ttfamily static void MX\+\_\+\+TIM10\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+TIM10 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_a1d1beb7da60021ee1adbca294f28ba88}\label{main_8c_a1d1beb7da60021ee1adbca294f28ba88} 
+\index{main.c@{main.c}!MX\_TIM1\_Init@{MX\_TIM1\_Init}}
+\index{MX\_TIM1\_Init@{MX\_TIM1\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_TIM1\_Init()}{MX\_TIM1\_Init()}}
+{\footnotesize\ttfamily static void MX\+\_\+\+TIM1\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+TIM1 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_af952250b2d49718b385e14a76fa7c1b8}\label{main_8c_af952250b2d49718b385e14a76fa7c1b8} 
+\index{main.c@{main.c}!MX\_TIM2\_Init@{MX\_TIM2\_Init}}
+\index{MX\_TIM2\_Init@{MX\_TIM2\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_TIM2\_Init()}{MX\_TIM2\_Init()}}
+{\footnotesize\ttfamily static void MX\+\_\+\+TIM2\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+TIM2 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_a73ff2ff527606fb2be261e9f85aab83c}\label{main_8c_a73ff2ff527606fb2be261e9f85aab83c} 
+\index{main.c@{main.c}!MX\_TIM3\_Init@{MX\_TIM3\_Init}}
+\index{MX\_TIM3\_Init@{MX\_TIM3\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_TIM3\_Init()}{MX\_TIM3\_Init()}}
+{\footnotesize\ttfamily static void MX\+\_\+\+TIM3\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+TIM3 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_aa33f0698b12657979eb254584682d30d}\label{main_8c_aa33f0698b12657979eb254584682d30d} 
+\index{main.c@{main.c}!MX\_TIM4\_Init@{MX\_TIM4\_Init}}
+\index{MX\_TIM4\_Init@{MX\_TIM4\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_TIM4\_Init()}{MX\_TIM4\_Init()}}
+{\footnotesize\ttfamily static void MX\+\_\+\+TIM4\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+TIM4 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_a7583181f2ba856da53571c33665f2c2d}\label{main_8c_a7583181f2ba856da53571c33665f2c2d} 
+\index{main.c@{main.c}!MX\_TIM5\_Init@{MX\_TIM5\_Init}}
+\index{MX\_TIM5\_Init@{MX\_TIM5\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_TIM5\_Init()}{MX\_TIM5\_Init()}}
+{\footnotesize\ttfamily static void MX\+\_\+\+TIM5\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+TIM5 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_a62f4b77e20bccafe98a183771749c20c}\label{main_8c_a62f4b77e20bccafe98a183771749c20c} 
+\index{main.c@{main.c}!MX\_USART1\_UART\_Init@{MX\_USART1\_UART\_Init}}
+\index{MX\_USART1\_UART\_Init@{MX\_USART1\_UART\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_USART1\_UART\_Init()}{MX\_USART1\_UART\_Init()}}
+{\footnotesize\ttfamily static void MX\+\_\+\+USART1\+\_\+\+UART\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+USART1 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920} 
+\index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+System Clock Configuration. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Configure the main internal regulator output voltage
+
+Initializes the RCC Oscillators according to the specified parameters in the RCC\+\_\+\+Osc\+Init\+Type\+Def structure.
+
+Initializes the CPU, AHB and APB buses clocks

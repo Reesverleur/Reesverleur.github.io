@@ -1,0 +1,65 @@
+\doxysection{Src/\+Pixy2\+\_\+\+Driver.h File Reference}
+\hypertarget{_pixy2___driver_8h}{}\label{_pixy2___driver_8h}\index{Src/Pixy2\_Driver.h@{Src/Pixy2\_Driver.h}}
+
+
+This file contains the class definition for the Pixy 2 driver.  
+
+
+{\ttfamily \#include \"{}stm32f4xx\+\_\+hal.\+h\"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_pixy2}{Pixy2}}
+\begin{DoxyCompactList}\small\item\em Class definition for a \doxylink{class_pixy2}{Pixy2} camera driver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_pixy2___driver_8h_a0a99ab4f6aa6ee7dc2abca5483910dde}{HAL\+\_\+\+SPI\+\_\+\+Tx\+Cplt\+Callback}} (SPI\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}hspi)
+\begin{DoxyCompactList}\small\item\em callback function for the SPI interrupt based transmit \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pixy2___driver_8h_a3df7021fe24cf874f8b1eec5bd5f4cb3}{HAL\+\_\+\+SPI\+\_\+\+Rx\+Cplt\+Callback}} (SPI\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}hspi)
+\begin{DoxyCompactList}\small\item\em callback function for the SPI interrupt based receive \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the class definition for the Pixy 2 driver. 
+
+\begin{DoxyAuthor}{Author}
+Rees P. Verleur 
+\end{DoxyAuthor}
+This contains the class and attribute definitions for the \doxylink{class_pixy2}{Pixy2} class. It also includes function prototypes for the methods in the class and function prototypes for the SPI Transmit and Receive callback function which is required for the operation of of the code. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_pixy2___driver_8h_a3df7021fe24cf874f8b1eec5bd5f4cb3}\label{_pixy2___driver_8h_a3df7021fe24cf874f8b1eec5bd5f4cb3} 
+\index{Pixy2\_Driver.h@{Pixy2\_Driver.h}!HAL\_SPI\_RxCpltCallback@{HAL\_SPI\_RxCpltCallback}}
+\index{HAL\_SPI\_RxCpltCallback@{HAL\_SPI\_RxCpltCallback}!Pixy2\_Driver.h@{Pixy2\_Driver.h}}
+\doxysubsubsection{\texorpdfstring{HAL\_SPI\_RxCpltCallback()}{HAL\_SPI\_RxCpltCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+SPI\+\_\+\+Rx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{SPI\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{hspi }\end{DoxyParamCaption})}
+
+
+
+callback function for the SPI interrupt based receive 
+
+This function runs on the completion of the receive operation for the SPI components 
+\begin{DoxyParams}{Parameters}
+{\em hspi} & A pointer to the spi object which triggered the interrupt this is passed into the function by the system. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_pixy2___driver_8h_a0a99ab4f6aa6ee7dc2abca5483910dde}\label{_pixy2___driver_8h_a0a99ab4f6aa6ee7dc2abca5483910dde} 
+\index{Pixy2\_Driver.h@{Pixy2\_Driver.h}!HAL\_SPI\_TxCpltCallback@{HAL\_SPI\_TxCpltCallback}}
+\index{HAL\_SPI\_TxCpltCallback@{HAL\_SPI\_TxCpltCallback}!Pixy2\_Driver.h@{Pixy2\_Driver.h}}
+\doxysubsubsection{\texorpdfstring{HAL\_SPI\_TxCpltCallback()}{HAL\_SPI\_TxCpltCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+SPI\+\_\+\+Tx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{SPI\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{hspi }\end{DoxyParamCaption})}
+
+
+
+callback function for the SPI interrupt based transmit 
+
+This function runs on the completion of the transmit operation for the SPI components 
+\begin{DoxyParams}{Parameters}
+{\em hspi} & A pointer to the spi object which triggered the interrupt this is passed into the function by the system. \\
+\hline
+\end{DoxyParams}

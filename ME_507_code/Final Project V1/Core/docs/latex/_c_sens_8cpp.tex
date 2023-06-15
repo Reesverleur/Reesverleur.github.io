@@ -1,0 +1,44 @@
+\doxysection{Src/\+CSens.cpp File Reference}
+\hypertarget{_c_sens_8cpp}{}\label{_c_sens_8cpp}\index{Src/CSens.cpp@{Src/CSens.cpp}}
+
+
+This file contains the methods for the \doxylink{class_c_sens}{CSens} class.  
+
+
+{\ttfamily \#include \"{}CSens.\+h\"{}}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_c_sens_8cpp_ac16a95413b35f05c5ce725fefd8531a5}{HAL\+\_\+\+I2\+C\+\_\+\+Mem\+Rx\+Cplt\+Callback}} (I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}hi2c)
+\begin{DoxyCompactList}\small\item\em Callback function for I2C memory read. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the methods for the \doxylink{class_c_sens}{CSens} class. 
+
+\begin{DoxyAuthor}{Author}
+Rees P. Verleur 
+\end{DoxyAuthor}
+This contains the method definitions for the \doxylink{class_c_sens}{CSens} class. It also includes the I2C memory read callback function definition 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_c_sens_8cpp_ac16a95413b35f05c5ce725fefd8531a5}\label{_c_sens_8cpp_ac16a95413b35f05c5ce725fefd8531a5} 
+\index{CSens.cpp@{CSens.cpp}!HAL\_I2C\_MemRxCpltCallback@{HAL\_I2C\_MemRxCpltCallback}}
+\index{HAL\_I2C\_MemRxCpltCallback@{HAL\_I2C\_MemRxCpltCallback}!CSens.cpp@{CSens.cpp}}
+\doxysubsubsection{\texorpdfstring{HAL\_I2C\_MemRxCpltCallback()}{HAL\_I2C\_MemRxCpltCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+I2\+C\+\_\+\+Mem\+Rx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{hi2c }\end{DoxyParamCaption})}
+
+
+
+Callback function for I2C memory read. 
+
+This is called when the memory read operation is complete. It processes the read data into the appropriate attributes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hi2c} & A pointer to the I2C object which triggered the interrupt \\
+\hline
+\end{DoxyParams}

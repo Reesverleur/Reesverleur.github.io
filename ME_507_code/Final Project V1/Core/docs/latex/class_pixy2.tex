@@ -1,0 +1,116 @@
+\doxysection{Pixy2 Class Reference}
+\hypertarget{class_pixy2}{}\label{class_pixy2}\index{Pixy2@{Pixy2}}
+
+
+Class definition for a \doxylink{class_pixy2}{Pixy2} camera driver.  
+
+
+
+
+{\ttfamily \#include $<$Pixy2\+\_\+\+Driver.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pixy2_aead5ae3d4ebc59d35fdc8faae3ee3797}{Pixy2}} (SPI\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}hspi, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}GPIOx, uint16\+\_\+t GPIO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_pixy2}{Pixy2} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pixy2_acd9f3a548eed9c7348c14619affbab9b}{get\+Block}} (uint8\+\_\+t sigmap, uint8\+\_\+t maxblocks)
+\begin{DoxyCompactList}\small\item\em Method to get new block data from the camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pixy2_ad7032b25bbeaacbadbfea0f4a63b9ada}{set\+Coords}} ()
+\begin{DoxyCompactList}\small\item\em Method to set the coordinates of the next ball to collect. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_pixy2_a1f52f01612a384324ca724557f3b660e}\label{class_pixy2_a1f52f01612a384324ca724557f3b660e} 
+uint8\+\_\+t {\bfseries Block} \mbox{[}40\mbox{]} = \{0\}
+\begin{DoxyCompactList}\small\item\em Block response data. \end{DoxyCompactList}\item 
+\Hypertarget{class_pixy2_acb15871ec0ff4bc7e4dff74c51131c89}\label{class_pixy2_acb15871ec0ff4bc7e4dff74c51131c89} 
+int {\bfseries Coords} \mbox{[}2\mbox{]} = \{0\}
+\begin{DoxyCompactList}\small\item\em coordinates of block \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_pixy2_a49f19b0f16a7f2aac4ed828f308c547d}\label{class_pixy2_a49f19b0f16a7f2aac4ed828f308c547d} 
+static SPI\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} {\bfseries spi}
+\begin{DoxyCompactList}\small\item\em pointer to spi object \end{DoxyCompactList}\item 
+\Hypertarget{class_pixy2_a75a4ee39e2cecd3391825d84cfbb5020}\label{class_pixy2_a75a4ee39e2cecd3391825d84cfbb5020} 
+static GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*} {\bfseries SS\+\_\+\+Port}
+\begin{DoxyCompactList}\small\item\em pointer to ss port \end{DoxyCompactList}\item 
+\Hypertarget{class_pixy2_af55d898a6bde47ead0588ea66aed2b1c}\label{class_pixy2_af55d898a6bde47ead0588ea66aed2b1c} 
+static uint16\+\_\+t {\bfseries SS\+\_\+\+Pin}
+\begin{DoxyCompactList}\small\item\em pointer to ss pin \end{DoxyCompactList}\item 
+\Hypertarget{class_pixy2_aa8af39f57cd9f4fe191fc560ef761926}\label{class_pixy2_aa8af39f57cd9f4fe191fc560ef761926} 
+static uint8\+\_\+t {\bfseries Data} \mbox{[}100\mbox{]}
+\begin{DoxyCompactList}\small\item\em Raw Data from response. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_pixy2_aaa32690b46c6fc32298c63eaa48be9a6}\label{class_pixy2_aaa32690b46c6fc32298c63eaa48be9a6} 
+int {\bfseries Start\+Byte} = 0
+\begin{DoxyCompactList}\small\item\em Start index of requested data. \end{DoxyCompactList}\item 
+\Hypertarget{class_pixy2_af70f3d006ec88c0ea52f500938413230}\label{class_pixy2_af70f3d006ec88c0ea52f500938413230} 
+int {\bfseries Length} = 0
+\begin{DoxyCompactList}\small\item\em Length of expected response. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class definition for a \doxylink{class_pixy2}{Pixy2} camera driver. 
+
+This contains the attribute definitions and the function prototypes for the SPI based Pixy 2 driver. The class sends requests to the connected camera and interprets the responses as usable data types. It also employs the checksum feature to be sure of data fidelity 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_pixy2_aead5ae3d4ebc59d35fdc8faae3ee3797}\label{class_pixy2_aead5ae3d4ebc59d35fdc8faae3ee3797} 
+\index{Pixy2@{Pixy2}!Pixy2@{Pixy2}}
+\index{Pixy2@{Pixy2}!Pixy2@{Pixy2}}
+\doxysubsubsection{\texorpdfstring{Pixy2()}{Pixy2()}}
+{\footnotesize\ttfamily Pixy2\+::\+Pixy2 (\begin{DoxyParamCaption}\item[{SPI\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{hspi,  }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{GPIOx,  }\item[{uint16\+\_\+t}]{GPIO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_pixy2}{Pixy2} class. 
+
+This creates a \doxylink{class_pixy2}{Pixy2} object connected to the SPI port specified with the cs pin as specified by the port and pin 
+\begin{DoxyParams}{Parameters}
+{\em hspi} & This is the pointer to the spi port connected to the \doxylink{class_pixy2}{Pixy2} \\
+\hline
+{\em GPIOx} & This is the pointer to the gpio port of the SPI CS pin \\
+\hline
+{\em GPIO\+\_\+\+Pin} & This is an integer representing the pin for the SPI CS pin \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pixy2_acd9f3a548eed9c7348c14619affbab9b}\label{class_pixy2_acd9f3a548eed9c7348c14619affbab9b} 
+\index{Pixy2@{Pixy2}!getBlock@{getBlock}}
+\index{getBlock@{getBlock}!Pixy2@{Pixy2}}
+\doxysubsubsection{\texorpdfstring{getBlock()}{getBlock()}}
+{\footnotesize\ttfamily void Pixy2\+::get\+Block (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{sigmap,  }\item[{uint8\+\_\+t}]{maxblocks }\end{DoxyParamCaption})}
+
+
+
+Method to get new block data from the camera. 
+
+This retrieves the data from the color sensor by sending a specific request through the SPI protocol. It also interprets the result and matches it up with the checksum value to be sure of fidelity 
+\begin{DoxyParams}{Parameters}
+{\em sigmap} & This is a bitmask representing the specific objects to return data about \\
+\hline
+{\em maxblocks} & This is an integer representing the maximum number of objects to return data about objects are reported in order of size with the largest first. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_pixy2_ad7032b25bbeaacbadbfea0f4a63b9ada}\label{class_pixy2_ad7032b25bbeaacbadbfea0f4a63b9ada} 
+\index{Pixy2@{Pixy2}!setCoords@{setCoords}}
+\index{setCoords@{setCoords}!Pixy2@{Pixy2}}
+\doxysubsubsection{\texorpdfstring{setCoords()}{setCoords()}}
+{\footnotesize\ttfamily void Pixy2\+::set\+Coords (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to set the coordinates of the next ball to collect. 
+
+Sets the coordinate values based on the last valid block read from the \doxylink{class_pixy2}{Pixy2} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Src/\mbox{\hyperlink{_pixy2___driver_8h}{Pixy2\+\_\+\+Driver.\+h}}\item 
+Src/\mbox{\hyperlink{_pixy2___driver_8cpp}{Pixy2\+\_\+\+Driver.\+cpp}}\end{DoxyCompactItemize}

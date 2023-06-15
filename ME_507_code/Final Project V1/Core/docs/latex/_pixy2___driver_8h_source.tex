@@ -1,0 +1,44 @@
+\doxysection{Pixy2\+\_\+\+Driver.\+h}
+\hypertarget{_pixy2___driver_8h_source}{}\label{_pixy2___driver_8h_source}\index{Src/Pixy2\_Driver.h@{Src/Pixy2\_Driver.h}}
+\mbox{\hyperlink{_pixy2___driver_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#ifndef\ SRC\_PIXY2\_DRIVER\_H\_}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ SRC\_PIXY2\_DRIVER\_H\_}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ Includes}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <numeric>}}
+\DoxyCodeLine{00024\ \textcolor{comment}{//\ Class\ Declaration}}
+\DoxyCodeLine{00037\ \textcolor{comment}{}\textcolor{keyword}{class\ }\mbox{\hyperlink{class_pixy2}{Pixy2}}}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{private}:\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Private\ variables}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_pixy2_aaa32690b46c6fc32298c63eaa48be9a6}{StartByte}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_pixy2_af70f3d006ec88c0ea52f500938413230}{Length}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{public}:\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Public\ variables}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_pixy2_a1f52f01612a384324ca724557f3b660e}{Block}}[40]\ =\ \{0\};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ SPI\_HandleTypeDef*\ \mbox{\hyperlink{class_pixy2_a49f19b0f16a7f2aac4ed828f308c547d}{spi}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ GPIO\_TypeDef*\ \mbox{\hyperlink{class_pixy2_a75a4ee39e2cecd3391825d84cfbb5020}{SS\_Port}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ uint16\_t\ \mbox{\hyperlink{class_pixy2_af55d898a6bde47ead0588ea66aed2b1c}{SS\_Pin}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_pixy2_acb15871ec0ff4bc7e4dff74c51131c89}{Coords}}[2]\ =\ \{0\};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ uint8\_t\ \mbox{\hyperlink{class_pixy2_aa8af39f57cd9f4fe191fc560ef761926}{Data}}[100];\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pixy2}{Pixy2}}(SPI\_HandleTypeDef*\ hspi,GPIO\_TypeDef*\ GPIOx,uint16\_t\ GPIO\_Pin);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Function\ to\ get\ new\ block\ data}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pixy2_acd9f3a548eed9c7348c14619affbab9b}{getBlock}}(uint8\_t\ sigmap,uint8\_t\ maxblocks);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Function\ to\ set\ coords\ from\ current\ block\ data}}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pixy2_ad7032b25bbeaacbadbfea0f4a63b9ada}{setCoords}}();}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{comment}{//\ Callback\ functions\ for\ SPI\ object}}
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pixy2___driver_8h_a0a99ab4f6aa6ee7dc2abca5483910dde}{HAL\_SPI\_TxCpltCallback}}(SPI\_HandleTypeDef*\ hspi);}
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pixy2___driver_8h_a3df7021fe24cf874f8b1eec5bd5f4cb3}{HAL\_SPI\_RxCpltCallback}}(SPI\_HandleTypeDef*\ hspi);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_PIXY2\_DRIVER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

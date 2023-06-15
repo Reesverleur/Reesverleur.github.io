@@ -1,0 +1,49 @@
+\doxysection{Motor.\+h}
+\hypertarget{_motor_8h_source}{}\label{_motor_8h_source}\index{Src/Motor.h@{Src/Motor.h}}
+\mbox{\hyperlink{_motor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#ifndef\ SRC\_MOTOR\_H\_}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ SRC\_MOTOR\_H\_}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ Includes}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <numeric>}}
+\DoxyCodeLine{00043\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_motor}{Motor}}}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \ \ TIM\_HandleTypeDef*\ \ \mbox{\hyperlink{class_motor_a1867a8b2977e1babab19e7e87db8ce07}{tim}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ TIM\_HandleTypeDef*\ \ \mbox{\hyperlink{class_motor_afe8c85d61882b063517c04fbfd46bd86}{entim}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ int32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a32426f87fadadcce23bd936daf27070b}{FwdCh}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ int32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a2bc952e0a163cfce19910382aa29e3c5}{RevCh}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ int32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_aa6350dfc7ecdabe983b3e9daa28c5a9c}{En}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ int32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ int32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a913de2f1a084b5eaa30278c3a70dbc0a}{Pos}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_adf4a9300dd9db97cee93305fbe324827}{Kp}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a435009b7289c271f82abe4a48f4f3465}{Ki}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a6c87513f80d274f8d44b170cae3be677}{Kd}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ int32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_ab6855c76809c900fcc0ceb51325fbbf7}{setpoint}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ int32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_afc65daba01d22bb441ccaa2fd2c50c32}{error}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ int32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_aa9ee5b69fdbff22dffda9204190685ee}{esum}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ int32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_aae158f1e157fdcf8025816a680f55be1}{derror}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ int16\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a17dda9f9427518acfc75b1a93dfef5de}{oldticks}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ int16\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_motor}{Motor}}(TIM\_HandleTypeDef*\ htim,TIM\_HandleTypeDef*\ htim2,int32\_t\ Ch1,int32\_t\ Ch2);}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_motor_ae041b9de81167d779e707e35571e7be2}{Enable}}(int32\_t\ newEn);}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_motor_a9d7fe6d75f5d4fdba765c2d14d557662}{duty}}(int32\_t\ newDuty);}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_motor_aeebacb3410fcf6fd74e975214b328984}{Control}}(int32\_t\ newSet);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_motor_ac3edc48cd9375328a110a5d209729262}{setGains}}(\textcolor{keywordtype}{float}\ nKp,\textcolor{keywordtype}{float}\ nKi,\ \textcolor{keywordtype}{float}\ nKd);}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_motor_acaf15733cbb06206652de484efd96dbf}{zeroErrors}}();}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_motor_a2d78e1dd7a81217ea192b9d8a8919db5}{VariableControl}}(int32\_t\ newSet,\ \textcolor{keywordtype}{float}\ nKp,\ \textcolor{keywordtype}{float}\ nKi,\ int32\_t\ intError);}
+\DoxyCodeLine{00071\ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_MOTOR\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
