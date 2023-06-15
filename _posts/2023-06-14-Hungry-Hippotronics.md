@@ -2,13 +2,13 @@
 layout: post
 title: Hungry Hippotronics
 subtitle: Cal Poly ME 507 Final Project
-post_description: This project aimed to create a robot that could autonomously collect & sort balls in a competition. This was the final project for Cal Poly SLO's Mechanical Control System Design course. Students learned to use Fusion 360 to design a circuit board and program in C and C++ on integrated
 thumbnail-img: /assets/img/competition-ring.png
 tags: [engineering, robotics]
 ---
-### This project has [**code**][code] and [**documentation**][docs] be sure to check those out! ###
 
 This project aimed to create a robot that could autonomously collect & sort balls in a competition. This was the final project for Cal Poly SLO's Mechanical Control System Design course. Students learned to use Fusion 360 to design a circuit board and program in C and C++ on integrated hardware in order to create the final project. 
+
+### This project has [**code**][code] and [**documentation**][docs] be sure to check those out! ###
 
 The project began by learning to use Fusion 360 to create an electrical design. I had never done this before, but I was eager to learn. These skills were first used in a homework assignment to design an 8-bit dip-switch "DAC." It was challenging to get used to new CAD software and consider the intricacies of a new type of design, but in the end, I was able to create the circuit you can see below.
 
