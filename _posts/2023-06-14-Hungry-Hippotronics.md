@@ -24,7 +24,11 @@ Finally, the time came to design the final board. Using what I had learned so fa
 After receiving this board from the manufacturer, we added all the components we selected to get the final result.
 
 ![Circuit Board][Board Image]
-After assembling, I tested the board to determine that it worked exactly as expected, with all the voltage rails at the correct values and the MCU running code as expected. After everything checked out, I moved on to developing the software.
+After assembling, I tested the board to determine that it worked exactly as expected, with all the voltage rails at the correct values and the MCU running code as expected. After everything checked out, I moved on to developing the code for the project.
+
+The code for this project was written in C++ and made use of the HAL API for the STM32F411. The code was written in the STM32 Cube IDE which made selecting pin functions easy. The code for this project is not complete, as the project as a whole fell short. As such, I do not have a main function loop running a finite state machine. One was planned and would have used the FSM below or a very similar one.
+![Finite State Machine][fsm]
+
 
 A full code listing is available [here][code], and complete documentation can be found [here][docs]
 
@@ -39,6 +43,7 @@ A full code listing is available [here][code], and complete documentation can be
 [Homework 4 image]: /assets/img/Homework-4-Schematic.png
 [Final Schematic]: /assets/img/Final-Board-Schematic.png
 [Board Image]: /assets/img/circuit-board.jpg
+[fsm]: /assets/img/fsm.png
 [code]: https://github.com/Reesverleur/Reesverleur.github.io/tree/master/ME_507_code/Final-Project-V1
 [docs]: /ME_507_code/Final-Project-V1/Core/docs/html/index.html
 
