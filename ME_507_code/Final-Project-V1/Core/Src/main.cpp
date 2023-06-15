@@ -25,6 +25,7 @@
 #include "CSens.h"
 #include "Motor.h"
 #include "Pixy2_Driver.h"
+#include "coms.h"
 
 /* USER CODE END Includes */
 

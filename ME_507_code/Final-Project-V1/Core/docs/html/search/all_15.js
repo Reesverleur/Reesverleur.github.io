@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['xtrans_0',['xtrans',['../namespace_communication.html#a1547b1fa75ac1591f35066e7c823e077',1,'Communication']]]
+  ['wheeldist_0',['wheeldist',['../classcoms.html#a4976dd06b5bbda38b69c1e9db321c59c',1,'coms']]],
+  ['wheelrad_1',['wheelrad',['../classcoms.html#a3d5bf94523808d4432732494fee2ccc1',1,'coms']]]
 ];

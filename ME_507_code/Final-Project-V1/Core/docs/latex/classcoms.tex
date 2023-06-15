@@ -1,0 +1,322 @@
+\doxysection{coms Class Reference}
+\hypertarget{classcoms}{}\label{classcoms}\index{coms@{coms}}
+
+
+Class definition for a bluetooth communication protocol.  
+
+
+
+
+{\ttfamily \#include $<$coms.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcoms_a4ea00f51efa933dc1a13dc582028418b}{coms}} (UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}huart)
+\begin{DoxyCompactList}\small\item\em Constructor for the coms class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcoms_ac1818f4a6a42099cb0a140af5b1520ad}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Begin method for bluetooth uart channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcoms_a4c38446b460ef90e5be61c123aa0151f}{request}} ()
+\begin{DoxyCompactList}\small\item\em Data request method for bluetooth uart channel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcoms_a71aeb298946c712700eed039ca23114c}{decode}} ()
+\begin{DoxyCompactList}\small\item\em Data decoder for bluetooth uart channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{classcoms_a54eae3337175c32e900a04401461866e}{start}} \mbox{[}5\mbox{]}
+\begin{DoxyCompactList}\small\item\em start message to transmit to python program \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classcoms_afb7e83efb45da7e6b59b63b36126e78c}{req}} \mbox{[}4\mbox{]}
+\begin{DoxyCompactList}\small\item\em byte request message to transmit to python program \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{classcoms_a666b1b882a1b3be1c4b97fc62e87a63f}{rotate}}
+\begin{DoxyCompactList}\small\item\em integer for degrees to rotate \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{classcoms_ae69d3c4e4691b8fd6f78a66db1eb2657}{translate}}
+\begin{DoxyCompactList}\small\item\em integer for amount to move \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classcoms_a3a0545f02ee2451e7a6056348c38717d}{uart}}
+\begin{DoxyCompactList}\small\item\em Pointer to UART object. \end{DoxyCompactList}\item 
+static char \mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}} \mbox{[}10\mbox{]}
+\begin{DoxyCompactList}\small\item\em data buffer to receive data into from python program \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{classcoms_a306970d649634b9cbd59f9d80f71fd58}{cpr}}
+\begin{DoxyCompactList}\small\item\em Integer defining the cpr of the motor encoder. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classcoms_af46ef7b1dfe9a2dd9a30bb441b035e1c}{gear}}
+\begin{DoxyCompactList}\small\item\em Float defining gearing ratio of motor. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classcoms_a3d5bf94523808d4432732494fee2ccc1}{wheelrad}}
+\begin{DoxyCompactList}\small\item\em Float defining wheel radius. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classcoms_a4976dd06b5bbda38b69c1e9db321c59c}{wheeldist}}
+\begin{DoxyCompactList}\small\item\em Float defining distance between wheels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class definition for a bluetooth communication protocol. 
+
+This contains the attribute definitions and the function prototypes for the coms class. The com port will operate using a custom standard to transmit the required data as compactly as possible.
+
+After a begin and acknowledge byte the class will allow for the robot to request data from the python code. The python program will then transmit the data in the set format \"{}\+R\#\#\#\+T\#\#\#\#00\"{} This will correspond to a series of movements the robot must make, first a rotation by some number of degrees, then a translation (forward move) by some amount of distance. These quantities can be easily converted to motor angular positions by the system using basic geometry. 
+
+Definition at line \mbox{\hyperlink{coms_8h_source_l00049}{49}} of file \mbox{\hyperlink{coms_8h_source}{coms.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcoms_a4ea00f51efa933dc1a13dc582028418b}\label{classcoms_a4ea00f51efa933dc1a13dc582028418b} 
+\index{coms@{coms}!coms@{coms}}
+\index{coms@{coms}!coms@{coms}}
+\doxysubsubsection{\texorpdfstring{coms()}{coms()}}
+{\footnotesize\ttfamily coms\+::coms (\begin{DoxyParamCaption}\item[{UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{huart }\end{DoxyParamCaption})}
+
+
+
+Constructor for the coms class. 
+
+This creates a coms object connected to the bluetooth uart channel
+
+
+\begin{DoxyParams}{Parameters}
+{\em huart} & This is the pointer to the UART object connected to the Bluetooth module \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{coms_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{coms_8cpp_source}{coms.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classcoms_a3a0545f02ee2451e7a6056348c38717d}{uart}}\ =\ huart;}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classcoms_a54eae3337175c32e900a04401461866e}{start}}\ =\ \textcolor{stringliteral}{"{}begin"{}};}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classcoms_afb7e83efb45da7e6b59b63b36126e78c}{req}}\ =\ \textcolor{stringliteral}{"{}data"{}};}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classcoms_a666b1b882a1b3be1c4b97fc62e87a63f}{rotate}}\ =\ 0;}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classcoms_ae69d3c4e4691b8fd6f78a66db1eb2657}{translate}}\ =\ 0;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classcoms_a306970d649634b9cbd59f9d80f71fd58}{cpr}}\ =\ 24;}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classcoms_af46ef7b1dfe9a2dd9a30bb441b035e1c}{gear}}\ =\ 46.85;}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classcoms_a4976dd06b5bbda38b69c1e9db321c59c}{wheeldist}}\ =\ 150;}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classcoms_a3d5bf94523808d4432732494fee2ccc1}{wheelrad}}\ =\ 30;}
+\DoxyCodeLine{00039\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcoms_ac1818f4a6a42099cb0a140af5b1520ad}\label{classcoms_ac1818f4a6a42099cb0a140af5b1520ad} 
+\index{coms@{coms}!begin@{begin}}
+\index{begin@{begin}!coms@{coms}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily void coms\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Begin method for bluetooth uart channel. 
+
+This sends a standard start message to sync up with the python program. This allows for future communications to be correctly interpreted on both ends 
+
+Definition at line \mbox{\hyperlink{coms_8cpp_source_l00052}{52}} of file \mbox{\hyperlink{coms_8cpp_source}{coms.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ HAL\_UART\_Transmit\_IT(\mbox{\hyperlink{classcoms_a3a0545f02ee2451e7a6056348c38717d}{uart}},(uint8\_t*)\ \&\mbox{\hyperlink{classcoms_a54eae3337175c32e900a04401461866e}{start}},5);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcoms_a71aeb298946c712700eed039ca23114c}\label{classcoms_a71aeb298946c712700eed039ca23114c} 
+\index{coms@{coms}!decode@{decode}}
+\index{decode@{decode}!coms@{coms}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
+{\footnotesize\ttfamily void coms\+::decode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Data decoder for bluetooth uart channel. 
+
+This decodes the character data in messbuff into usable types. 
+
+Definition at line \mbox{\hyperlink{coms_8cpp_source_l00083}{83}} of file \mbox{\hyperlink{coms_8cpp_source}{coms.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}}[0]\ ==\ \textcolor{charliteral}{'R'}\ \&\&\ \mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}}[4]\ =\ \textcolor{charliteral}{'T'})\{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcoms_a666b1b882a1b3be1c4b97fc62e87a63f}{rotate}}\ =\ (\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}}[1]-\/\textcolor{charliteral}{'0'})*100+(\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}}[2]-\/\textcolor{charliteral}{'0'})*10+(\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}}[3]-\/\textcolor{charliteral}{'0'})*1;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcoms_ae69d3c4e4691b8fd6f78a66db1eb2657}{translate}}\ =\ (\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}}[5]-\/\textcolor{charliteral}{'0'})*1000+(\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}}[6]-\/\textcolor{charliteral}{'0'})*100+(\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}}[7]-\/\textcolor{charliteral}{'0'})*10+(\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}}[8]-\/\textcolor{charliteral}{'0'})*1;}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+\DoxyCodeLine{00089\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classcoms_a4c38446b460ef90e5be61c123aa0151f}\label{classcoms_a4c38446b460ef90e5be61c123aa0151f} 
+\index{coms@{coms}!request@{request}}
+\index{request@{request}!coms@{coms}}
+\doxysubsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily void coms\+::request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Data request method for bluetooth uart channel. 
+
+This sends a standard data request message to the python program prompting that program to fetch data being hosted on a web server and transmit it over UART 
+
+Definition at line \mbox{\hyperlink{coms_8cpp_source_l00069}{69}} of file \mbox{\hyperlink{coms_8cpp_source}{coms.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ HAL\_UART\_Transmit\_IT(\mbox{\hyperlink{classcoms_a3a0545f02ee2451e7a6056348c38717d}{uart}},(uint8\_t*)\ \&\mbox{\hyperlink{classcoms_afb7e83efb45da7e6b59b63b36126e78c}{req}},4);}
+\DoxyCodeLine{00071\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcoms_a306970d649634b9cbd59f9d80f71fd58}\label{classcoms_a306970d649634b9cbd59f9d80f71fd58} 
+\index{coms@{coms}!cpr@{cpr}}
+\index{cpr@{cpr}!coms@{coms}}
+\doxysubsubsection{\texorpdfstring{cpr}{cpr}}
+{\footnotesize\ttfamily int32\+\_\+t coms\+::cpr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Integer defining the cpr of the motor encoder. 
+
+
+
+Definition at line \mbox{\hyperlink{coms_8h_source_l00051}{51}} of file \mbox{\hyperlink{coms_8h_source}{coms.\+h}}.
+
+\Hypertarget{classcoms_af46ef7b1dfe9a2dd9a30bb441b035e1c}\label{classcoms_af46ef7b1dfe9a2dd9a30bb441b035e1c} 
+\index{coms@{coms}!gear@{gear}}
+\index{gear@{gear}!coms@{coms}}
+\doxysubsubsection{\texorpdfstring{gear}{gear}}
+{\footnotesize\ttfamily float coms\+::gear\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Float defining gearing ratio of motor. 
+
+
+
+Definition at line \mbox{\hyperlink{coms_8h_source_l00052}{52}} of file \mbox{\hyperlink{coms_8h_source}{coms.\+h}}.
+
+\Hypertarget{classcoms_a2f9faae9e70f59ae9b252a255147ae79}\label{classcoms_a2f9faae9e70f59ae9b252a255147ae79} 
+\index{coms@{coms}!messbuff@{messbuff}}
+\index{messbuff@{messbuff}!coms@{coms}}
+\doxysubsubsection{\texorpdfstring{messbuff}{messbuff}}
+{\footnotesize\ttfamily char coms\+::messbuff\mbox{[}10\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+data buffer to receive data into from python program 
+
+
+
+Definition at line \mbox{\hyperlink{coms_8h_source_l00059}{59}} of file \mbox{\hyperlink{coms_8h_source}{coms.\+h}}.
+
+\Hypertarget{classcoms_afb7e83efb45da7e6b59b63b36126e78c}\label{classcoms_afb7e83efb45da7e6b59b63b36126e78c} 
+\index{coms@{coms}!req@{req}}
+\index{req@{req}!coms@{coms}}
+\doxysubsubsection{\texorpdfstring{req}{req}}
+{\footnotesize\ttfamily char coms\+::req\mbox{[}4\mbox{]}}
+
+
+
+byte request message to transmit to python program 
+
+
+
+Definition at line \mbox{\hyperlink{coms_8h_source_l00058}{58}} of file \mbox{\hyperlink{coms_8h_source}{coms.\+h}}.
+
+\Hypertarget{classcoms_a666b1b882a1b3be1c4b97fc62e87a63f}\label{classcoms_a666b1b882a1b3be1c4b97fc62e87a63f} 
+\index{coms@{coms}!rotate@{rotate}}
+\index{rotate@{rotate}!coms@{coms}}
+\doxysubsubsection{\texorpdfstring{rotate}{rotate}}
+{\footnotesize\ttfamily int32\+\_\+t coms\+::rotate}
+
+
+
+integer for degrees to rotate 
+
+
+
+Definition at line \mbox{\hyperlink{coms_8h_source_l00060}{60}} of file \mbox{\hyperlink{coms_8h_source}{coms.\+h}}.
+
+\Hypertarget{classcoms_a54eae3337175c32e900a04401461866e}\label{classcoms_a54eae3337175c32e900a04401461866e} 
+\index{coms@{coms}!start@{start}}
+\index{start@{start}!coms@{coms}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily char coms\+::start\mbox{[}5\mbox{]}}
+
+
+
+start message to transmit to python program 
+
+
+
+Definition at line \mbox{\hyperlink{coms_8h_source_l00057}{57}} of file \mbox{\hyperlink{coms_8h_source}{coms.\+h}}.
+
+\Hypertarget{classcoms_ae69d3c4e4691b8fd6f78a66db1eb2657}\label{classcoms_ae69d3c4e4691b8fd6f78a66db1eb2657} 
+\index{coms@{coms}!translate@{translate}}
+\index{translate@{translate}!coms@{coms}}
+\doxysubsubsection{\texorpdfstring{translate}{translate}}
+{\footnotesize\ttfamily int32\+\_\+t coms\+::translate}
+
+
+
+integer for amount to move 
+
+
+
+Definition at line \mbox{\hyperlink{coms_8h_source_l00061}{61}} of file \mbox{\hyperlink{coms_8h_source}{coms.\+h}}.
+
+\Hypertarget{classcoms_a3a0545f02ee2451e7a6056348c38717d}\label{classcoms_a3a0545f02ee2451e7a6056348c38717d} 
+\index{coms@{coms}!uart@{uart}}
+\index{uart@{uart}!coms@{coms}}
+\doxysubsubsection{\texorpdfstring{uart}{uart}}
+{\footnotesize\ttfamily UART\+\_\+\+Handle\+Type\+Def\texorpdfstring{$\ast$}{*} coms\+::uart\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pointer to UART object. 
+
+
+
+Definition at line \mbox{\hyperlink{coms_8h_source_l00056}{56}} of file \mbox{\hyperlink{coms_8h_source}{coms.\+h}}.
+
+\Hypertarget{classcoms_a4976dd06b5bbda38b69c1e9db321c59c}\label{classcoms_a4976dd06b5bbda38b69c1e9db321c59c} 
+\index{coms@{coms}!wheeldist@{wheeldist}}
+\index{wheeldist@{wheeldist}!coms@{coms}}
+\doxysubsubsection{\texorpdfstring{wheeldist}{wheeldist}}
+{\footnotesize\ttfamily float coms\+::wheeldist\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Float defining distance between wheels. 
+
+
+
+Definition at line \mbox{\hyperlink{coms_8h_source_l00054}{54}} of file \mbox{\hyperlink{coms_8h_source}{coms.\+h}}.
+
+\Hypertarget{classcoms_a3d5bf94523808d4432732494fee2ccc1}\label{classcoms_a3d5bf94523808d4432732494fee2ccc1} 
+\index{coms@{coms}!wheelrad@{wheelrad}}
+\index{wheelrad@{wheelrad}!coms@{coms}}
+\doxysubsubsection{\texorpdfstring{wheelrad}{wheelrad}}
+{\footnotesize\ttfamily float coms\+::wheelrad\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Float defining wheel radius. 
+
+
+
+Definition at line \mbox{\hyperlink{coms_8h_source_l00053}{53}} of file \mbox{\hyperlink{coms_8h_source}{coms.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Src/\mbox{\hyperlink{coms_8h}{coms.\+h}}\item 
+Src/\mbox{\hyperlink{coms_8cpp}{coms.\+cpp}}\end{DoxyCompactItemize}

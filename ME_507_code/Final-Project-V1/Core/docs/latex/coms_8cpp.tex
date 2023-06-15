@@ -1,0 +1,88 @@
+\doxysection{Src/coms.cpp File Reference}
+\hypertarget{coms_8cpp}{}\label{coms_8cpp}\index{Src/coms.cpp@{Src/coms.cpp}}
+
+
+This file contains the methods for the coms class.  
+
+
+{\ttfamily \#include \"{}coms.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{coms_8cpp_abcdf9b59049eccbc87d54042f9235b1a}{HAL\+\_\+\+UART\+\_\+\+Tx\+Cplt\+Callback}} (UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}huart)
+\begin{DoxyCompactList}\small\item\em Callback function for uart transmit interrupts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{coms_8cpp_ae494a9643f29b87d6d81e5264e60e57b}{HAL\+\_\+\+UART\+\_\+\+Rx\+Cplt\+Callback}} (UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}huart)
+\begin{DoxyCompactList}\small\item\em Callback function for uart receive interrupts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains the methods for the coms class. 
+
+\begin{DoxyAuthor}{Author}
+Rees P. Verleur 
+\end{DoxyAuthor}
+This contains the method definitions for the coms class. These methods allow for synchronization with a companion python program and for standardized data transfer between python running on a pc and this program running on the STM32\+F411. 
+
+Definition in file \mbox{\hyperlink{coms_8cpp_source}{coms.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{coms_8cpp_ae494a9643f29b87d6d81e5264e60e57b}\label{coms_8cpp_ae494a9643f29b87d6d81e5264e60e57b} 
+\index{coms.cpp@{coms.cpp}!HAL\_UART\_RxCpltCallback@{HAL\_UART\_RxCpltCallback}}
+\index{HAL\_UART\_RxCpltCallback@{HAL\_UART\_RxCpltCallback}!coms.cpp@{coms.cpp}}
+\doxysubsubsection{\texorpdfstring{HAL\_UART\_RxCpltCallback()}{HAL\_UART\_RxCpltCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+UART\+\_\+\+Rx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{huart }\end{DoxyParamCaption})}
+
+
+
+Callback function for uart receive interrupts. 
+
+This runs when a uart receive complete interrupt is triggered 
+\begin{DoxyParams}{Parameters}
+{\em huart} & This is the pointer to the uart object which triggered the interrupt. This input is handled by the system. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{coms_8cpp_source_l00122}{122}} of file \mbox{\hyperlink{coms_8cpp_source}{coms.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordflow}{if}(huart\ ==\ \mbox{\hyperlink{classcoms_a3a0545f02ee2451e7a6056348c38717d}{coms::uart}})\{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{coms::messbuff}}\ ==\ \textcolor{stringliteral}{"{}stop000000"{}})\{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Handle\ E-\/stop\ condition}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00127\ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \}}
+
+\end{DoxyCode}
+\Hypertarget{coms_8cpp_abcdf9b59049eccbc87d54042f9235b1a}\label{coms_8cpp_abcdf9b59049eccbc87d54042f9235b1a} 
+\index{coms.cpp@{coms.cpp}!HAL\_UART\_TxCpltCallback@{HAL\_UART\_TxCpltCallback}}
+\index{HAL\_UART\_TxCpltCallback@{HAL\_UART\_TxCpltCallback}!coms.cpp@{coms.cpp}}
+\doxysubsubsection{\texorpdfstring{HAL\_UART\_TxCpltCallback()}{HAL\_UART\_TxCpltCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+UART\+\_\+\+Tx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{huart }\end{DoxyParamCaption})}
+
+
+
+Callback function for uart transmit interrupts. 
+
+This runs when a uart transmit complete interrupt is triggered 
+\begin{DoxyParams}{Parameters}
+{\em huart} & This is the pointer to the uart object which triggered the interrupt. This input is handled by the system. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{coms_8cpp_source_l00103}{103}} of file \mbox{\hyperlink{coms_8cpp_source}{coms.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{if}(huart\ ==\ \mbox{\hyperlink{classcoms_a3a0545f02ee2451e7a6056348c38717d}{coms::uart}})\{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ HAL\_UART\_Receive\_IT(\mbox{\hyperlink{classcoms_a3a0545f02ee2451e7a6056348c38717d}{coms::uart}},(uint8\_t*)\ \&(\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{coms::messbuff}}),10);}
+\DoxyCodeLine{00106\ \ \ \ \ \}}
+\DoxyCodeLine{00107\ \}}
+
+\end{DoxyCode}

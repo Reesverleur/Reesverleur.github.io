@@ -1,9 +1,11 @@
 var dir_413f4e031a85da0d68269c6fd2f76e1c =
 [
     [ "Communication.py", "_communication_8py.html", "_communication_8py" ],
+    [ "coms.cpp", "coms_8cpp.html", "coms_8cpp" ],
+    [ "coms.h", "coms_8h.html", "coms_8h" ],
     [ "CSens.cpp", "_c_sens_8cpp.html", "_c_sens_8cpp" ],
     [ "CSens.h", "_c_sens_8h.html", "_c_sens_8h" ],
-    [ "main.c", "main_8c.html", "main_8c" ],
+    [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
     [ "Motor.cpp", "_motor_8cpp.html", null ],
     [ "Motor.h", "_motor_8h.html", "_motor_8h" ],
     [ "Pixy2_Driver.cpp", "_pixy2___driver_8cpp.html", "_pixy2___driver_8cpp" ],

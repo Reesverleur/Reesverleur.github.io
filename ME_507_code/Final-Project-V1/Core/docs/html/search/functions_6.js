@@ -19,5 +19,7 @@ var searchData=
   ['hal_5ftim_5fpwm_5fmspinit_16',['HAL_TIM_PWM_MspInit',['../stm32f4xx__hal__msp_8c.html#a24d5b9c609d8b753d95508419f4c1901',1,'stm32f4xx_hal_msp.c']]],
   ['hal_5fuart_5fmspdeinit_17',['HAL_UART_MspDeInit',['../stm32f4xx__hal__msp_8c.html#a718f39804e3b910d738a0e1e46151188',1,'stm32f4xx_hal_msp.c']]],
   ['hal_5fuart_5fmspinit_18',['HAL_UART_MspInit',['../stm32f4xx__hal__msp_8c.html#a0e553b32211877322f949b14801bbfa7',1,'stm32f4xx_hal_msp.c']]],
-  ['hardfault_5fhandler_19',['HardFault_Handler',['../stm32f4xx__it_8c.html#a2bffc10d5bd4106753b7c30e86903bea',1,'stm32f4xx_it.c']]]
+  ['hal_5fuart_5frxcpltcallback_19',['HAL_UART_RxCpltCallback',['../coms_8cpp.html#ae494a9643f29b87d6d81e5264e60e57b',1,'HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart):&#160;coms.cpp'],['../coms_8h.html#ae494a9643f29b87d6d81e5264e60e57b',1,'HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart):&#160;coms.cpp']]],
+  ['hal_5fuart_5ftxcpltcallback_20',['HAL_UART_TxCpltCallback',['../coms_8cpp.html#abcdf9b59049eccbc87d54042f9235b1a',1,'HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart):&#160;coms.cpp'],['../coms_8h.html#abcdf9b59049eccbc87d54042f9235b1a',1,'HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart):&#160;coms.cpp']]],
+  ['hardfault_5fhandler_21',['HardFault_Handler',['../stm32f4xx__it_8c.html#a2bffc10d5bd4106753b7c30e86903bea',1,'stm32f4xx_it.c']]]
 ];

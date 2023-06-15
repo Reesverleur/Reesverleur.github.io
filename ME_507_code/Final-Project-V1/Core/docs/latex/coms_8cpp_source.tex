@@ -1,0 +1,53 @@
+\doxysection{coms.\+cpp}
+\hypertarget{coms_8cpp_source}{}\label{coms_8cpp_source}\index{Src/coms.cpp@{Src/coms.cpp}}
+\mbox{\hyperlink{coms_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{coms_8h}{coms.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00028}\mbox{\hyperlink{classcoms_a4ea00f51efa933dc1a13dc582028418b}{00028}}\ \mbox{\hyperlink{classcoms_a4ea00f51efa933dc1a13dc582028418b}{coms::coms}}(UART\_HandleTypeDef*\ huart)\{}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{classcoms_a3a0545f02ee2451e7a6056348c38717d}{uart}}\ =\ huart;}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{classcoms_a54eae3337175c32e900a04401461866e}{start}}\ =\ \textcolor{stringliteral}{"{}begin"{}};}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{classcoms_afb7e83efb45da7e6b59b63b36126e78c}{req}}\ =\ \textcolor{stringliteral}{"{}data"{}};}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00032}00032\ \ \ \ \ \mbox{\hyperlink{classcoms_a666b1b882a1b3be1c4b97fc62e87a63f}{rotate}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{classcoms_ae69d3c4e4691b8fd6f78a66db1eb2657}{translate}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{classcoms_a306970d649634b9cbd59f9d80f71fd58}{cpr}}\ =\ 24;}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00036}00036\ \ \ \ \ \mbox{\hyperlink{classcoms_af46ef7b1dfe9a2dd9a30bb441b035e1c}{gear}}\ =\ 46.85;}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{classcoms_a4976dd06b5bbda38b69c1e9db321c59c}{wheeldist}}\ =\ 150;}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00038}00038\ \ \ \ \ \mbox{\hyperlink{classcoms_a3d5bf94523808d4432732494fee2ccc1}{wheelrad}}\ =\ 30;}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00039}00039\ \}}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00052}\mbox{\hyperlink{classcoms_ac1818f4a6a42099cb0a140af5b1520ad}{00052}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcoms_ac1818f4a6a42099cb0a140af5b1520ad}{coms::begin}}()\{}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00053}00053\ \ \ \ \ HAL\_UART\_Transmit\_IT(\mbox{\hyperlink{classcoms_a3a0545f02ee2451e7a6056348c38717d}{uart}},(uint8\_t*)\ \&\mbox{\hyperlink{classcoms_a54eae3337175c32e900a04401461866e}{start}},5);}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00069}\mbox{\hyperlink{classcoms_a4c38446b460ef90e5be61c123aa0151f}{00069}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcoms_a4c38446b460ef90e5be61c123aa0151f}{coms::request}}()\{}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00070}00070\ \ \ \ \ HAL\_UART\_Transmit\_IT(\mbox{\hyperlink{classcoms_a3a0545f02ee2451e7a6056348c38717d}{uart}},(uint8\_t*)\ \&\mbox{\hyperlink{classcoms_afb7e83efb45da7e6b59b63b36126e78c}{req}},4);}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00071}00071\ \}}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00083}\mbox{\hyperlink{classcoms_a71aeb298946c712700eed039ca23114c}{00083}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcoms_a71aeb298946c712700eed039ca23114c}{coms::decode}}()\{}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}}[0]\ ==\ \textcolor{charliteral}{'R'}\ \&\&\ \mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}}[4]\ =\ \textcolor{charliteral}{'T'})\{}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcoms_a666b1b882a1b3be1c4b97fc62e87a63f}{rotate}}\ =\ (\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}}[1]-\/\textcolor{charliteral}{'0'})*100+(\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}}[2]-\/\textcolor{charliteral}{'0'})*10+(\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}}[3]-\/\textcolor{charliteral}{'0'})*1;}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcoms_ae69d3c4e4691b8fd6f78a66db1eb2657}{translate}}\ =\ (\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}}[5]-\/\textcolor{charliteral}{'0'})*1000+(\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}}[6]-\/\textcolor{charliteral}{'0'})*100+(\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}}[7]-\/\textcolor{charliteral}{'0'})*10+(\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}}[8]-\/\textcolor{charliteral}{'0'})*1;}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00088}00088\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00089}00089\ \}}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00103}\mbox{\hyperlink{coms_8cpp_abcdf9b59049eccbc87d54042f9235b1a}{00103}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{coms_8cpp_abcdf9b59049eccbc87d54042f9235b1a}{HAL\_UART\_TxCpltCallback}}(UART\_HandleTypeDef*\ huart)\{}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00104}00104\ \ \ \ \ \textcolor{keywordflow}{if}(huart\ ==\ \mbox{\hyperlink{classcoms_a3a0545f02ee2451e7a6056348c38717d}{coms::uart}})\{}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ HAL\_UART\_Receive\_IT(\mbox{\hyperlink{classcoms_a3a0545f02ee2451e7a6056348c38717d}{coms::uart}},(uint8\_t*)\ \&(\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{coms::messbuff}}),10);}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00106}00106\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00107}00107\ \}}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00122}\mbox{\hyperlink{coms_8cpp_ae494a9643f29b87d6d81e5264e60e57b}{00122}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{coms_8cpp_ae494a9643f29b87d6d81e5264e60e57b}{HAL\_UART\_RxCpltCallback}}(UART\_HandleTypeDef*\ huart)\{}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00123}00123\ \ \ \ \ \textcolor{keywordflow}{if}(huart\ ==\ \mbox{\hyperlink{classcoms_a3a0545f02ee2451e7a6056348c38717d}{coms::uart}})\{}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{coms::messbuff}}\ ==\ \textcolor{stringliteral}{"{}stop000000"{}})\{}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Handle\ E-\/stop\ condition}}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00127}00127\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{coms_8cpp_source_l00128}00128\ \}}
+
+\end{DoxyCode}

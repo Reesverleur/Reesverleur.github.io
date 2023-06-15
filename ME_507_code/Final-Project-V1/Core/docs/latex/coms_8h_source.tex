@@ -1,0 +1,42 @@
+\doxysection{coms.\+h}
+\hypertarget{coms_8h_source}{}\label{coms_8h_source}\index{Src/coms.h@{Src/coms.h}}
+\mbox{\hyperlink{coms_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00022}00022\ \textcolor{preprocessor}{\#ifndef\ SRC\_COMS\_H\_}}
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00023}00023\ \textcolor{preprocessor}{\#define\ SRC\_COMS\_H\_}}
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00025}00025\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00026}00026\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00027}00027\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00028}00028\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00029}00029\ \textcolor{preprocessor}{\#include\ <numeric>}}
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00049}\mbox{\hyperlink{classcoms}{00049}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcoms}{coms}}\{}
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00050}00050\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00051}\mbox{\hyperlink{classcoms_a306970d649634b9cbd59f9d80f71fd58}{00051}}\ \ \ \ \ \ \ \ \ int32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcoms_a306970d649634b9cbd59f9d80f71fd58}{cpr}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00052}\mbox{\hyperlink{classcoms_af46ef7b1dfe9a2dd9a30bb441b035e1c}{00052}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcoms_af46ef7b1dfe9a2dd9a30bb441b035e1c}{gear}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00053}\mbox{\hyperlink{classcoms_a3d5bf94523808d4432732494fee2ccc1}{00053}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcoms_a3d5bf94523808d4432732494fee2ccc1}{wheelrad}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00054}\mbox{\hyperlink{classcoms_a4976dd06b5bbda38b69c1e9db321c59c}{00054}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcoms_a4976dd06b5bbda38b69c1e9db321c59c}{wheeldist}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00055}00055\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00056}\mbox{\hyperlink{classcoms_a3a0545f02ee2451e7a6056348c38717d}{00056}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ UART\_HandleTypeDef*\ \ \mbox{\hyperlink{classcoms_a3a0545f02ee2451e7a6056348c38717d}{uart}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00057}\mbox{\hyperlink{classcoms_a54eae3337175c32e900a04401461866e}{00057}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcoms_a54eae3337175c32e900a04401461866e}{start}}[5];\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00058}\mbox{\hyperlink{classcoms_afb7e83efb45da7e6b59b63b36126e78c}{00058}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcoms_afb7e83efb45da7e6b59b63b36126e78c}{req}}[4];\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00059}\mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{00059}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcoms_a2f9faae9e70f59ae9b252a255147ae79}{messbuff}}[10];\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00060}\mbox{\hyperlink{classcoms_a666b1b882a1b3be1c4b97fc62e87a63f}{00060}}\ \ \ \ \ \ \ \ \ int32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcoms_a666b1b882a1b3be1c4b97fc62e87a63f}{rotate}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00061}\mbox{\hyperlink{classcoms_ae69d3c4e4691b8fd6f78a66db1eb2657}{00061}}\ \ \ \ \ \ \ \ \ int32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classcoms_ae69d3c4e4691b8fd6f78a66db1eb2657}{translate}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00063}00063\ \ \ \ \ \mbox{\hyperlink{classcoms_a4ea00f51efa933dc1a13dc582028418b}{coms::coms}}(UART\_HandleTypeDef*\ huart);}
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00064}00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcoms_ac1818f4a6a42099cb0a140af5b1520ad}{coms::begin}}();}
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00065}00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcoms_a4c38446b460ef90e5be61c123aa0151f}{coms::request}}();}
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00066}00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcoms_a71aeb298946c712700eed039ca23114c}{coms::decode}}();}
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00067}00067\ \};}
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00072}00072\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{coms_8h_abcdf9b59049eccbc87d54042f9235b1a}{HAL\_UART\_TxCpltCallback}}(UART\_HandleTypeDef*\ huart);}
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00073}00073\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{coms_8h_ae494a9643f29b87d6d81e5264e60e57b}{HAL\_UART\_RxCpltCallback}}(UART\_HandleTypeDef*\ huart);}
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{coms_8h_source_l00075}00075\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ SRC\_COMS\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
