@@ -11,7 +11,7 @@ The project began by learning how to use Fusion 360 to create an electrical desi
 
 ![Homework 1 Routing](https://github.com/Reesverleur/Reesverleur.github.io/blob/master/assets/img/Homework%201%20Schematic.png)
 
-This circuit is very simple, and my routing is not at all optimal, but as my first try using electrical CAD software, I am happy with the results.
+This circuit is very simple, and my routing is not optimal, but as my first try using electrical CAD software, I am happy with the results.
 
 Next, we moved on to creating custom parts by making a minimum functional module for the microcontroller we planned to use, an STM32F411. The minimum functional module provided a good stepping off point for the creation of our final design. The feedback I got from the instructor on this design largely informed my final design for the class. This schematic is shown below.
 
@@ -25,5 +25,8 @@ After receiving this board from the manufacturer, we added all the components we
 
 ![Circuit Board](https://github.com/Reesverleur/Reesverleur.github.io/blob/master/assets/img/circuit%20board.jpg)
 
-After testing we determined that this board worked exactly as expected with all the voltage rails at the correct values, and the MCU running code as expected.
+After assembling, I tested the board to determine that it worked exactly as expected, with all the voltage rails at the correct values and the MCU running code as expected. After everything checked out, I moved on to developing the software.
+
+[A full documented code listing is available here]()
+
 
