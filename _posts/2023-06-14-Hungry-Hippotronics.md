@@ -38,4 +38,4 @@ After assembling, I tested the board to determine that it worked exactly as expe
 [Homework 1 image]: /assets/img/Homework-1-Schematic.png
 [Homework 4 image]: /assets/img/Homework-4-Schematic.png
 [Final Schematic]: /assets/img/Final-Board-Schematic.png
-[Board Image]: /assets/img/circuit-board.png
+[Board Image]: /assets/img/circuit-board.jpg
