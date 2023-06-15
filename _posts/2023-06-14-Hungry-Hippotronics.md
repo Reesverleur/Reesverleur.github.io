@@ -40,7 +40,7 @@ I also wrote a driver for an I2C-based color sensor. This presented a challenge 
 
 {% include youtube.html id="gWmsTxVh03Y" %}
 
-To control the motors, I created a motor driver to work with the motor driver ICs I chose when designing the board. This driver allows for directly controlling the motor effort (-100% - 100%). Or allows for position control with one of two algorithms. The first is a standard PID controller. The second implements a two-state controller, which allows for the integral action to be turned on only when the system gets close to the final position. This means the integral error term does not accrue while the system is saturated from the proportional gain. Testing showed that the two-state system had a significantly better response and did not overshoot as the more traditional system was prone to do. This motor driver class can be seen in the below video.
+To control the motors, I created a motor driver to work with the motor driver ICs I chose when designing the board. This driver allows for directly controlling the motor effort (±100%). Or allows for position control with one of two algorithms. The first is a standard PID controller. The second implements a two-state controller, which allows for the integral action to be turned on only when the system gets close to the final position. This means the integral error term does not accrue while the system is saturated from the proportional gain. Testing showed that the two-state system had a significantly better response and did not overshoot as the more traditional system was prone to do. This motor driver class can be seen in the below video.
 
 {% include youtube.html id="QQV3AZaJCNU" %}
 
