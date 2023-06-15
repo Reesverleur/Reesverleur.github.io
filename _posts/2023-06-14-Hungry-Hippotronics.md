@@ -68,7 +68,6 @@ Despite the status of the project, I learned a lot in this class. I had never de
 [Final Schematic]: /assets/img/Final-Board-Schematic.png
 [Board Image]: /assets/img/circuit-board.jpg
 [fsm]: /assets/img/fsm.png
-[pixy2 video]: /assets/img/Pixy2.mp4
 [CAD]: /assets/img/CAD.png
 [nathanurl]: www.google.com
 [jackurl]:  www.google.com
