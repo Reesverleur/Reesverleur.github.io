@@ -41,11 +41,13 @@ Finally, to communicate with the board, I wrote a class which used a standard co
 
 A full code listing is available [here][code], and complete documentation can be found [here][docs]
 
-My groupmate was primarily responsible for creating the mechanical system. His portfolio for this class can be found [here][jackurl]. The CAD for our mechanical system can be seen below.
+My groupmate, Jack,  was primarily responsible for creating the mechanical system. His portfolio for this class can be found [here][jackurl]. The CAD for our mechanical system can be seen below.
 
-![system-cad][CAD]
+![System-Cad][CAD]
 
-Due to commitments to other 
+Due to commitments to our senior project course, Jack and I were not able to complete this project by the deadline for the class. We also had a last-minute electrical failure where the 5V rail started outputting 10.7 V. This burned out one of our servos, and made it impossible to plug in any of our 5V sensors without damaging them. I tried replacing the 5V switching regulator, but this did not fix the problem so I think there must have been a short downstream somewhere. I was not able to find it, but the troubleshooting we did ate up most of my remaining time, during which I was planning on finishing the code and helping with the mechanical assembly. 
+
+Despite the status of the project, I learned a lot in this class. I had never designed or assembled a circuit board before, and I also had never programmed anything in C++ before (except some very simple arduino projects). Overall, I am happy with how this project went, and I am looking forward to applying the skills I learned to my future projects.
 
 
 
