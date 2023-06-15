@@ -10,24 +10,29 @@ This project aimed to create a robot that could autonomously collect & sort ball
 
 ### This project has [**code**][code] and [**documentation**][docs] be sure to check those out! ###
 
-The project began by learning to use Fusion 360 to create an electrical design. I had never done this before, but I was eager to learn. These skills were first used in a homework assignment to design an 8-bit dip-switch "DAC." It was challenging to get used to new CAD software and consider the intricacies of a new type of design, but in the end, I was able to create the circuit you can see below.
+## Electrical Design ##
+
+The project began by learning to use Fusion 360 to create an electrical design. I had never done this before, but was eager to learn. These skills were first used in a homework assignment to design an 8-bit dip-switch "DAC." It was challenging to get used to new CAD software and consider the intricacies of a new type of design, but in the end, I was able to create the circuit you see below.
 
 ![Homework 1 Routing][Homework 1 image]
 
-This circuit is very simple, and my routing is not optimal, but as my first try using electrical CAD software, I am happy with the results.
+This circuit is very simple, and my routing is not optimal, but for my first time using electrical CAD software, I am happy with the results.
 
-Next, we moved on to creating custom parts by making a minimum functional module for the microcontroller we planned to use, an STM32F411. The minimum functional module provided a good stepping-off point for the creation of our final design. The feedback I got from the instructor on this design largely informed my final design for the class. This schematic is shown below.
+Next, we moved on to creating custom parts by making a minimum functional module for the microcontroller we planned to use, an STM32F411. The minimum functional module provided a good stepping-off point for the creation of our final design. The feedback I got from the instructor on this design largely informed my final design for the class. The schematic for the minimum module is below.
 
 ![Homework 4 Routing][Homework 4 image]
 
-Finally, the time came to design the final board. Using what I had learned so far in the course, along with the instructor's feedback on the first revision of my circuit, I created my final design. This design included connectors to attach my motors and sensors and set my pin allocation for the final project. This design can be seen below.
+Finally, the time came to design the final board. Using what I had learned so far in the course, along with the instructor's feedback on the first revision of my circuit, I created my final design. This design included connectors to attach my motors and sensors and set which pins on the MCU would be used for each item. I was very proud of the result which can be seen below.
 
 ![Final Routing][Final Schematic]
 
-After receiving this board from the manufacturer, we added all the components we selected to get the final result.
+After receiving this board from the manufacturer, we added all the selected components to get the final result. This process went very smoothly with only a few pins on the MCU needing to be reworked, and only one component (a schottky diode) being installed backwards. After fixing these small errors we had the board seen below. 
 
 ![Circuit Board][Board Image]
+
 After assembling, I tested the board to determine that it worked exactly as expected, with all the voltage rails at the correct values and the MCU running code as expected. After everything checked out, I moved on to developing the code for the project.
+
+## Software Development ##
 
 The code for this project was written in C++ and made use of the HAL API for the STM32F411. The code was written in the STM32 Cube IDE, which made selecting pin functions easy. The code for this project is not complete, as the project as a whole fell short. As such, I do not have a main function loop running a finite-state machine. One was planned and would have used the FSM below or a similar one.
 
@@ -49,13 +54,21 @@ To control the motors, I created a motor driver to work with the motor driver IC
 
 Finally, to communicate with the board, I wrote a class that used a standard communication protocol over UART to communicate with a Python program running on my laptop which could ping a [classmates][nathanurl] system to detect ball locations over the entire arena. This system provided the thumbnail image for this project.
 
-A full code listing is available [here][code], and complete documentation can be found [here][docs]
+A full [**code listing is available here**][code], and [**complete documentation can be found here**][docs]
+
+## Mechanical Design ##
 
 My groupmate, Jack,  was primarily responsible for creating the mechanical system. His portfolio for this class can be found [here][jackurl]. The CAD for our mechanical system can be seen below.
 
 ![System-Cad][CAD]
 
+The CAD went through many revisions and was designed so that all parts could either be 3D-printed or laser cut to facilitate quick iteration. We planned to have a large intake funnel which went to a pulley which used polycord to grab the balls. A sorting mechanism would be in line with the intake mechanism and would allow for rejection of incorrectly colored balls. The correctly colored balls would be collected in the robot and could be intermittently dumped back at the home corral. 
+
+## Trials and Tribulations ##
+
 Due to commitments to our senior project course, Jack and I were not able to complete this project by the deadline for the class. We also had a last-minute electrical failure where the 5V rail started outputting 10.7 V. This burned out one of our servos and made it impossible to plug in any of our 5V sensors without damaging them. I tried replacing the 5V switching regulator, but this did not fix the problem, so I think there must have been a short downstream somewhere. I was not able to find it, but the troubleshooting we did ate up most of my remaining time, during which I was planning on finishing the code and helping with the mechanical assembly. 
+
+## Conclusion ##
 
 Despite the status of the project, I learned a lot in this class. I had never designed or assembled a circuit board before, and I also had never programmed anything in C++ before (except for some very simple Arduino projects). Overall, I am happy with how this project went, and I am looking forward to applying the skills I learned to my future projects.
 
