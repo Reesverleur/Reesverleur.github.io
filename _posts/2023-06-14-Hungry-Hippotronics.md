@@ -29,8 +29,23 @@ After assembling, I tested the board to determine that it worked exactly as expe
 The code for this project was written in C++ and made use of the HAL API for the STM32F411. The code was written in the STM32 Cube IDE which made selecting pin functions easy. The code for this project is not complete, as the project as a whole fell short. As such, I do not have a main function loop running a finite state machine. One was planned and would have used the FSM below or a very similar one.
 ![Finite State Machine][fsm]
 
+To allow for the easy polling of sensor data and control of peripherals, I wrote several C++ classes for sensor and motor control. 
+
+The first of these was a class to allow for the use of a Pixy2 camera. This camera performs on-board image processing and can detect objects based on their color. I wrote a simple class that sends the correct request data over a Serial Peripheral Interface (SPI) connection, and listens for a response. When a response is captured the data can be checked using a checksum to be sure of fidelity, and then the data is processed and can be stored in public variables to be accessed by the main program loop at a later time. I gave this code to several of my classmates since others also used a Pixy2 camera.
+
+I also wrote a driver for an I2C based color sensor. This was presented a challenge because the I2C protocol appeared to be incorrectly implemented on the device I was using. This deviation from the standard was not noted in the documentation and was extremely difficult to find/correct for. Eventually I was able to get the sensor to return color data which seemed to correlate correctly with the color placed in front of the sensor.
+
+To control the motors I created a motor driver to work with the motor driver ICs I chose when designing the board. This driver allows for directly controlling the motor effort (-100% - 100%). Or allows for position control with one of two algorithms. The first is a standard PID controller. The second implements a two-state controller which allows for the integral action to be turned on only when the system gets close to the final position. This means that the integral error term does not accrue while the system is saturated from the proportional gain. Testing showed that the two-state system had a significantly better response and did not overshoot as the more traditional system was prone to do.
+
+Finally, to communicate with the board, I wrote a class which used a standard communication protocol over UART to communicate with a python program running on my laptop which could ping a [classmates][nathanurl] system to detect ball locations over the entire arena. This system provided the thumbnail image for this project.
 
 A full code listing is available [here][code], and complete documentation can be found [here][docs]
+
+My groupmate was primarily responsible for creating the mechanical system. His portfolio for this class can be found [here][jackurl]. The CAD for our mechanical system can be seen below.
+
+![system-cad][CAD]
+
+Due to commitments to other 
 
 
 
@@ -44,6 +59,9 @@ A full code listing is available [here][code], and complete documentation can be
 [Final Schematic]: /assets/img/Final-Board-Schematic.png
 [Board Image]: /assets/img/circuit-board.jpg
 [fsm]: /assets/img/fsm.png
+[CAD]: /assets/img/CAD.png
+[nathanurl]: www.google.com
+[jackurl]:  www.google.com
 [code]: https://github.com/Reesverleur/Reesverleur.github.io/tree/master/ME_507_code/Final-Project-V1
 [docs]: /ME_507_code/Final-Project-V1/Core/docs/html/index.html
 
