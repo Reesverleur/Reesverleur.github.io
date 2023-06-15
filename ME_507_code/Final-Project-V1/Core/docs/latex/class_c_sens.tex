@@ -19,38 +19,28 @@ void \mbox{\hyperlink{class_c_sens_a4f6a194a321d5e50883bc19add1067b4}{get\+Cdata
 \doxysubsubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_c_sens_abde882476a99649f3ab7e77de065964f}\label{class_c_sens_abde882476a99649f3ab7e77de065964f} 
-static uint8\+\_\+t {\bfseries Cdata} \mbox{[}27\mbox{]}
+static uint8\+\_\+t \mbox{\hyperlink{class_c_sens_abde882476a99649f3ab7e77de065964f}{Cdata}} \mbox{[}27\mbox{]}
 \begin{DoxyCompactList}\small\item\em Data collected from device. \end{DoxyCompactList}\item 
-\Hypertarget{class_c_sens_aa66efdc9555b448606dc65cea90795cc}\label{class_c_sens_aa66efdc9555b448606dc65cea90795cc} 
-static I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} {\bfseries i2c}
+static I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_c_sens_aa66efdc9555b448606dc65cea90795cc}{i2c}}
 \begin{DoxyCompactList}\small\item\em Pointer to i2c object. \end{DoxyCompactList}\item 
-\Hypertarget{class_c_sens_a96bf5467865d3114c8615064c7819b28}\label{class_c_sens_a96bf5467865d3114c8615064c7819b28} 
-static uint16\+\_\+t {\bfseries Clr\+\_\+\+Val}
+static uint16\+\_\+t \mbox{\hyperlink{class_c_sens_a96bf5467865d3114c8615064c7819b28}{Clr\+\_\+\+Val}}
 \begin{DoxyCompactList}\small\item\em 16 bit color value for clear channel \end{DoxyCompactList}\item 
-\Hypertarget{class_c_sens_a5ecef084ece6e281c72789920f7412dc}\label{class_c_sens_a5ecef084ece6e281c72789920f7412dc} 
-static uint16\+\_\+t {\bfseries Red\+\_\+\+Val}
+static uint16\+\_\+t \mbox{\hyperlink{class_c_sens_a5ecef084ece6e281c72789920f7412dc}{Red\+\_\+\+Val}}
 \begin{DoxyCompactList}\small\item\em 16 bit color value for red channel \end{DoxyCompactList}\item 
-\Hypertarget{class_c_sens_abf222dae6f684d88df32237e3a8315be}\label{class_c_sens_abf222dae6f684d88df32237e3a8315be} 
-static uint16\+\_\+t {\bfseries Grn\+\_\+\+Val}
+static uint16\+\_\+t \mbox{\hyperlink{class_c_sens_abf222dae6f684d88df32237e3a8315be}{Grn\+\_\+\+Val}}
 \begin{DoxyCompactList}\small\item\em 16 bit color value for green channel \end{DoxyCompactList}\item 
-\Hypertarget{class_c_sens_aa99d02835daf65e4baa53f817778a4af}\label{class_c_sens_aa99d02835daf65e4baa53f817778a4af} 
-static uint16\+\_\+t {\bfseries Blu\+\_\+\+Val}
+static uint16\+\_\+t \mbox{\hyperlink{class_c_sens_aa99d02835daf65e4baa53f817778a4af}{Blu\+\_\+\+Val}}
 \begin{DoxyCompactList}\small\item\em 16 bit color value for blue channel \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_c_sens_ad7bf06677399ec1ed5a406aa537f61b3}\label{class_c_sens_ad7bf06677399ec1ed5a406aa537f61b3} 
-int16\+\_\+t {\bfseries Address} = 0x0029 $<$$<$ 1
+int16\+\_\+t \mbox{\hyperlink{class_c_sens_ad7bf06677399ec1ed5a406aa537f61b3}{Address}} = 0x0029 $<$$<$ 1
 \begin{DoxyCompactList}\small\item\em I2C Address of color sensor. \end{DoxyCompactList}\item 
-\Hypertarget{class_c_sens_af53cda980242c8157481250149f9f64e}\label{class_c_sens_af53cda980242c8157481250149f9f64e} 
-int16\+\_\+t {\bfseries Mem\+Addr} = 0x0003
+int16\+\_\+t \mbox{\hyperlink{class_c_sens_af53cda980242c8157481250149f9f64e}{Mem\+Addr}} = 0x0003
 \begin{DoxyCompactList}\small\item\em Memory address to request data from. \end{DoxyCompactList}\item 
-\Hypertarget{class_c_sens_a482786ce0e9d5da99ce243c13500374a}\label{class_c_sens_a482786ce0e9d5da99ce243c13500374a} 
-int16\+\_\+t {\bfseries Length} = 27
+int16\+\_\+t \mbox{\hyperlink{class_c_sens_a482786ce0e9d5da99ce243c13500374a}{Length}} = 27
 \begin{DoxyCompactList}\small\item\em Number of bytes to fetch. \end{DoxyCompactList}\item 
-\Hypertarget{class_c_sens_a954998c99aaddec66864fae3ac90ff60}\label{class_c_sens_a954998c99aaddec66864fae3ac90ff60} 
-uint8\+\_\+t {\bfseries Init} \mbox{[}1\mbox{]} = \{0b00000011\}
+uint8\+\_\+t \mbox{\hyperlink{class_c_sens_a954998c99aaddec66864fae3ac90ff60}{Init}} \mbox{[}1\mbox{]} = \{0b00000011\}
 \begin{DoxyCompactList}\small\item\em Initialization byte to be written to 0x00. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -62,6 +52,10 @@ This contains the attribute definitions and the function prototypes for the I2C 
 The communication protocol for this class does not appear to match the standard I2C protocol. It appears that memory can only be accessed starting from byte 0. Additionally the memory read command must request data starting from byte 3 in order for the last 8 bytes (which contain the color data) to be populated.
 
 The color scales also appear to be very non-\/linear with the red channel having a much higher response than the blue and green. 
+
+Definition at line \mbox{\hyperlink{_c_sens_8h_source_l00046}{46}} of file \mbox{\hyperlink{_c_sens_8h_source}{CSens.\+h}}.
+
+
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_c_sens_ae46e479c302727c5c0b9d255f53dc525}\label{class_c_sens_ae46e479c302727c5c0b9d255f53dc525} 
@@ -81,6 +75,19 @@ This creates a \doxylink{class_c_sens}{CSens} object connected to the I2C port s
 \end{DoxyParams}
 
 
+Definition at line \mbox{\hyperlink{_c_sens_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{_c_sens_8cpp_source}{CSens.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_c_sens_aa66efdc9555b448606dc65cea90795cc}{i2c}}\ =\ hi2c;}
+\DoxyCodeLine{00032\ \ \ \ \ HAL\_I2C\_Mem\_Write(\mbox{\hyperlink{class_c_sens_aa66efdc9555b448606dc65cea90795cc}{i2c}},\mbox{\hyperlink{class_c_sens_ad7bf06677399ec1ed5a406aa537f61b3}{Address}},0x00,I2C\_MEMADD\_SIZE\_8BIT,\mbox{\hyperlink{class_c_sens_a954998c99aaddec66864fae3ac90ff60}{Init}},1,1000);}
+\DoxyCodeLine{00033\ \ \ \ \ HAL\_Delay(5);}
+\DoxyCodeLine{00034\ \}}
+
+\end{DoxyCode}
+
+
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_c_sens_a4f6a194a321d5e50883bc19add1067b4}\label{class_c_sens_a4f6a194a321d5e50883bc19add1067b4} 
 \index{CSens@{CSens}!getCdata@{getCdata}}
@@ -93,6 +100,160 @@ This creates a \doxylink{class_c_sens}{CSens} object connected to the I2C port s
 Method to get new color data from the sensor. 
 
 This retrieves the data from the color sensor by using the HAL implementation of the I2C communication protocol. 
+
+Definition at line \mbox{\hyperlink{_c_sens_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{_c_sens_8cpp_source}{CSens.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ HAL\_I2C\_Mem\_Read\_IT(\mbox{\hyperlink{class_c_sens_aa66efdc9555b448606dc65cea90795cc}{i2c}},\mbox{\hyperlink{class_c_sens_ad7bf06677399ec1ed5a406aa537f61b3}{Address}},\mbox{\hyperlink{class_c_sens_af53cda980242c8157481250149f9f64e}{MemAddr}},I2C\_MEMADD\_SIZE\_8BIT,\mbox{\hyperlink{class_c_sens_abde882476a99649f3ab7e77de065964f}{Cdata}},\mbox{\hyperlink{class_c_sens_a482786ce0e9d5da99ce243c13500374a}{Length}});}
+\DoxyCodeLine{00048\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_c_sens_ad7bf06677399ec1ed5a406aa537f61b3}\label{class_c_sens_ad7bf06677399ec1ed5a406aa537f61b3} 
+\index{CSens@{CSens}!Address@{Address}}
+\index{Address@{Address}!CSens@{CSens}}
+\doxysubsubsection{\texorpdfstring{Address}{Address}}
+{\footnotesize\ttfamily int16\+\_\+t CSens\+::\+Address = 0x0029 $<$$<$ 1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+I2C Address of color sensor. 
+
+
+
+Definition at line \mbox{\hyperlink{_c_sens_8h_source_l00049}{49}} of file \mbox{\hyperlink{_c_sens_8h_source}{CSens.\+h}}.
+
+\Hypertarget{class_c_sens_aa99d02835daf65e4baa53f817778a4af}\label{class_c_sens_aa99d02835daf65e4baa53f817778a4af} 
+\index{CSens@{CSens}!Blu\_Val@{Blu\_Val}}
+\index{Blu\_Val@{Blu\_Val}!CSens@{CSens}}
+\doxysubsubsection{\texorpdfstring{Blu\_Val}{Blu\_Val}}
+{\footnotesize\ttfamily uint16\+\_\+t CSens\+::\+Blu\+\_\+\+Val\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+16 bit color value for blue channel 
+
+
+
+Definition at line \mbox{\hyperlink{_c_sens_8h_source_l00060}{60}} of file \mbox{\hyperlink{_c_sens_8h_source}{CSens.\+h}}.
+
+\Hypertarget{class_c_sens_abde882476a99649f3ab7e77de065964f}\label{class_c_sens_abde882476a99649f3ab7e77de065964f} 
+\index{CSens@{CSens}!Cdata@{Cdata}}
+\index{Cdata@{Cdata}!CSens@{CSens}}
+\doxysubsubsection{\texorpdfstring{Cdata}{Cdata}}
+{\footnotesize\ttfamily uint8\+\_\+t CSens\+::\+Cdata\mbox{[}27\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Data collected from device. 
+
+
+
+Definition at line \mbox{\hyperlink{_c_sens_8h_source_l00055}{55}} of file \mbox{\hyperlink{_c_sens_8h_source}{CSens.\+h}}.
+
+\Hypertarget{class_c_sens_a96bf5467865d3114c8615064c7819b28}\label{class_c_sens_a96bf5467865d3114c8615064c7819b28} 
+\index{CSens@{CSens}!Clr\_Val@{Clr\_Val}}
+\index{Clr\_Val@{Clr\_Val}!CSens@{CSens}}
+\doxysubsubsection{\texorpdfstring{Clr\_Val}{Clr\_Val}}
+{\footnotesize\ttfamily uint16\+\_\+t CSens\+::\+Clr\+\_\+\+Val\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+16 bit color value for clear channel 
+
+
+
+Definition at line \mbox{\hyperlink{_c_sens_8h_source_l00057}{57}} of file \mbox{\hyperlink{_c_sens_8h_source}{CSens.\+h}}.
+
+\Hypertarget{class_c_sens_abf222dae6f684d88df32237e3a8315be}\label{class_c_sens_abf222dae6f684d88df32237e3a8315be} 
+\index{CSens@{CSens}!Grn\_Val@{Grn\_Val}}
+\index{Grn\_Val@{Grn\_Val}!CSens@{CSens}}
+\doxysubsubsection{\texorpdfstring{Grn\_Val}{Grn\_Val}}
+{\footnotesize\ttfamily uint16\+\_\+t CSens\+::\+Grn\+\_\+\+Val\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+16 bit color value for green channel 
+
+
+
+Definition at line \mbox{\hyperlink{_c_sens_8h_source_l00059}{59}} of file \mbox{\hyperlink{_c_sens_8h_source}{CSens.\+h}}.
+
+\Hypertarget{class_c_sens_aa66efdc9555b448606dc65cea90795cc}\label{class_c_sens_aa66efdc9555b448606dc65cea90795cc} 
+\index{CSens@{CSens}!i2c@{i2c}}
+\index{i2c@{i2c}!CSens@{CSens}}
+\doxysubsubsection{\texorpdfstring{i2c}{i2c}}
+{\footnotesize\ttfamily I2\+C\+\_\+\+Handle\+Type\+Def\texorpdfstring{$\ast$}{*} CSens\+::i2c\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Pointer to i2c object. 
+
+
+
+Definition at line \mbox{\hyperlink{_c_sens_8h_source_l00056}{56}} of file \mbox{\hyperlink{_c_sens_8h_source}{CSens.\+h}}.
+
+\Hypertarget{class_c_sens_a954998c99aaddec66864fae3ac90ff60}\label{class_c_sens_a954998c99aaddec66864fae3ac90ff60} 
+\index{CSens@{CSens}!Init@{Init}}
+\index{Init@{Init}!CSens@{CSens}}
+\doxysubsubsection{\texorpdfstring{Init}{Init}}
+{\footnotesize\ttfamily uint8\+\_\+t CSens\+::\+Init\mbox{[}1\mbox{]} = \{0b00000011\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initialization byte to be written to 0x00. 
+
+
+
+Definition at line \mbox{\hyperlink{_c_sens_8h_source_l00052}{52}} of file \mbox{\hyperlink{_c_sens_8h_source}{CSens.\+h}}.
+
+\Hypertarget{class_c_sens_a482786ce0e9d5da99ce243c13500374a}\label{class_c_sens_a482786ce0e9d5da99ce243c13500374a} 
+\index{CSens@{CSens}!Length@{Length}}
+\index{Length@{Length}!CSens@{CSens}}
+\doxysubsubsection{\texorpdfstring{Length}{Length}}
+{\footnotesize\ttfamily int16\+\_\+t CSens\+::\+Length = 27\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Number of bytes to fetch. 
+
+
+
+Definition at line \mbox{\hyperlink{_c_sens_8h_source_l00051}{51}} of file \mbox{\hyperlink{_c_sens_8h_source}{CSens.\+h}}.
+
+\Hypertarget{class_c_sens_af53cda980242c8157481250149f9f64e}\label{class_c_sens_af53cda980242c8157481250149f9f64e} 
+\index{CSens@{CSens}!MemAddr@{MemAddr}}
+\index{MemAddr@{MemAddr}!CSens@{CSens}}
+\doxysubsubsection{\texorpdfstring{MemAddr}{MemAddr}}
+{\footnotesize\ttfamily int16\+\_\+t CSens\+::\+Mem\+Addr = 0x0003\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Memory address to request data from. 
+
+
+
+Definition at line \mbox{\hyperlink{_c_sens_8h_source_l00050}{50}} of file \mbox{\hyperlink{_c_sens_8h_source}{CSens.\+h}}.
+
+\Hypertarget{class_c_sens_a5ecef084ece6e281c72789920f7412dc}\label{class_c_sens_a5ecef084ece6e281c72789920f7412dc} 
+\index{CSens@{CSens}!Red\_Val@{Red\_Val}}
+\index{Red\_Val@{Red\_Val}!CSens@{CSens}}
+\doxysubsubsection{\texorpdfstring{Red\_Val}{Red\_Val}}
+{\footnotesize\ttfamily uint16\+\_\+t CSens\+::\+Red\+\_\+\+Val\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+16 bit color value for red channel 
+
+
+
+Definition at line \mbox{\hyperlink{_c_sens_8h_source_l00058}{58}} of file \mbox{\hyperlink{_c_sens_8h_source}{CSens.\+h}}.
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

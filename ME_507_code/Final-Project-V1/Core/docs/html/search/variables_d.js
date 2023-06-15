@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pos_0',['Pos',['../class_motor.html#a913de2f1a084b5eaa30278c3a70dbc0a',1,'Motor']]]
+  ['n_0',['n',['../namespace_communication.html#a5e0e966415666366c570a202cde07525',1,'Communication']]]
 ];

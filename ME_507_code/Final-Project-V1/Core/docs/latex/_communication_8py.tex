@@ -1,0 +1,57 @@
+\doxysection{Src/\+Communication.py File Reference}
+\hypertarget{_communication_8py}{}\label{_communication_8py}\index{Src/Communication.py@{Src/Communication.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_communication}{Communication}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_communication_aeff85c26730689a3661104879b0a995c}{Communication.\+get\+\_\+info}} ()
+\item 
+\mbox{\hyperlink{namespace_communication_acd8cafd8f5c5a5343e663c25148d2bbc}{Communication.\+rss}} (X)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespace_communication_a3520cde1d9b046549a5679fd2f1567f0}{Communication.\+color}} = \textquotesingle{}green\textquotesingle{}
+\item 
+\mbox{\hyperlink{namespace_communication_ad220bbc7e70e70a32678128de9d9fa3d}{Communication.\+Serial\+Obj}} = serial.\+Serial(\textquotesingle{}COM24\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespace_communication_a6cf3dbaecccf7826e53f285d8064b33c}{Communication.\+baudrate}}
+\item 
+\mbox{\hyperlink{namespace_communication_ae557f97a5b53d4bb9c207ba6ae77a062}{Communication.\+bytesize}}
+\item 
+\mbox{\hyperlink{namespace_communication_ac71e8b632d40bd33c719d06092fc4d27}{Communication.\+parity}}
+\item 
+\mbox{\hyperlink{namespace_communication_a5f2260f692856d7d68acc081e1ad882d}{Communication.\+stopbits}}
+\item 
+\mbox{\hyperlink{namespace_communication_a82e143310a516ac846fc4d4158141af6}{Communication.\+timeout}}
+\item 
+\mbox{\hyperlink{namespace_communication_a0ac406e3fd08e8224cbb56c92d534c76}{Communication.\+start}} = Serial\+Obj.\+read(5)
+\item 
+\mbox{\hyperlink{namespace_communication_a8bff2b2773c8e14207fe73e47411d447}{Communication.\+req}} = Serial\+Obj.\+read(4)
+\item 
+list \mbox{\hyperlink{namespace_communication_a470cbc741e27fca278913a038166e85c}{Communication.\+bindex}} = \mbox{[}$\,$\mbox{]}
+\item 
+list \mbox{\hyperlink{namespace_communication_a142fbaa4648fe7b45a798a8030019199}{Communication.\+dist}} = \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_communication_ab92b364153abcdaebcdf720d82548df9}{Communication.\+balls}}
+\item 
+\mbox{\hyperlink{namespace_communication_a78d82ad6303544338716197dd292e2d2}{Communication.\+robots}}
+\item 
+\mbox{\hyperlink{namespace_communication_a5e0e966415666366c570a202cde07525}{Communication.\+n}} = x
+\item 
+\mbox{\hyperlink{namespace_communication_ae832d97bb3f9b275c11e03839109fd4f}{Communication.\+distance}} = \mbox{\hyperlink{namespace_communication_acd8cafd8f5c5a5343e663c25148d2bbc}{rss}}(\mbox{[}\mbox{\hyperlink{namespace_communication_a78d82ad6303544338716197dd292e2d2}{robots}}\mbox{[}\mbox{\hyperlink{namespace_communication_a5e0e966415666366c570a202cde07525}{n}}\mbox{]}\mbox{[}\"{}center\"{}\mbox{]}\mbox{[}0\mbox{]}-\/\mbox{\hyperlink{namespace_communication_ab92b364153abcdaebcdf720d82548df9}{balls}}\mbox{[}x\mbox{]}\mbox{[}\textquotesingle{}x\textquotesingle{}\mbox{]},\mbox{\hyperlink{namespace_communication_a78d82ad6303544338716197dd292e2d2}{robots}}\mbox{[}\mbox{\hyperlink{namespace_communication_a5e0e966415666366c570a202cde07525}{n}}\mbox{]}\mbox{[}\"{}center\"{}\mbox{]}\mbox{[}1\mbox{]}-\/\mbox{\hyperlink{namespace_communication_ab92b364153abcdaebcdf720d82548df9}{balls}}\mbox{[}x\mbox{]}\mbox{[}\textquotesingle{}y\textquotesingle{}\mbox{]}\mbox{]})
+\item 
+\mbox{\hyperlink{namespace_communication_a8320afb477e6d9ccafe700582fee6b91}{Communication.\+idx}} = np.\+array(\mbox{\hyperlink{namespace_communication_a142fbaa4648fe7b45a798a8030019199}{dist}}).argmin()
+\item 
+\mbox{\hyperlink{namespace_communication_a1547b1fa75ac1591f35066e7c823e077}{Communication.\+xtrans}} = \mbox{\hyperlink{namespace_communication_ab92b364153abcdaebcdf720d82548df9}{balls}}\mbox{[}\mbox{\hyperlink{namespace_communication_a8320afb477e6d9ccafe700582fee6b91}{idx}}\mbox{]}\mbox{[}\textquotesingle{}x\textquotesingle{}\mbox{]}-\/\mbox{\hyperlink{namespace_communication_a78d82ad6303544338716197dd292e2d2}{robots}}\mbox{[}\mbox{\hyperlink{namespace_communication_a5e0e966415666366c570a202cde07525}{n}}\mbox{]}\mbox{[}\"{}center\"{}\mbox{]}\mbox{[}0\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_communication_aff5e008a50563c357fe02ef2cc72b22c}{Communication.\+ytrans}} = \mbox{\hyperlink{namespace_communication_ab92b364153abcdaebcdf720d82548df9}{balls}}\mbox{[}\mbox{\hyperlink{namespace_communication_a8320afb477e6d9ccafe700582fee6b91}{idx}}\mbox{]}\mbox{[}\textquotesingle{}y\textquotesingle{}\mbox{]}-\/\mbox{\hyperlink{namespace_communication_a78d82ad6303544338716197dd292e2d2}{robots}}\mbox{[}\mbox{\hyperlink{namespace_communication_a5e0e966415666366c570a202cde07525}{n}}\mbox{]}\mbox{[}\"{}center\"{}\mbox{]}\mbox{[}1\mbox{]}
+\item 
+\mbox{\hyperlink{namespace_communication_ae54bbb9805537bce5f111a48420610f6}{Communication.\+phi}} = np.\+arctan(\mbox{\hyperlink{namespace_communication_aff5e008a50563c357fe02ef2cc72b22c}{ytrans}}/\mbox{\hyperlink{namespace_communication_a1547b1fa75ac1591f35066e7c823e077}{xtrans}})
+\item 
+\mbox{\hyperlink{namespace_communication_afc936ae1be897ea15fe859aca179150c}{Communication.\+angle}} = min(\mbox{[}\mbox{\hyperlink{namespace_communication_ae54bbb9805537bce5f111a48420610f6}{phi}} -\/ \mbox{\hyperlink{namespace_communication_a78d82ad6303544338716197dd292e2d2}{robots}}\mbox{[}\mbox{\hyperlink{namespace_communication_a5e0e966415666366c570a202cde07525}{n}}\mbox{]}\mbox{[}\"{}orientation\"{}\mbox{]},\mbox{\hyperlink{namespace_communication_ae54bbb9805537bce5f111a48420610f6}{phi}} -\/ \mbox{\hyperlink{namespace_communication_a78d82ad6303544338716197dd292e2d2}{robots}}\mbox{[}\mbox{\hyperlink{namespace_communication_a5e0e966415666366c570a202cde07525}{n}}\mbox{]}\mbox{[}\"{}orientation\"{}\mbox{]}-\/360\mbox{]})
+\end{DoxyCompactItemize}

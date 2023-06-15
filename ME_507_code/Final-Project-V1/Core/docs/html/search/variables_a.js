@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['length_0',['Length',['../class_c_sens.html#a482786ce0e9d5da99ce243c13500374a',1,'CSens::Length'],['../class_pixy2.html#af70f3d006ec88c0ea52f500938413230',1,'Pixy2::Length']]]
+  ['kd_0',['Kd',['../class_motor.html#a6c87513f80d274f8d44b170cae3be677',1,'Motor']]],
+  ['ki_1',['Ki',['../class_motor.html#a435009b7289c271f82abe4a48f4f3465',1,'Motor']]],
+  ['kp_2',['Kp',['../class_motor.html#adf4a9300dd9db97cee93305fbe324827',1,'Motor']]]
 ];

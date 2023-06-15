@@ -12,7 +12,7 @@ Class definition for a motor driver/controller.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_motor_a3190d10cf16b26293ae6a8a7cc6f9a7c}{Motor}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}htim, TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}htim2, int32\+\_\+t Ch1, int32\+\_\+t Ch2)
+\mbox{\hyperlink{class_motor_a3190d10cf16b26293ae6a8a7cc6f9a7c}{Motor}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}htim, TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{main_8c_a2c80fd5510e2990a59a5c90d745c716c}{htim2}}, int32\+\_\+t Ch1, int32\+\_\+t Ch2)
 \begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_motor}{Motor} class. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_motor_ae041b9de81167d779e707e35571e7be2}{Enable}} (int32\+\_\+t new\+En)
 \begin{DoxyCompactList}\small\item\em Method to enable/disable motor. \end{DoxyCompactList}\item 
@@ -29,53 +29,37 @@ void \mbox{\hyperlink{class_motor_a2d78e1dd7a81217ea192b9d8a8919db5}{Variable\+C
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_motor_a1867a8b2977e1babab19e7e87db8ce07}\label{class_motor_a1867a8b2977e1babab19e7e87db8ce07} 
-TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} {\bfseries tim}
+TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_motor_a1867a8b2977e1babab19e7e87db8ce07}{tim}}
 \begin{DoxyCompactList}\small\item\em Pointer to timer object controlling PWM signal for motor drive pins. \end{DoxyCompactList}\item 
-\Hypertarget{class_motor_afe8c85d61882b063517c04fbfd46bd86}\label{class_motor_afe8c85d61882b063517c04fbfd46bd86} 
-TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} {\bfseries entim}
+TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_motor_afe8c85d61882b063517c04fbfd46bd86}{entim}}
 \begin{DoxyCompactList}\small\item\em Pointer to timer object interpreting quadrature encoder feedback. \end{DoxyCompactList}\item 
-\Hypertarget{class_motor_a32426f87fadadcce23bd936daf27070b}\label{class_motor_a32426f87fadadcce23bd936daf27070b} 
-int32\+\_\+t {\bfseries Fwd\+Ch}
+int32\+\_\+t \mbox{\hyperlink{class_motor_a32426f87fadadcce23bd936daf27070b}{Fwd\+Ch}}
 \begin{DoxyCompactList}\small\item\em Integer representing Forward channel of drive timer. \end{DoxyCompactList}\item 
-\Hypertarget{class_motor_a2bc952e0a163cfce19910382aa29e3c5}\label{class_motor_a2bc952e0a163cfce19910382aa29e3c5} 
-int32\+\_\+t {\bfseries Rev\+Ch}
+int32\+\_\+t \mbox{\hyperlink{class_motor_a2bc952e0a163cfce19910382aa29e3c5}{Rev\+Ch}}
 \begin{DoxyCompactList}\small\item\em Integer representing Reverse channel of drive timer. \end{DoxyCompactList}\item 
-\Hypertarget{class_motor_aa6350dfc7ecdabe983b3e9daa28c5a9c}\label{class_motor_aa6350dfc7ecdabe983b3e9daa28c5a9c} 
-int32\+\_\+t {\bfseries En}
+int32\+\_\+t \mbox{\hyperlink{class_motor_aa6350dfc7ecdabe983b3e9daa28c5a9c}{En}}
 \begin{DoxyCompactList}\small\item\em Enable value for motor object. \end{DoxyCompactList}\item 
-\Hypertarget{class_motor_a98874168e7395ecd24077dffb1f045fd}\label{class_motor_a98874168e7395ecd24077dffb1f045fd} 
-int32\+\_\+t {\bfseries Duty}
+int32\+\_\+t \mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}
 \begin{DoxyCompactList}\small\item\em Current Duty Cycle for motor object. \end{DoxyCompactList}\item 
-\Hypertarget{class_motor_a913de2f1a084b5eaa30278c3a70dbc0a}\label{class_motor_a913de2f1a084b5eaa30278c3a70dbc0a} 
-int32\+\_\+t {\bfseries Pos}
+int32\+\_\+t \mbox{\hyperlink{class_motor_a913de2f1a084b5eaa30278c3a70dbc0a}{Pos}}
 \begin{DoxyCompactList}\small\item\em Current Position Value for motor object. \end{DoxyCompactList}\item 
-\Hypertarget{class_motor_adf4a9300dd9db97cee93305fbe324827}\label{class_motor_adf4a9300dd9db97cee93305fbe324827} 
-float {\bfseries Kp}
+float \mbox{\hyperlink{class_motor_adf4a9300dd9db97cee93305fbe324827}{Kp}}
 \begin{DoxyCompactList}\small\item\em Proportional gain for control loop. \end{DoxyCompactList}\item 
-\Hypertarget{class_motor_a435009b7289c271f82abe4a48f4f3465}\label{class_motor_a435009b7289c271f82abe4a48f4f3465} 
-float {\bfseries Ki}
+float \mbox{\hyperlink{class_motor_a435009b7289c271f82abe4a48f4f3465}{Ki}}
 \begin{DoxyCompactList}\small\item\em Integral gain for control loop. \end{DoxyCompactList}\item 
-\Hypertarget{class_motor_a6c87513f80d274f8d44b170cae3be677}\label{class_motor_a6c87513f80d274f8d44b170cae3be677} 
-float {\bfseries Kd}
+float \mbox{\hyperlink{class_motor_a6c87513f80d274f8d44b170cae3be677}{Kd}}
 \begin{DoxyCompactList}\small\item\em Derivative gain for control loop. \end{DoxyCompactList}\item 
-\Hypertarget{class_motor_ab6855c76809c900fcc0ceb51325fbbf7}\label{class_motor_ab6855c76809c900fcc0ceb51325fbbf7} 
-int32\+\_\+t {\bfseries setpoint}
+int32\+\_\+t \mbox{\hyperlink{class_motor_ab6855c76809c900fcc0ceb51325fbbf7}{setpoint}}
 \begin{DoxyCompactList}\small\item\em Set Point for control loop. \end{DoxyCompactList}\item 
-\Hypertarget{class_motor_afc65daba01d22bb441ccaa2fd2c50c32}\label{class_motor_afc65daba01d22bb441ccaa2fd2c50c32} 
-int32\+\_\+t {\bfseries error}
+int32\+\_\+t \mbox{\hyperlink{class_motor_afc65daba01d22bb441ccaa2fd2c50c32}{error}}
 \begin{DoxyCompactList}\small\item\em Current position error from set point. \end{DoxyCompactList}\item 
-\Hypertarget{class_motor_aa9ee5b69fdbff22dffda9204190685ee}\label{class_motor_aa9ee5b69fdbff22dffda9204190685ee} 
-int32\+\_\+t {\bfseries esum}
+int32\+\_\+t \mbox{\hyperlink{class_motor_aa9ee5b69fdbff22dffda9204190685ee}{esum}}
 \begin{DoxyCompactList}\small\item\em integral of past error from set point \end{DoxyCompactList}\item 
-\Hypertarget{class_motor_aae158f1e157fdcf8025816a680f55be1}\label{class_motor_aae158f1e157fdcf8025816a680f55be1} 
-int32\+\_\+t {\bfseries derror}
+int32\+\_\+t \mbox{\hyperlink{class_motor_aae158f1e157fdcf8025816a680f55be1}{derror}}
 \begin{DoxyCompactList}\small\item\em derivative of past error from set point \end{DoxyCompactList}\item 
-\Hypertarget{class_motor_a17dda9f9427518acfc75b1a93dfef5de}\label{class_motor_a17dda9f9427518acfc75b1a93dfef5de} 
-int16\+\_\+t {\bfseries oldticks}
+int16\+\_\+t \mbox{\hyperlink{class_motor_a17dda9f9427518acfc75b1a93dfef5de}{oldticks}}
 \begin{DoxyCompactList}\small\item\em last timer count value \end{DoxyCompactList}\item 
-\Hypertarget{class_motor_a1488c62593760ccd830dd139a226d149}\label{class_motor_a1488c62593760ccd830dd139a226d149} 
-int16\+\_\+t {\bfseries ticks}
+int16\+\_\+t \mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}}
 \begin{DoxyCompactList}\small\item\em timer count value \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -85,6 +69,10 @@ Class definition for a motor driver/controller.
 This contains the attribute definitions and the function prototypes for the motor driver. The motors take a PWM signal from two channels representing the forward and reverse channels. The encoders return two square waves which are 90 degrees out of phase to allow for a full quadrature setup.
 
 In addition to the method allowing for setting a static duty cycle, the class has two additional methods which when called on every pass through a loop (no more than 10 ms between calls) allow for closed loop position control. There are also methods to change the gains, to zero out the errors and to enable/disable the motors. 
+
+Definition at line \mbox{\hyperlink{_motor_8h_source_l00043}{43}} of file \mbox{\hyperlink{_motor_8h_source}{Motor.\+h}}.
+
+
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_motor_a3190d10cf16b26293ae6a8a7cc6f9a7c}\label{class_motor_a3190d10cf16b26293ae6a8a7cc6f9a7c} 
@@ -112,6 +100,32 @@ This creates a \doxylink{class_motor}{Motor} object connected to the timers spec
 \end{DoxyParams}
 
 
+Definition at line \mbox{\hyperlink{_motor_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{_motor_8cpp_source}{Motor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a1867a8b2977e1babab19e7e87db8ce07}{tim}}\ \ \ \ \ \ \ \ =\ \mbox{\hyperlink{main_8c_a25fc663547539bc49fecc0011bd76ab5}{htim1}};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_afe8c85d61882b063517c04fbfd46bd86}{entim}}\ \ \ \ =\ \mbox{\hyperlink{main_8c_a2c80fd5510e2990a59a5c90d745c716c}{htim2}};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a32426f87fadadcce23bd936daf27070b}{FwdCh}}\ \ \ \ =\ Ch1;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a2bc952e0a163cfce19910382aa29e3c5}{RevCh}}\ \ \ \ \ =\ Ch2;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_aa6350dfc7ecdabe983b3e9daa28c5a9c}{En}}\ \ \ \ \ \ \ \ \ \ =\ 0;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}\ \ \ \ \ \ =\ 0;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a913de2f1a084b5eaa30278c3a70dbc0a}{Pos}}\ \ \ \ \ \ \ \ =\ 0;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_adf4a9300dd9db97cee93305fbe324827}{Kp}}\ \ \ \ \ \ \ \ \ \ =\ 0;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a435009b7289c271f82abe4a48f4f3465}{Ki}}\ \ \ \ \ \ \ \ \ \ =\ 0;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a6c87513f80d274f8d44b170cae3be677}{Kd}}\ \ \ \ \ \ \ \ \ \ =\ 0;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_ab6855c76809c900fcc0ceb51325fbbf7}{setpoint}}\ \ =\ 0;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_afc65daba01d22bb441ccaa2fd2c50c32}{error}}\ \ \ \ =\ 0;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_aa9ee5b69fdbff22dffda9204190685ee}{esum}}\ \ \ \ \ \ =\ 0;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_aae158f1e157fdcf8025816a680f55be1}{derror}}\ \ \ \ \ \ =\ 0;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a17dda9f9427518acfc75b1a93dfef5de}{oldticks}}\ \ =\ 0;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}}\ \ \ \ =\ 0;}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_motor_aeebacb3410fcf6fd74e975214b328984}\label{class_motor_aeebacb3410fcf6fd74e975214b328984} 
 \index{Motor@{Motor}!Control@{Control}}
@@ -130,6 +144,45 @@ This implements a PID control loop for the object where the duty cycle is update
 {\em new\+Set} & This is the new desired set point for the motor controller \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_motor_8cpp_source_l00110}{110}} of file \mbox{\hyperlink{_motor_8cpp_source}{Motor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_ab6855c76809c900fcc0ceb51325fbbf7}{setpoint}}=\ newSet;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}}\ =\ \_\_HAL\_TIM\_GET\_COUNTER(\mbox{\hyperlink{class_motor_afe8c85d61882b063517c04fbfd46bd86}{entim}})-\/\mbox{\hyperlink{class_motor_a17dda9f9427518acfc75b1a93dfef5de}{oldticks}};}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}}>32768)\{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}}\ =\mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}}-\/65535;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}}<-\/32768)\{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}}\ =\mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}}+65535;}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a913de2f1a084b5eaa30278c3a70dbc0a}{Pos}}\ =\ \mbox{\hyperlink{class_motor_a913de2f1a084b5eaa30278c3a70dbc0a}{Pos}}+\mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}}-\/\mbox{\hyperlink{class_motor_a17dda9f9427518acfc75b1a93dfef5de}{oldticks}};}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a17dda9f9427518acfc75b1a93dfef5de}{oldticks}}\ =\ \mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}};}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_aae158f1e157fdcf8025816a680f55be1}{derror}}\ =\ (\mbox{\hyperlink{class_motor_ab6855c76809c900fcc0ceb51325fbbf7}{setpoint}}-\/\mbox{\hyperlink{class_motor_a913de2f1a084b5eaa30278c3a70dbc0a}{Pos}})-\/\mbox{\hyperlink{class_motor_afc65daba01d22bb441ccaa2fd2c50c32}{error}};}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_afc65daba01d22bb441ccaa2fd2c50c32}{error}}\ =\ \mbox{\hyperlink{class_motor_afc65daba01d22bb441ccaa2fd2c50c32}{error}}+\mbox{\hyperlink{class_motor_aae158f1e157fdcf8025816a680f55be1}{derror}};}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_aa9ee5b69fdbff22dffda9204190685ee}{esum}}\ =\ \mbox{\hyperlink{class_motor_aa9ee5b69fdbff22dffda9204190685ee}{esum}}+\mbox{\hyperlink{class_motor_afc65daba01d22bb441ccaa2fd2c50c32}{error}};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}\ =\ (\mbox{\hyperlink{class_motor_adf4a9300dd9db97cee93305fbe324827}{Kp}}*\mbox{\hyperlink{class_motor_afc65daba01d22bb441ccaa2fd2c50c32}{error}}+\mbox{\hyperlink{class_motor_a435009b7289c271f82abe4a48f4f3465}{Ki}}*\mbox{\hyperlink{class_motor_aa9ee5b69fdbff22dffda9204190685ee}{esum}}+\mbox{\hyperlink{class_motor_a6c87513f80d274f8d44b170cae3be677}{Kd}}*\mbox{\hyperlink{class_motor_aae158f1e157fdcf8025816a680f55be1}{derror}});}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}>4800)\{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}\ =\ 4800;}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}<-\/4800)\{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}\ =\ -\/4800;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}>=0)\{}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \_\_HAL\_TIM\_SET\_COMPARE(\mbox{\hyperlink{class_motor_a1867a8b2977e1babab19e7e87db8ce07}{tim}},\mbox{\hyperlink{class_motor_a32426f87fadadcce23bd936daf27070b}{FwdCh}},\mbox{\hyperlink{class_motor_aa6350dfc7ecdabe983b3e9daa28c5a9c}{En}}*\mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}});}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \_\_HAL\_TIM\_SET\_COMPARE(\mbox{\hyperlink{class_motor_a1867a8b2977e1babab19e7e87db8ce07}{tim}},\mbox{\hyperlink{class_motor_a2bc952e0a163cfce19910382aa29e3c5}{RevCh}},0);}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}<0)\{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \_\_HAL\_TIM\_SET\_COMPARE(\mbox{\hyperlink{class_motor_a1867a8b2977e1babab19e7e87db8ce07}{tim}},\mbox{\hyperlink{class_motor_a2bc952e0a163cfce19910382aa29e3c5}{RevCh}},\mbox{\hyperlink{class_motor_aa6350dfc7ecdabe983b3e9daa28c5a9c}{En}}*-\/1*\mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}});}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \_\_HAL\_TIM\_SET\_COMPARE(\mbox{\hyperlink{class_motor_a1867a8b2977e1babab19e7e87db8ce07}{tim}},\mbox{\hyperlink{class_motor_a32426f87fadadcce23bd936daf27070b}{FwdCh}},0);}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \}}
+
+\end{DoxyCode}
 \Hypertarget{class_motor_a9d7fe6d75f5d4fdba765c2d14d557662}\label{class_motor_a9d7fe6d75f5d4fdba765c2d14d557662} 
 \index{Motor@{Motor}!duty@{duty}}
 \index{duty@{duty}!Motor@{Motor}}
@@ -147,6 +200,24 @@ This sets the duty cycle of the PWM channels controlling the motor
 {\em new\+Duty} & This is the new desired duty cycle as a percent(-\/100 to 100) \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_motor_8cpp_source_l00087}{87}} of file \mbox{\hyperlink{_motor_8cpp_source}{Motor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}\ =\ newDuty;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}>=0)\{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \_\_HAL\_TIM\_SET\_COMPARE(\mbox{\hyperlink{class_motor_a1867a8b2977e1babab19e7e87db8ce07}{tim}},\mbox{\hyperlink{class_motor_a32426f87fadadcce23bd936daf27070b}{FwdCh}},\mbox{\hyperlink{class_motor_aa6350dfc7ecdabe983b3e9daa28c5a9c}{En}}*\mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}*48);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \_\_HAL\_TIM\_SET\_COMPARE(\mbox{\hyperlink{class_motor_a1867a8b2977e1babab19e7e87db8ce07}{tim}},\mbox{\hyperlink{class_motor_a2bc952e0a163cfce19910382aa29e3c5}{RevCh}},0);}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}<0)\{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \_\_HAL\_TIM\_SET\_COMPARE(\mbox{\hyperlink{class_motor_a1867a8b2977e1babab19e7e87db8ce07}{tim}},\mbox{\hyperlink{class_motor_a2bc952e0a163cfce19910382aa29e3c5}{RevCh}},\mbox{\hyperlink{class_motor_aa6350dfc7ecdabe983b3e9daa28c5a9c}{En}}*-\/1*\mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}*48);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \_\_HAL\_TIM\_SET\_COMPARE(\mbox{\hyperlink{class_motor_a1867a8b2977e1babab19e7e87db8ce07}{tim}},\mbox{\hyperlink{class_motor_a32426f87fadadcce23bd936daf27070b}{FwdCh}},0);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ \}}
+
+\end{DoxyCode}
 \Hypertarget{class_motor_ae041b9de81167d779e707e35571e7be2}\label{class_motor_ae041b9de81167d779e707e35571e7be2} 
 \index{Motor@{Motor}!Enable@{Enable}}
 \index{Enable@{Enable}!Motor@{Motor}}
@@ -164,6 +235,17 @@ This enables/disables the motor using a pseudo-\/boolean
 {\em new\+En} & This is a pseudo-\/boolean controlling the enable status of the motors. A value of 1 is enables the motors, a value of 0 disables the motors \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_motor_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{_motor_8cpp_source}{Motor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_aa6350dfc7ecdabe983b3e9daa28c5a9c}{En}}\ =\ newEn;}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+
+\end{DoxyCode}
 \Hypertarget{class_motor_ac3edc48cd9375328a110a5d209729262}\label{class_motor_ac3edc48cd9375328a110a5d209729262} 
 \index{Motor@{Motor}!setGains@{setGains}}
 \index{setGains@{setGains}!Motor@{Motor}}
@@ -185,6 +267,19 @@ This allows for the setting of the Proportional, Integral, and Derivative gains 
 {\em n\+Kd} & This is the new Derivative Gain value \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_motor_8cpp_source_l00157}{157}} of file \mbox{\hyperlink{_motor_8cpp_source}{Motor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_adf4a9300dd9db97cee93305fbe324827}{Kp}}\ =\ nKp;}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a435009b7289c271f82abe4a48f4f3465}{Ki}}\ =\ nKi;}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a6c87513f80d274f8d44b170cae3be677}{Kd}}\ =\ nKd;}
+\DoxyCodeLine{00161\ \ \ \ \ \}}
+
+\end{DoxyCode}
 \Hypertarget{class_motor_a2d78e1dd7a81217ea192b9d8a8919db5}\label{class_motor_a2d78e1dd7a81217ea192b9d8a8919db5} 
 \index{Motor@{Motor}!VariableControl@{VariableControl}}
 \index{VariableControl@{VariableControl}!Motor@{Motor}}
@@ -208,6 +303,53 @@ This implements a modified PI control loop where the Integral gain can be enable
 {\em int\+Error} & This is the integral error threshold after which integration of the error will begin. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_motor_8cpp_source_l00199}{199}} of file \mbox{\hyperlink{_motor_8cpp_source}{Motor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_adf4a9300dd9db97cee93305fbe324827}{Kp}}\ =\ nKp;}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a435009b7289c271f82abe4a48f4f3465}{Ki}}\ =\ nKi;}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Kd\ =\ 0;}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_ab6855c76809c900fcc0ceb51325fbbf7}{setpoint}}=\ newSet;}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}}\ =\ \_\_HAL\_TIM\_GET\_COUNTER(\mbox{\hyperlink{class_motor_afe8c85d61882b063517c04fbfd46bd86}{entim}})-\/\mbox{\hyperlink{class_motor_a17dda9f9427518acfc75b1a93dfef5de}{oldticks}};}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}}>32768)\{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}}\ =\mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}}-\/65535;}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}}<-\/32768)\{}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}}\ =\mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}}+65535;}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a913de2f1a084b5eaa30278c3a70dbc0a}{Pos}}\ =\ \mbox{\hyperlink{class_motor_a913de2f1a084b5eaa30278c3a70dbc0a}{Pos}}+\mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}}-\/\mbox{\hyperlink{class_motor_a17dda9f9427518acfc75b1a93dfef5de}{oldticks}};}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a17dda9f9427518acfc75b1a93dfef5de}{oldticks}}\ =\ \mbox{\hyperlink{class_motor_a1488c62593760ccd830dd139a226d149}{ticks}};}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_aae158f1e157fdcf8025816a680f55be1}{derror}}\ =\ (\mbox{\hyperlink{class_motor_ab6855c76809c900fcc0ceb51325fbbf7}{setpoint}}-\/\mbox{\hyperlink{class_motor_a913de2f1a084b5eaa30278c3a70dbc0a}{Pos}})-\/\mbox{\hyperlink{class_motor_afc65daba01d22bb441ccaa2fd2c50c32}{error}};}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_afc65daba01d22bb441ccaa2fd2c50c32}{error}}\ =\ \mbox{\hyperlink{class_motor_afc65daba01d22bb441ccaa2fd2c50c32}{error}}+\mbox{\hyperlink{class_motor_aae158f1e157fdcf8025816a680f55be1}{derror}};}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_motor_afc65daba01d22bb441ccaa2fd2c50c32}{error}}\ <=\ intError)\{}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_aa9ee5b69fdbff22dffda9204190685ee}{esum}}\ =\ \mbox{\hyperlink{class_motor_aa9ee5b69fdbff22dffda9204190685ee}{esum}}+\mbox{\hyperlink{class_motor_afc65daba01d22bb441ccaa2fd2c50c32}{error}};}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_aa9ee5b69fdbff22dffda9204190685ee}{esum}}\ =\ 0;}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}\ =\ (\mbox{\hyperlink{class_motor_adf4a9300dd9db97cee93305fbe324827}{Kp}}*\mbox{\hyperlink{class_motor_afc65daba01d22bb441ccaa2fd2c50c32}{error}}+\mbox{\hyperlink{class_motor_a435009b7289c271f82abe4a48f4f3465}{Ki}}*\mbox{\hyperlink{class_motor_aa9ee5b69fdbff22dffda9204190685ee}{esum}}+\mbox{\hyperlink{class_motor_a6c87513f80d274f8d44b170cae3be677}{Kd}}*\mbox{\hyperlink{class_motor_aae158f1e157fdcf8025816a680f55be1}{derror}});}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}>4800)\{}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}\ =\ 4800;}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}<-\/4800)\{}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}\ =\ -\/4800;}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00228\ }
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}>=0)\{}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \_\_HAL\_TIM\_SET\_COMPARE(\mbox{\hyperlink{class_motor_a1867a8b2977e1babab19e7e87db8ce07}{tim}},\mbox{\hyperlink{class_motor_a32426f87fadadcce23bd936daf27070b}{FwdCh}},\mbox{\hyperlink{class_motor_aa6350dfc7ecdabe983b3e9daa28c5a9c}{En}}*\mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}});}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \_\_HAL\_TIM\_SET\_COMPARE(\mbox{\hyperlink{class_motor_a1867a8b2977e1babab19e7e87db8ce07}{tim}},\mbox{\hyperlink{class_motor_a2bc952e0a163cfce19910382aa29e3c5}{RevCh}},0);}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}}<0)\{}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \_\_HAL\_TIM\_SET\_COMPARE(\mbox{\hyperlink{class_motor_a1867a8b2977e1babab19e7e87db8ce07}{tim}},\mbox{\hyperlink{class_motor_a2bc952e0a163cfce19910382aa29e3c5}{RevCh}},\mbox{\hyperlink{class_motor_aa6350dfc7ecdabe983b3e9daa28c5a9c}{En}}*-\/1*\mbox{\hyperlink{class_motor_a98874168e7395ecd24077dffb1f045fd}{Duty}});}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \_\_HAL\_TIM\_SET\_COMPARE(\mbox{\hyperlink{class_motor_a1867a8b2977e1babab19e7e87db8ce07}{tim}},\mbox{\hyperlink{class_motor_a32426f87fadadcce23bd936daf27070b}{FwdCh}},0);}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ \ \ \ \ \}}
+
+\end{DoxyCode}
 \Hypertarget{class_motor_acaf15733cbb06206652de484efd96dbf}\label{class_motor_acaf15733cbb06206652de484efd96dbf} 
 \index{Motor@{Motor}!zeroErrors@{zeroErrors}}
 \index{zeroErrors@{zeroErrors}!Motor@{Motor}}
@@ -219,6 +361,246 @@ This implements a modified PI control loop where the Integral gain can be enable
 Method to zero errors for control loop. 
 
 This allows for the zeroing of all error values when setting a new setpoint 
+
+Definition at line \mbox{\hyperlink{_motor_8cpp_source_l00171}{171}} of file \mbox{\hyperlink{_motor_8cpp_source}{Motor.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_afc65daba01d22bb441ccaa2fd2c50c32}{error}}\ =\ 0;}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_aae158f1e157fdcf8025816a680f55be1}{derror}}\ =\ 0;}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_motor_aa9ee5b69fdbff22dffda9204190685ee}{esum}}\ =\ 0;}
+\DoxyCodeLine{00175\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_motor_aae158f1e157fdcf8025816a680f55be1}\label{class_motor_aae158f1e157fdcf8025816a680f55be1} 
+\index{Motor@{Motor}!derror@{derror}}
+\index{derror@{derror}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{derror}{derror}}
+{\footnotesize\ttfamily int32\+\_\+t Motor\+::derror}
+
+
+
+derivative of past error from set point 
+
+
+
+Definition at line \mbox{\hyperlink{_motor_8h_source_l00059}{59}} of file \mbox{\hyperlink{_motor_8h_source}{Motor.\+h}}.
+
+\Hypertarget{class_motor_a98874168e7395ecd24077dffb1f045fd}\label{class_motor_a98874168e7395ecd24077dffb1f045fd} 
+\index{Motor@{Motor}!Duty@{Duty}}
+\index{Duty@{Duty}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{Duty}{Duty}}
+{\footnotesize\ttfamily int32\+\_\+t Motor\+::\+Duty}
+
+
+
+Current Duty Cycle for motor object. 
+
+
+
+Definition at line \mbox{\hyperlink{_motor_8h_source_l00051}{51}} of file \mbox{\hyperlink{_motor_8h_source}{Motor.\+h}}.
+
+\Hypertarget{class_motor_aa6350dfc7ecdabe983b3e9daa28c5a9c}\label{class_motor_aa6350dfc7ecdabe983b3e9daa28c5a9c} 
+\index{Motor@{Motor}!En@{En}}
+\index{En@{En}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{En}{En}}
+{\footnotesize\ttfamily int32\+\_\+t Motor\+::\+En}
+
+
+
+Enable value for motor object. 
+
+
+
+Definition at line \mbox{\hyperlink{_motor_8h_source_l00050}{50}} of file \mbox{\hyperlink{_motor_8h_source}{Motor.\+h}}.
+
+\Hypertarget{class_motor_afe8c85d61882b063517c04fbfd46bd86}\label{class_motor_afe8c85d61882b063517c04fbfd46bd86} 
+\index{Motor@{Motor}!entim@{entim}}
+\index{entim@{entim}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{entim}{entim}}
+{\footnotesize\ttfamily TIM\+\_\+\+Handle\+Type\+Def\texorpdfstring{$\ast$}{*} Motor\+::entim}
+
+
+
+Pointer to timer object interpreting quadrature encoder feedback. 
+
+
+
+Definition at line \mbox{\hyperlink{_motor_8h_source_l00047}{47}} of file \mbox{\hyperlink{_motor_8h_source}{Motor.\+h}}.
+
+\Hypertarget{class_motor_afc65daba01d22bb441ccaa2fd2c50c32}\label{class_motor_afc65daba01d22bb441ccaa2fd2c50c32} 
+\index{Motor@{Motor}!error@{error}}
+\index{error@{error}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{error}{error}}
+{\footnotesize\ttfamily int32\+\_\+t Motor\+::error}
+
+
+
+Current position error from set point. 
+
+
+
+Definition at line \mbox{\hyperlink{_motor_8h_source_l00057}{57}} of file \mbox{\hyperlink{_motor_8h_source}{Motor.\+h}}.
+
+\Hypertarget{class_motor_aa9ee5b69fdbff22dffda9204190685ee}\label{class_motor_aa9ee5b69fdbff22dffda9204190685ee} 
+\index{Motor@{Motor}!esum@{esum}}
+\index{esum@{esum}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{esum}{esum}}
+{\footnotesize\ttfamily int32\+\_\+t Motor\+::esum}
+
+
+
+integral of past error from set point 
+
+
+
+Definition at line \mbox{\hyperlink{_motor_8h_source_l00058}{58}} of file \mbox{\hyperlink{_motor_8h_source}{Motor.\+h}}.
+
+\Hypertarget{class_motor_a32426f87fadadcce23bd936daf27070b}\label{class_motor_a32426f87fadadcce23bd936daf27070b} 
+\index{Motor@{Motor}!FwdCh@{FwdCh}}
+\index{FwdCh@{FwdCh}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{FwdCh}{FwdCh}}
+{\footnotesize\ttfamily int32\+\_\+t Motor\+::\+Fwd\+Ch}
+
+
+
+Integer representing Forward channel of drive timer. 
+
+
+
+Definition at line \mbox{\hyperlink{_motor_8h_source_l00048}{48}} of file \mbox{\hyperlink{_motor_8h_source}{Motor.\+h}}.
+
+\Hypertarget{class_motor_a6c87513f80d274f8d44b170cae3be677}\label{class_motor_a6c87513f80d274f8d44b170cae3be677} 
+\index{Motor@{Motor}!Kd@{Kd}}
+\index{Kd@{Kd}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{Kd}{Kd}}
+{\footnotesize\ttfamily float Motor\+::\+Kd}
+
+
+
+Derivative gain for control loop. 
+
+
+
+Definition at line \mbox{\hyperlink{_motor_8h_source_l00055}{55}} of file \mbox{\hyperlink{_motor_8h_source}{Motor.\+h}}.
+
+\Hypertarget{class_motor_a435009b7289c271f82abe4a48f4f3465}\label{class_motor_a435009b7289c271f82abe4a48f4f3465} 
+\index{Motor@{Motor}!Ki@{Ki}}
+\index{Ki@{Ki}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{Ki}{Ki}}
+{\footnotesize\ttfamily float Motor\+::\+Ki}
+
+
+
+Integral gain for control loop. 
+
+
+
+Definition at line \mbox{\hyperlink{_motor_8h_source_l00054}{54}} of file \mbox{\hyperlink{_motor_8h_source}{Motor.\+h}}.
+
+\Hypertarget{class_motor_adf4a9300dd9db97cee93305fbe324827}\label{class_motor_adf4a9300dd9db97cee93305fbe324827} 
+\index{Motor@{Motor}!Kp@{Kp}}
+\index{Kp@{Kp}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{Kp}{Kp}}
+{\footnotesize\ttfamily float Motor\+::\+Kp}
+
+
+
+Proportional gain for control loop. 
+
+
+
+Definition at line \mbox{\hyperlink{_motor_8h_source_l00053}{53}} of file \mbox{\hyperlink{_motor_8h_source}{Motor.\+h}}.
+
+\Hypertarget{class_motor_a17dda9f9427518acfc75b1a93dfef5de}\label{class_motor_a17dda9f9427518acfc75b1a93dfef5de} 
+\index{Motor@{Motor}!oldticks@{oldticks}}
+\index{oldticks@{oldticks}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{oldticks}{oldticks}}
+{\footnotesize\ttfamily int16\+\_\+t Motor\+::oldticks}
+
+
+
+last timer count value 
+
+
+
+Definition at line \mbox{\hyperlink{_motor_8h_source_l00060}{60}} of file \mbox{\hyperlink{_motor_8h_source}{Motor.\+h}}.
+
+\Hypertarget{class_motor_a913de2f1a084b5eaa30278c3a70dbc0a}\label{class_motor_a913de2f1a084b5eaa30278c3a70dbc0a} 
+\index{Motor@{Motor}!Pos@{Pos}}
+\index{Pos@{Pos}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{Pos}{Pos}}
+{\footnotesize\ttfamily int32\+\_\+t Motor\+::\+Pos}
+
+
+
+Current Position Value for motor object. 
+
+
+
+Definition at line \mbox{\hyperlink{_motor_8h_source_l00052}{52}} of file \mbox{\hyperlink{_motor_8h_source}{Motor.\+h}}.
+
+\Hypertarget{class_motor_a2bc952e0a163cfce19910382aa29e3c5}\label{class_motor_a2bc952e0a163cfce19910382aa29e3c5} 
+\index{Motor@{Motor}!RevCh@{RevCh}}
+\index{RevCh@{RevCh}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{RevCh}{RevCh}}
+{\footnotesize\ttfamily int32\+\_\+t Motor\+::\+Rev\+Ch}
+
+
+
+Integer representing Reverse channel of drive timer. 
+
+
+
+Definition at line \mbox{\hyperlink{_motor_8h_source_l00049}{49}} of file \mbox{\hyperlink{_motor_8h_source}{Motor.\+h}}.
+
+\Hypertarget{class_motor_ab6855c76809c900fcc0ceb51325fbbf7}\label{class_motor_ab6855c76809c900fcc0ceb51325fbbf7} 
+\index{Motor@{Motor}!setpoint@{setpoint}}
+\index{setpoint@{setpoint}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{setpoint}{setpoint}}
+{\footnotesize\ttfamily int32\+\_\+t Motor\+::setpoint}
+
+
+
+Set Point for control loop. 
+
+
+
+Definition at line \mbox{\hyperlink{_motor_8h_source_l00056}{56}} of file \mbox{\hyperlink{_motor_8h_source}{Motor.\+h}}.
+
+\Hypertarget{class_motor_a1488c62593760ccd830dd139a226d149}\label{class_motor_a1488c62593760ccd830dd139a226d149} 
+\index{Motor@{Motor}!ticks@{ticks}}
+\index{ticks@{ticks}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{ticks}{ticks}}
+{\footnotesize\ttfamily int16\+\_\+t Motor\+::ticks}
+
+
+
+timer count value 
+
+
+
+Definition at line \mbox{\hyperlink{_motor_8h_source_l00061}{61}} of file \mbox{\hyperlink{_motor_8h_source}{Motor.\+h}}.
+
+\Hypertarget{class_motor_a1867a8b2977e1babab19e7e87db8ce07}\label{class_motor_a1867a8b2977e1babab19e7e87db8ce07} 
+\index{Motor@{Motor}!tim@{tim}}
+\index{tim@{tim}!Motor@{Motor}}
+\doxysubsubsection{\texorpdfstring{tim}{tim}}
+{\footnotesize\ttfamily TIM\+\_\+\+Handle\+Type\+Def\texorpdfstring{$\ast$}{*} Motor\+::tim}
+
+
+
+Pointer to timer object controlling PWM signal for motor drive pins. 
+
+
+
+Definition at line \mbox{\hyperlink{_motor_8h_source_l00046}{46}} of file \mbox{\hyperlink{_motor_8h_source}{Motor.\+h}}.
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

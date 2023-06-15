@@ -1,0 +1,26 @@
+var class_motor =
+[
+    [ "Motor", "class_motor.html#a3190d10cf16b26293ae6a8a7cc6f9a7c", null ],
+    [ "Control", "class_motor.html#aeebacb3410fcf6fd74e975214b328984", null ],
+    [ "duty", "class_motor.html#a9d7fe6d75f5d4fdba765c2d14d557662", null ],
+    [ "Enable", "class_motor.html#ae041b9de81167d779e707e35571e7be2", null ],
+    [ "setGains", "class_motor.html#ac3edc48cd9375328a110a5d209729262", null ],
+    [ "VariableControl", "class_motor.html#a2d78e1dd7a81217ea192b9d8a8919db5", null ],
+    [ "zeroErrors", "class_motor.html#acaf15733cbb06206652de484efd96dbf", null ],
+    [ "derror", "class_motor.html#aae158f1e157fdcf8025816a680f55be1", null ],
+    [ "Duty", "class_motor.html#a98874168e7395ecd24077dffb1f045fd", null ],
+    [ "En", "class_motor.html#aa6350dfc7ecdabe983b3e9daa28c5a9c", null ],
+    [ "entim", "class_motor.html#afe8c85d61882b063517c04fbfd46bd86", null ],
+    [ "error", "class_motor.html#afc65daba01d22bb441ccaa2fd2c50c32", null ],
+    [ "esum", "class_motor.html#aa9ee5b69fdbff22dffda9204190685ee", null ],
+    [ "FwdCh", "class_motor.html#a32426f87fadadcce23bd936daf27070b", null ],
+    [ "Kd", "class_motor.html#a6c87513f80d274f8d44b170cae3be677", null ],
+    [ "Ki", "class_motor.html#a435009b7289c271f82abe4a48f4f3465", null ],
+    [ "Kp", "class_motor.html#adf4a9300dd9db97cee93305fbe324827", null ],
+    [ "oldticks", "class_motor.html#a17dda9f9427518acfc75b1a93dfef5de", null ],
+    [ "Pos", "class_motor.html#a913de2f1a084b5eaa30278c3a70dbc0a", null ],
+    [ "RevCh", "class_motor.html#a2bc952e0a163cfce19910382aa29e3c5", null ],
+    [ "setpoint", "class_motor.html#ab6855c76809c900fcc0ceb51325fbbf7", null ],
+    [ "ticks", "class_motor.html#a1488c62593760ccd830dd139a226d149", null ],
+    [ "tim", "class_motor.html#a1867a8b2977e1babab19e7e87db8ce07", null ]
+];

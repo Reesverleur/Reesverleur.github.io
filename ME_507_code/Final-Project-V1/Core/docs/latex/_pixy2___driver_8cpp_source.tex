@@ -1,0 +1,65 @@
+\doxysection{Pixy2\+\_\+\+Driver.\+cpp}
+\hypertarget{_pixy2___driver_8cpp_source}{}\label{_pixy2___driver_8cpp_source}\index{Src/Pixy2\_Driver.cpp@{Src/Pixy2\_Driver.cpp}}
+\mbox{\hyperlink{_pixy2___driver_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_pixy2___driver_8h}{Pixy2\_Driver.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <numeric>}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00020}00020\ \textcolor{comment}{//\ Constructor\ only\ requires\ a\ few\ of\ the\ class\ attributes}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00035}\mbox{\hyperlink{class_pixy2_aead5ae3d4ebc59d35fdc8faae3ee3797}{00035}}\ \textcolor{comment}{}\ \ \ \ \mbox{\hyperlink{class_pixy2_aead5ae3d4ebc59d35fdc8faae3ee3797}{Pixy2::Pixy2}}(SPI\_HandleTypeDef*\ hspi,GPIO\_TypeDef*\ GPIOx,uint16\_t\ GPIO\_Pin)\{}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pixy2_a49f19b0f16a7f2aac4ed828f308c547d}{spi}}\ \ \ \ \ \ \ \ =\ hspi;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ pointer\ to\ spi\ object}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pixy2_a75a4ee39e2cecd3391825d84cfbb5020}{SS\_Port}}\ \ \ \ =\ GPIOx;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ pointer\ to\ ss\ port}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pixy2_af55d898a6bde47ead0588ea66aed2b1c}{SS\_Pin}}\ \ \ \ =\ GPIO\_Pin;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ pointer\ to\ ss\ pin}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00040}00040\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00041}00041\ \textcolor{comment}{//\ Updates\ block\ data\ for\ pixy2\ object}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00058}\mbox{\hyperlink{class_pixy2_acd9f3a548eed9c7348c14619affbab9b}{00058}}\ \textcolor{comment}{}\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pixy2_acd9f3a548eed9c7348c14619affbab9b}{Pixy2::getBlock}}(uint8\_t\ sigmap,uint8\_t\ maxblocks)\{}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ uint8\_t\ blocReq[]\ =\ \{0xae,0xc1,32,2,sigmap,maxblocks\};\ \ \ \ \ \ \textcolor{comment}{//\ block\ request\ data}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pixy2_af70f3d006ec88c0ea52f500938413230}{Length}}\ =\ 20;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ length\ of\ response}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ HAL\_GPIO\_WritePin(\mbox{\hyperlink{class_pixy2_a75a4ee39e2cecd3391825d84cfbb5020}{SS\_Port}},\mbox{\hyperlink{class_pixy2_af55d898a6bde47ead0588ea66aed2b1c}{SS\_Pin}},GPIO\_PIN\_RESET);\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ drive\ ss\ pin\ low\ to\ enable\ communication}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ HAL\_SPI\_Transmit\_IT(\mbox{\hyperlink{class_pixy2_a49f19b0f16a7f2aac4ed828f308c547d}{spi}},(uint8\_t*)\ \&blocReq,6);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ transmit\ block\ request\ return\ data\ is\ put\ in\ Data}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ int16\_t\ n;}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(n=0;n<99;n++)\{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ iterate\ over\ all\ elements\ in\ Data}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_pixy2_aa8af39f57cd9f4fe191fc560ef761926}{Data}}[n]\ ==\ 0xaf\ \&\&\ \mbox{\hyperlink{class_pixy2_aa8af39f57cd9f4fe191fc560ef761926}{Data}}[n+1]\ ==\ 0xc1)\{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ check\ for\ first\ occurrence\ of\ \ 0xaec1}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pixy2_aaa32690b46c6fc32298c63eaa48be9a6}{StartByte}}\ =\ n;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ set\ as\ start\ byte}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ int16\_t\ csum\ =\ std::accumulate(\mbox{\hyperlink{class_pixy2_aa8af39f57cd9f4fe191fc560ef761926}{Data}}+\mbox{\hyperlink{class_pixy2_aaa32690b46c6fc32298c63eaa48be9a6}{StartByte}}+6,\mbox{\hyperlink{class_pixy2_aa8af39f57cd9f4fe191fc560ef761926}{Data}}+\mbox{\hyperlink{class_pixy2_aaa32690b46c6fc32298c63eaa48be9a6}{StartByte}}+20,0);}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(csum\ ==\ (\mbox{\hyperlink{class_pixy2_aa8af39f57cd9f4fe191fc560ef761926}{Data}}[\mbox{\hyperlink{class_pixy2_aaa32690b46c6fc32298c63eaa48be9a6}{StartByte}}+5]<<8)+\mbox{\hyperlink{class_pixy2_aa8af39f57cd9f4fe191fc560ef761926}{Data}}[\mbox{\hyperlink{class_pixy2_aaa32690b46c6fc32298c63eaa48be9a6}{StartByte}}+4])\{}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ memcpy(\&\mbox{\hyperlink{class_pixy2_a1f52f01612a384324ca724557f3b660e}{Block}},\&\mbox{\hyperlink{class_pixy2_aa8af39f57cd9f4fe191fc560ef761926}{Data}}[n],\mbox{\hyperlink{class_pixy2_af70f3d006ec88c0ea52f500938413230}{Length}});\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ copy\ the\ data\ to\ Block\ for\ stability}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ n\ =\ 100;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ exit\ out\ of\ for\ loop\ early}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00076}00076\ \textcolor{comment}{//\ Sets\ coordinates\ from\ last\ captured\ block}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00086}\mbox{\hyperlink{class_pixy2_ad7032b25bbeaacbadbfea0f4a63b9ada}{00086}}\ \textcolor{comment}{}\ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pixy2_ad7032b25bbeaacbadbfea0f4a63b9ada}{Pixy2::setCoords}}()\{}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Be\ sure\ there\ isn't\ an\ error\ state\ (0x0101)}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!(\mbox{\hyperlink{class_pixy2_a1f52f01612a384324ca724557f3b660e}{Block}}[8]==1\ \&\&\ \mbox{\hyperlink{class_pixy2_a1f52f01612a384324ca724557f3b660e}{Block}}[9]==1\ \&\&\ \mbox{\hyperlink{class_pixy2_a1f52f01612a384324ca724557f3b660e}{Block}}[10]==1\ \&\&\ \mbox{\hyperlink{class_pixy2_a1f52f01612a384324ca724557f3b660e}{Block}}[11]==1))\{}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ If\ not,\ set\ coords\ from\ fetched\ block\ data}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pixy2_acb15871ec0ff4bc7e4dff74c51131c89}{Coords}}[0]\ =\ (\mbox{\hyperlink{class_pixy2_a1f52f01612a384324ca724557f3b660e}{Block}}[9]<<8)+\mbox{\hyperlink{class_pixy2_a1f52f01612a384324ca724557f3b660e}{Block}}[8];}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pixy2_acb15871ec0ff4bc7e4dff74c51131c89}{Coords}}[1]\ =\ (\mbox{\hyperlink{class_pixy2_a1f52f01612a384324ca724557f3b660e}{Block}}[11]<<8)+\mbox{\hyperlink{class_pixy2_a1f52f01612a384324ca724557f3b660e}{Block}}[10];}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ otherwise\ return\ -\/1\ for\ an\ error}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pixy2_acb15871ec0ff4bc7e4dff74c51131c89}{Coords}}[0]\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pixy2_acb15871ec0ff4bc7e4dff74c51131c89}{Coords}}[1]\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00113}\mbox{\hyperlink{_pixy2___driver_8cpp_a0a99ab4f6aa6ee7dc2abca5483910dde}{00113}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pixy2___driver_8cpp_a0a99ab4f6aa6ee7dc2abca5483910dde}{HAL\_SPI\_TxCpltCallback}}(SPI\_HandleTypeDef*\ hspi)\{\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Transmit\ callback\ function}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(hspi\ ==\ \mbox{\hyperlink{class_pixy2_a49f19b0f16a7f2aac4ed828f308c547d}{Pixy2::spi}})\{}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ HAL\_SPI\_Receive\_IT(hspi,(uint8\_t*)\ \&(\mbox{\hyperlink{class_pixy2_aa8af39f57cd9f4fe191fc560ef761926}{Pixy2::Data}}),100);\ \ \textcolor{comment}{//\ Start\ a\ receive\ command\ and\ put\ return\ data\ in\ Data}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00117}00117\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00130}\mbox{\hyperlink{_pixy2___driver_8cpp_a3df7021fe24cf874f8b1eec5bd5f4cb3}{00130}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pixy2___driver_8cpp_a3df7021fe24cf874f8b1eec5bd5f4cb3}{HAL\_SPI\_RxCpltCallback}}(SPI\_HandleTypeDef*\ hspi)\{\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Receive\ callback\ function}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (hspi\ ==\ \mbox{\hyperlink{class_pixy2_a49f19b0f16a7f2aac4ed828f308c547d}{Pixy2::spi}})\{}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ HAL\_GPIO\_WritePin(\mbox{\hyperlink{class_pixy2_a75a4ee39e2cecd3391825d84cfbb5020}{Pixy2::SS\_Port}},\mbox{\hyperlink{class_pixy2_af55d898a6bde47ead0588ea66aed2b1c}{Pixy2::SS\_Pin}},GPIO\_PIN\_SET);\ \ \ \ \textcolor{comment}{//\ Write\ ss\ pin\ high\ to\ disable\ communication}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_pixy2___driver_8cpp_source_l00134}00134\ \ \ \ \ \}}
+
+\end{DoxyCode}

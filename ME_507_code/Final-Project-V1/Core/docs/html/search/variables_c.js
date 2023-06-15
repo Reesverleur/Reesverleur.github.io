@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['oldticks_0',['oldticks',['../class_motor.html#a17dda9f9427518acfc75b1a93dfef5de',1,'Motor']]]
+  ['memaddr_0',['MemAddr',['../class_c_sens.html#af53cda980242c8157481250149f9f64e',1,'CSens']]]
 ];

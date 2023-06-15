@@ -1,0 +1,84 @@
+\doxysection{Communication.\+py}
+\hypertarget{_communication_8py_source}{}\label{_communication_8py_source}\index{Src/Communication.py@{Src/Communication.py}}
+\mbox{\hyperlink{_communication_8py}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00001}\mbox{\hyperlink{namespace_communication}{00001}}\ \textcolor{keyword}{import}\ serial}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00002}00002\ \textcolor{keyword}{import}\ numpy\ \textcolor{keyword}{as}\ np}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00003}00003\ \textcolor{keyword}{import}\ time}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00004}00004\ \textcolor{keyword}{import}\ requests}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00005}00005\ \textcolor{keyword}{import}\ json}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00007}\mbox{\hyperlink{namespace_communication_aeff85c26730689a3661104879b0a995c}{00007}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespace_communication_aeff85c26730689a3661104879b0a995c}{get\_info}}():}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00008}00008\ \ \ \ \ \textcolor{comment}{\#response\ =\ requests.get('http://10.144.129.5:5001/info')}}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00009}00009\ \ \ \ \ response\ =\ \textcolor{stringliteral}{'\{"{}balls"{}:[\{"{}color"{}:"{}green"{},"{}x"{}:544,"{}y"{}:156\},\{"{}color"{}:"{}yellow"{},"{}x"{}:635,"{}y"{}:115\},\{"{}color"{}:"{}yellow"{},"{}x"{}:632,"{}y"{}:44\},\{"{}color"{}:"{}yellow"{},"{}x"{}:11,"{}y"{}:22\},\{"{}color"{}:"{}yellow"{},"{}x"{}:618,"{}y"{}:2\}],"{}robots"{}:[\{"{}center"{}:[342,337],"{}color"{}:"{}green"{},"{}decoded\_info"{}:"{}R1"{},"{}orientation"{}:1\}]\}'}}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00010}00010\ \ \ \ \ data\ =\ json.loads(response)}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00012}00012\ \ \ \ \ balls\ =\ data[\textcolor{stringliteral}{'balls'}]}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00013}00013\ \ \ \ \ robots\ =\ data[\textcolor{stringliteral}{'robots'}]}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{return}\ balls,\ robots}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00017}\mbox{\hyperlink{namespace_communication_acd8cafd8f5c5a5343e663c25148d2bbc}{00017}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespace_communication_acd8cafd8f5c5a5343e663c25148d2bbc}{rss}}(X):}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00018}00018\ \ \ \ \ sqx\ =\ [x*x\ \textcolor{keywordflow}{for}\ x\ \textcolor{keywordflow}{in}\ X]}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00019}00019\ \ \ \ \ sumx\ =\ sum(sqx)}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00020}00020\ \ \ \ \ rssx\ =\ np.sqrt(sumx)}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{return}\ rssx}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00022}\mbox{\hyperlink{namespace_communication_a3520cde1d9b046549a5679fd2f1567f0}{00022}}\ color\ =\ \textcolor{stringliteral}{'green'}}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00023}\mbox{\hyperlink{namespace_communication_ad220bbc7e70e70a32678128de9d9fa3d}{00023}}\ SerialObj\ =\ serial.Serial(\textcolor{stringliteral}{'COM24'})\ \textcolor{comment}{\#\ COMxx\ \ format\ on\ Windows}}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ ttyUSBx\ format\ on\ Linux}}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00025}\mbox{\hyperlink{namespace_communication_a6cf3dbaecccf7826e53f285d8064b33c}{00025}}\ SerialObj.baudrate\ =\ 115200\ \ \textcolor{comment}{\#\ set\ Baud\ rate\ to\ 9600}}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00026}\mbox{\hyperlink{namespace_communication_ae557f97a5b53d4bb9c207ba6ae77a062}{00026}}\ SerialObj.bytesize\ =\ 8\ \ \ \textcolor{comment}{\#\ Number\ of\ data\ bits\ =\ 8}}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00027}\mbox{\hyperlink{namespace_communication_ac71e8b632d40bd33c719d06092fc4d27}{00027}}\ SerialObj.parity\ \ =\textcolor{stringliteral}{'N'}\ \ \ \textcolor{comment}{\#\ No\ parity}}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00028}\mbox{\hyperlink{namespace_communication_a5f2260f692856d7d68acc081e1ad882d}{00028}}\ SerialObj.stopbits\ =\ 1\ \ \ \textcolor{comment}{\#\ Number\ of\ Stop\ bits\ =\ 1}}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00030}\mbox{\hyperlink{namespace_communication_a82e143310a516ac846fc4d4158141af6}{00030}}\ SerialObj.timeout\ =\ \textcolor{keywordtype}{None}}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00032}00032\ \textcolor{keywordflow}{while}\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00033}\mbox{\hyperlink{namespace_communication_a0ac406e3fd08e8224cbb56c92d534c76}{00033}}\ \ \ \ \ start\ =\ SerialObj.read(5)}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{if}\ start\ ==\ \textcolor{stringliteral}{'begin'}:}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00035}00035\ \ \ \ \ \ \ \ \ SerialObj.timeout\ =\ 0.05}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00038}\mbox{\hyperlink{namespace_communication_a8bff2b2773c8e14207fe73e47411d447}{00038}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ req\ =\ SerialObj.read(4)}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ req\ ==\ \textcolor{stringliteral}{'data'}:}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00040}\mbox{\hyperlink{namespace_communication_a470cbc741e27fca278913a038166e85c}{00040}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bindex\ =\ []}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00041}\mbox{\hyperlink{namespace_communication_a142fbaa4648fe7b45a798a8030019199}{00041}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dist\ =\ []}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00042}\mbox{\hyperlink{namespace_communication_ab92b364153abcdaebcdf720d82548df9}{00042}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ balls,\ robots\ =\ \mbox{\hyperlink{namespace_communication_aeff85c26730689a3661104879b0a995c}{get\_info}}();}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ x\ \textcolor{keywordflow}{in}\ range(len(robots)):}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ robots[x][\textcolor{stringliteral}{"{}decoded\_info"{}}]\ ==\ \textcolor{stringliteral}{'R1'}:}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00045}\mbox{\hyperlink{namespace_communication_a5e0e966415666366c570a202cde07525}{00045}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ n=x}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ x\ \textcolor{keywordflow}{in}\ range(len(balls)):}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ balls[x][\textcolor{stringliteral}{"{}color"{}}]\ ==\ color:}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ bindex.append(x)}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ x\ \textcolor{keywordflow}{in}\ bindex:}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00050}\mbox{\hyperlink{namespace_communication_ae832d97bb3f9b275c11e03839109fd4f}{00050}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ distance\ =\ \mbox{\hyperlink{namespace_communication_acd8cafd8f5c5a5343e663c25148d2bbc}{rss}}([robots[n][\textcolor{stringliteral}{"{}center"{}}][0]-\/balls[x][\textcolor{stringliteral}{'x'}],robots[n][\textcolor{stringliteral}{"{}center"{}}][1]-\/balls[x][\textcolor{stringliteral}{'y'}]])}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dist.append(distance)}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00052}\mbox{\hyperlink{namespace_communication_a8320afb477e6d9ccafe700582fee6b91}{00052}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ idx\ =\ np.array(dist).argmin()}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00053}\mbox{\hyperlink{namespace_communication_a1547b1fa75ac1591f35066e7c823e077}{00053}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ xtrans\ =\ balls[idx][\textcolor{stringliteral}{'x'}]-\/robots[n][\textcolor{stringliteral}{"{}center"{}}][0]}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00054}\mbox{\hyperlink{namespace_communication_aff5e008a50563c357fe02ef2cc72b22c}{00054}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ytrans\ =\ balls[idx][\textcolor{stringliteral}{'y'}]-\/robots[n][\textcolor{stringliteral}{"{}center"{}}][1]}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ xtrans\ >\ 0\ \textcolor{keywordflow}{and}\ ytrans>0:}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00056}\mbox{\hyperlink{namespace_communication_ae54bbb9805537bce5f111a48420610f6}{00056}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ phi\ =\ np.arctan(ytrans/xtrans)}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ xtrans<0\ \textcolor{keywordflow}{and}\ ytrans>0:}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ phi\ =\ np.arctan(ytrans/xtrans)+np.pi}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ xtrans<0\ \textcolor{keywordflow}{and}\ ytrans<0:}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ phi\ =\ np.arctan(ytrans/xtrans)+np.pi}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ xtrans>0\ \textcolor{keywordflow}{and}\ ytrans<0:}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ phi\ =\ np.arctan(ytrans/xtrans)+2*np.pi}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ xtrans==0\ \textcolor{keywordflow}{and}\ ytrans>0:}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ phi\ =\ np.pi/2}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{elif}\ xtrans==0\ \textcolor{keywordflow}{and}\ ytrans<0:}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ phi\ =\ 3*np.pi/2}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ phi\ =\ phi*180/np.pi}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Process\ data\ to\ get\ our\ robot\ position/orientation}}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ and\ location\ of\ nearest\ ball\ of\ correct\ color}}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00071}\mbox{\hyperlink{namespace_communication_afc936ae1be897ea15fe859aca179150c}{00071}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ angle\ =\ min([phi\ -\/\ robots[n][\textcolor{stringliteral}{"{}orientation"{}}],phi\ -\/\ robots[n][\textcolor{stringliteral}{"{}orientation"{}}]-\/360])}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ distance\ =\ \mbox{\hyperlink{namespace_communication_acd8cafd8f5c5a5343e663c25148d2bbc}{rss}}([xtrans,ytrans])}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SerialObj.write(f\textcolor{stringliteral}{'R\{angle\}T\{distance\}'})}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{except}\ KeyboardInterrupt:}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SerialObj.write(\textcolor{stringliteral}{'stop000000'})}
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00077}00077\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_communication_8py_source_l00078}00078\ }
+
+\end{DoxyCode}

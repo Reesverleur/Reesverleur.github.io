@@ -5,10 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Final Project V1: Src/CSens.cpp File Reference</title>
+<title>Final Project: Src/CSens.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Final Project V1
+   <div id="projectname">Final Project
    </div>
   </td>
  </tr>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_c_sens_8cpp.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,11 +88,6 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
@@ -85,7 +101,9 @@ $(function() {
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
-</div><table class="memberdecls">
+</div>
+<p><a href="_c_sens_8cpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ac16a95413b35f05c5ce725fefd8531a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_sens_8cpp.html#ac16a95413b35f05c5ce725fefd8531a5">HAL_I2C_MemRxCpltCallback</a> (I2C_HandleTypeDef *hi2c)</td></tr>
@@ -96,6 +114,8 @@ Functions</h2></td></tr>
 <div class="textblock"><p>This file contains the methods for the <a class="el" href="class_c_sens.html" title="Class definition for an I2C color Sensor Driver.">CSens</a> class. </p>
 <dl class="section author"><dt>Author</dt><dd>Rees P. Verleur </dd></dl>
 <p>This contains the method definitions for the <a class="el" href="class_c_sens.html" title="Class definition for an I2C color Sensor Driver.">CSens</a> class. It also includes the I2C memory read callback function definition </p>
+
+<p class="definition">Definition in file <a class="el" href="_c_sens_8cpp_source.html">CSens.cpp</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="ac16a95413b35f05c5ce725fefd8531a5" name="ac16a95413b35f05c5ce725fefd8531a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac16a95413b35f05c5ce725fefd8531a5">&#9670;&#160;</a></span>HAL_I2C_MemRxCpltCallback()</h2>
@@ -122,12 +142,32 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="_c_sens_8cpp_source.html#l00061">61</a> of file <a class="el" href="_c_sens_8cpp_source.html">CSens.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>                                                       {                <span class="comment">// Memory read callback function</span></div>
+<div class="line"><span class="lineno">   62</span>        <span class="keywordflow">if</span>(hi2c == <a class="code hl_variable" href="class_c_sens.html#aa66efdc9555b448606dc65cea90795cc">CSens::i2c</a>){</div>
+<div class="line"><span class="lineno">   63</span>            <a class="code hl_variable" href="class_c_sens.html#a96bf5467865d3114c8615064c7819b28">CSens::Clr_Val</a> = (<a class="code hl_variable" href="class_c_sens.html#abde882476a99649f3ab7e77de065964f">CSens::Cdata</a>[20]&lt;&lt;8)+<a class="code hl_variable" href="class_c_sens.html#abde882476a99649f3ab7e77de065964f">CSens::Cdata</a>[19];    <span class="comment">// Clear data is little endian</span></div>
+<div class="line"><span class="lineno">   64</span>            <a class="code hl_variable" href="class_c_sens.html#a5ecef084ece6e281c72789920f7412dc">CSens::Red_Val</a> = (<a class="code hl_variable" href="class_c_sens.html#abde882476a99649f3ab7e77de065964f">CSens::Cdata</a>[21]&lt;&lt;8)+<a class="code hl_variable" href="class_c_sens.html#abde882476a99649f3ab7e77de065964f">CSens::Cdata</a>[22];    <span class="comment">// RGB data is big endian</span></div>
+<div class="line"><span class="lineno">   65</span>            <a class="code hl_variable" href="class_c_sens.html#abf222dae6f684d88df32237e3a8315be">CSens::Grn_Val</a> = (<a class="code hl_variable" href="class_c_sens.html#abde882476a99649f3ab7e77de065964f">CSens::Cdata</a>[23]&lt;&lt;8)+<a class="code hl_variable" href="class_c_sens.html#abde882476a99649f3ab7e77de065964f">CSens::Cdata</a>[24];</div>
+<div class="line"><span class="lineno">   66</span>            <a class="code hl_variable" href="class_c_sens.html#aa99d02835daf65e4baa53f817778a4af">CSens::Blu_Val</a> = (<a class="code hl_variable" href="class_c_sens.html#abde882476a99649f3ab7e77de065964f">CSens::Cdata</a>[25]&lt;&lt;8)+<a class="code hl_variable" href="class_c_sens.html#abde882476a99649f3ab7e77de065964f">CSens::Cdata</a>[26];</div>
+<div class="line"><span class="lineno">   67</span>        }</div>
+<div class="line"><span class="lineno">   68</span>}</div>
+<div class="ttc" id="aclass_c_sens_html_a5ecef084ece6e281c72789920f7412dc"><div class="ttname"><a href="class_c_sens.html#a5ecef084ece6e281c72789920f7412dc">CSens::Red_Val</a></div><div class="ttdeci">static uint16_t Red_Val</div><div class="ttdoc">16 bit color value for red channel</div><div class="ttdef"><b>Definition</b> <a href="_c_sens_8h_source.html#l00058">CSens.h:58</a></div></div>
+<div class="ttc" id="aclass_c_sens_html_a96bf5467865d3114c8615064c7819b28"><div class="ttname"><a href="class_c_sens.html#a96bf5467865d3114c8615064c7819b28">CSens::Clr_Val</a></div><div class="ttdeci">static uint16_t Clr_Val</div><div class="ttdoc">16 bit color value for clear channel</div><div class="ttdef"><b>Definition</b> <a href="_c_sens_8h_source.html#l00057">CSens.h:57</a></div></div>
+<div class="ttc" id="aclass_c_sens_html_aa66efdc9555b448606dc65cea90795cc"><div class="ttname"><a href="class_c_sens.html#aa66efdc9555b448606dc65cea90795cc">CSens::i2c</a></div><div class="ttdeci">static I2C_HandleTypeDef * i2c</div><div class="ttdoc">Pointer to i2c object.</div><div class="ttdef"><b>Definition</b> <a href="_c_sens_8h_source.html#l00056">CSens.h:56</a></div></div>
+<div class="ttc" id="aclass_c_sens_html_aa99d02835daf65e4baa53f817778a4af"><div class="ttname"><a href="class_c_sens.html#aa99d02835daf65e4baa53f817778a4af">CSens::Blu_Val</a></div><div class="ttdeci">static uint16_t Blu_Val</div><div class="ttdoc">16 bit color value for blue channel</div><div class="ttdef"><b>Definition</b> <a href="_c_sens_8h_source.html#l00060">CSens.h:60</a></div></div>
+<div class="ttc" id="aclass_c_sens_html_abde882476a99649f3ab7e77de065964f"><div class="ttname"><a href="class_c_sens.html#abde882476a99649f3ab7e77de065964f">CSens::Cdata</a></div><div class="ttdeci">static uint8_t Cdata[27]</div><div class="ttdoc">Data collected from device.</div><div class="ttdef"><b>Definition</b> <a href="_c_sens_8h_source.html#l00055">CSens.h:55</a></div></div>
+<div class="ttc" id="aclass_c_sens_html_abf222dae6f684d88df32237e3a8315be"><div class="ttname"><a href="class_c_sens.html#abf222dae6f684d88df32237e3a8315be">CSens::Grn_Val</a></div><div class="ttdeci">static uint16_t Grn_Val</div><div class="ttdoc">16 bit color value for green channel</div><div class="ttdef"><b>Definition</b> <a href="_c_sens_8h_source.html#l00059">CSens.h:59</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a class="el" href="_c_sens_8cpp.html">CSens.cpp</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+  </ul>
+</div>
 </body>
 </html>

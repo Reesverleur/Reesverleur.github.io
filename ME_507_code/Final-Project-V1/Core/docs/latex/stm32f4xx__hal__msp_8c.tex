@@ -53,6 +53,10 @@ Copyright (c) 2023 STMicroelectronics. All rights reserved.
 
 This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
 
+Definition in file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+
 \doxysubsection{Function Documentation}
 \Hypertarget{stm32f4xx__hal__msp_8c_a39b0f8e80268ab3e660ead921ad4b22f}\label{stm32f4xx__hal__msp_8c_a39b0f8e80268ab3e660ead921ad4b22f} 
 \index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_ADC\_MspDeInit@{HAL\_ADC\_MspDeInit}}
@@ -74,7 +78,32 @@ ADC MSP De-\/\+Initialization This function freeze the hardware resources used i
 {\em None} & \\
 \hline
 \end{DoxyRetVals}
-ADC1 GPIO Configuration PA4 -\/-\/-\/---\texorpdfstring{$>$}{>} ADC1\+\_\+\+IN4 PA5 -\/-\/-\/---\texorpdfstring{$>$}{>} ADC1\+\_\+\+IN5 PA6 -\/-\/-\/---\texorpdfstring{$>$}{>} ADC1\+\_\+\+IN6 PA7 -\/-\/-\/---\texorpdfstring{$>$}{>} ADC1\+\_\+\+IN7\Hypertarget{stm32f4xx__hal__msp_8c_aa30863492d5c3103e3e8ce8a63dadd07}\label{stm32f4xx__hal__msp_8c_aa30863492d5c3103e3e8ce8a63dadd07} 
+ADC1 GPIO Configuration PA4 -\/-\/-\/---\texorpdfstring{$>$}{>} ADC1\+\_\+\+IN4 PA5 -\/-\/-\/---\texorpdfstring{$>$}{>} ADC1\+\_\+\+IN5 PA6 -\/-\/-\/---\texorpdfstring{$>$}{>} ADC1\+\_\+\+IN6 PA7 -\/-\/-\/---\texorpdfstring{$>$}{>} ADC1\+\_\+\+IN7
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00123}{123}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00124\ \{}
+\DoxyCodeLine{00125\ \ \ \textcolor{keywordflow}{if}(hadc-\/>Instance==ADC1)}
+\DoxyCodeLine{00126\ \ \ \{}
+\DoxyCodeLine{00127\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ ADC1\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ ADC1\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ disable\ */}}
+\DoxyCodeLine{00131\ \ \ \ \ \_\_HAL\_RCC\_ADC1\_CLK\_DISABLE();}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00139\ \ \ \ \ HAL\_GPIO\_DeInit(GPIOA,\ GPIO\_PIN\_4|GPIO\_PIN\_5|GPIO\_PIN\_6|GPIO\_PIN\_7);}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ ADC1\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ ADC1\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00144\ \ \ \}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \}}
+
+\end{DoxyCode}
+\Hypertarget{stm32f4xx__hal__msp_8c_aa30863492d5c3103e3e8ce8a63dadd07}\label{stm32f4xx__hal__msp_8c_aa30863492d5c3103e3e8ce8a63dadd07} 
 \index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_ADC\_MspInit@{HAL\_ADC\_MspInit}}
 \index{HAL\_ADC\_MspInit@{HAL\_ADC\_MspInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
 \doxysubsubsection{\texorpdfstring{HAL\_ADC\_MspInit()}{HAL\_ADC\_MspInit()}}
@@ -94,7 +123,37 @@ ADC MSP Initialization This function configures the hardware resources used in t
 {\em None} & \\
 \hline
 \end{DoxyRetVals}
-ADC1 GPIO Configuration PA4 -\/-\/-\/---\texorpdfstring{$>$}{>} ADC1\+\_\+\+IN4 PA5 -\/-\/-\/---\texorpdfstring{$>$}{>} ADC1\+\_\+\+IN5 PA6 -\/-\/-\/---\texorpdfstring{$>$}{>} ADC1\+\_\+\+IN6 PA7 -\/-\/-\/---\texorpdfstring{$>$}{>} ADC1\+\_\+\+IN7\Hypertarget{stm32f4xx__hal__msp_8c_a2ec8d9b09854c732e2feed549278f048}\label{stm32f4xx__hal__msp_8c_a2ec8d9b09854c732e2feed549278f048} 
+ADC1 GPIO Configuration PA4 -\/-\/-\/---\texorpdfstring{$>$}{>} ADC1\+\_\+\+IN4 PA5 -\/-\/-\/---\texorpdfstring{$>$}{>} ADC1\+\_\+\+IN5 PA6 -\/-\/-\/---\texorpdfstring{$>$}{>} ADC1\+\_\+\+IN6 PA7 -\/-\/-\/---\texorpdfstring{$>$}{>} ADC1\+\_\+\+IN7
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00087}{87}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088\ \{}
+\DoxyCodeLine{00089\ \ \ GPIO\_InitTypeDef\ GPIO\_InitStruct\ =\ \{0\};}
+\DoxyCodeLine{00090\ \ \ \textcolor{keywordflow}{if}(hadc-\/>Instance==ADC1)}
+\DoxyCodeLine{00091\ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ ADC1\_MspInit\ 0\ */}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ ADC1\_MspInit\ 0\ */}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ enable\ */}}
+\DoxyCodeLine{00096\ \ \ \ \ \_\_HAL\_RCC\_ADC1\_CLK\_ENABLE();}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \_\_HAL\_RCC\_GPIOA\_CLK\_ENABLE();}
+\DoxyCodeLine{00105\ \ \ \ \ GPIO\_InitStruct.Pin\ =\ GPIO\_PIN\_4|GPIO\_PIN\_5|GPIO\_PIN\_6|GPIO\_PIN\_7;}
+\DoxyCodeLine{00106\ \ \ \ \ GPIO\_InitStruct.Mode\ =\ GPIO\_MODE\_ANALOG;}
+\DoxyCodeLine{00107\ \ \ \ \ GPIO\_InitStruct.Pull\ =\ GPIO\_NOPULL;}
+\DoxyCodeLine{00108\ \ \ \ \ HAL\_GPIO\_Init(GPIOA,\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ ADC1\_MspInit\ 1\ */}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ ADC1\_MspInit\ 1\ */}}
+\DoxyCodeLine{00113\ \ \ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \}}
+
+\end{DoxyCode}
+\Hypertarget{stm32f4xx__hal__msp_8c_a2ec8d9b09854c732e2feed549278f048}\label{stm32f4xx__hal__msp_8c_a2ec8d9b09854c732e2feed549278f048} 
 \index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_I2C\_MspDeInit@{HAL\_I2C\_MspDeInit}}
 \index{HAL\_I2C\_MspDeInit@{HAL\_I2C\_MspDeInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
 \doxysubsubsection{\texorpdfstring{HAL\_I2C\_MspDeInit()}{HAL\_I2C\_MspDeInit()}}
@@ -114,7 +173,37 @@ I2C MSP De-\/\+Initialization This function freeze the hardware resources used i
 {\em None} & \\
 \hline
 \end{DoxyRetVals}
-I2\+C2 GPIO Configuration PB10 -\/-\/-\/---\texorpdfstring{$>$}{>} I2\+C2\+\_\+\+SCL PB9 -\/-\/-\/---\texorpdfstring{$>$}{>} I2\+C2\+\_\+\+SDA\Hypertarget{stm32f4xx__hal__msp_8c_abe01a202c27b23fc150aa66af3130073}\label{stm32f4xx__hal__msp_8c_abe01a202c27b23fc150aa66af3130073} 
+I2\+C2 GPIO Configuration PB10 -\/-\/-\/---\texorpdfstring{$>$}{>} I2\+C2\+\_\+\+SCL PB9 -\/-\/-\/---\texorpdfstring{$>$}{>} I2\+C2\+\_\+\+SDA
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00202}{202}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00203\ \{}
+\DoxyCodeLine{00204\ \ \ \textcolor{keywordflow}{if}(hi2c-\/>Instance==I2C2)}
+\DoxyCodeLine{00205\ \ \ \{}
+\DoxyCodeLine{00206\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ I2C2\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ I2C2\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ disable\ */}}
+\DoxyCodeLine{00210\ \ \ \ \ \_\_HAL\_RCC\_I2C2\_CLK\_DISABLE();}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00216\ \ \ \ \ HAL\_GPIO\_DeInit(GPIOB,\ GPIO\_PIN\_10);}
+\DoxyCodeLine{00217\ }
+\DoxyCodeLine{00218\ \ \ \ \ HAL\_GPIO\_DeInit(GPIOB,\ GPIO\_PIN\_9);}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{comment}{/*\ I2C2\ interrupt\ DeInit\ */}}
+\DoxyCodeLine{00221\ \ \ \ \ HAL\_NVIC\_DisableIRQ(I2C2\_EV\_IRQn);}
+\DoxyCodeLine{00222\ \ \ \ \ HAL\_NVIC\_DisableIRQ(I2C2\_ER\_IRQn);}
+\DoxyCodeLine{00223\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ I2C2\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00225\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ I2C2\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00226\ \ \ \}}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00228\ \}}
+
+\end{DoxyCode}
+\Hypertarget{stm32f4xx__hal__msp_8c_abe01a202c27b23fc150aa66af3130073}\label{stm32f4xx__hal__msp_8c_abe01a202c27b23fc150aa66af3130073} 
 \index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_I2C\_MspInit@{HAL\_I2C\_MspInit}}
 \index{HAL\_I2C\_MspInit@{HAL\_I2C\_MspInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
 \doxysubsubsection{\texorpdfstring{HAL\_I2C\_MspInit()}{HAL\_I2C\_MspInit()}}
@@ -134,13 +223,79 @@ I2C MSP Initialization This function configures the hardware resources used in t
 {\em None} & \\
 \hline
 \end{DoxyRetVals}
-I2\+C2 GPIO Configuration PB10 -\/-\/-\/---\texorpdfstring{$>$}{>} I2\+C2\+\_\+\+SCL PB9 -\/-\/-\/---\texorpdfstring{$>$}{>} I2\+C2\+\_\+\+SDA\Hypertarget{stm32f4xx__hal__msp_8c_ae4fb8e66865c87d0ebab74a726a6891f}\label{stm32f4xx__hal__msp_8c_ae4fb8e66865c87d0ebab74a726a6891f} 
+I2\+C2 GPIO Configuration PB10 -\/-\/-\/---\texorpdfstring{$>$}{>} I2\+C2\+\_\+\+SCL PB9 -\/-\/-\/---\texorpdfstring{$>$}{>} I2\+C2\+\_\+\+SDA
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00154}{154}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00155\ \{}
+\DoxyCodeLine{00156\ \ \ GPIO\_InitTypeDef\ GPIO\_InitStruct\ =\ \{0\};}
+\DoxyCodeLine{00157\ \ \ \textcolor{keywordflow}{if}(hi2c-\/>Instance==I2C2)}
+\DoxyCodeLine{00158\ \ \ \{}
+\DoxyCodeLine{00159\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ I2C2\_MspInit\ 0\ */}}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ I2C2\_MspInit\ 0\ */}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \_\_HAL\_RCC\_GPIOB\_CLK\_ENABLE();}
+\DoxyCodeLine{00168\ \ \ \ \ GPIO\_InitStruct.Pin\ =\ GPIO\_PIN\_10;}
+\DoxyCodeLine{00169\ \ \ \ \ GPIO\_InitStruct.Mode\ =\ GPIO\_MODE\_AF\_OD;}
+\DoxyCodeLine{00170\ \ \ \ \ GPIO\_InitStruct.Pull\ =\ GPIO\_NOPULL;}
+\DoxyCodeLine{00171\ \ \ \ \ GPIO\_InitStruct.Speed\ =\ GPIO\_SPEED\_FREQ\_VERY\_HIGH;}
+\DoxyCodeLine{00172\ \ \ \ \ GPIO\_InitStruct.Alternate\ =\ GPIO\_AF4\_I2C2;}
+\DoxyCodeLine{00173\ \ \ \ \ HAL\_GPIO\_Init(GPIOB,\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ GPIO\_InitStruct.Pin\ =\ GPIO\_PIN\_9;}
+\DoxyCodeLine{00176\ \ \ \ \ GPIO\_InitStruct.Mode\ =\ GPIO\_MODE\_AF\_OD;}
+\DoxyCodeLine{00177\ \ \ \ \ GPIO\_InitStruct.Pull\ =\ GPIO\_NOPULL;}
+\DoxyCodeLine{00178\ \ \ \ \ GPIO\_InitStruct.Speed\ =\ GPIO\_SPEED\_FREQ\_VERY\_HIGH;}
+\DoxyCodeLine{00179\ \ \ \ \ GPIO\_InitStruct.Alternate\ =\ GPIO\_AF9\_I2C2;}
+\DoxyCodeLine{00180\ \ \ \ \ HAL\_GPIO\_Init(GPIOB,\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ enable\ */}}
+\DoxyCodeLine{00183\ \ \ \ \ \_\_HAL\_RCC\_I2C2\_CLK\_ENABLE();}
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{comment}{/*\ I2C2\ interrupt\ Init\ */}}
+\DoxyCodeLine{00185\ \ \ \ \ HAL\_NVIC\_SetPriority(I2C2\_EV\_IRQn,\ 0,\ 0);}
+\DoxyCodeLine{00186\ \ \ \ \ HAL\_NVIC\_EnableIRQ(I2C2\_EV\_IRQn);}
+\DoxyCodeLine{00187\ \ \ \ \ HAL\_NVIC\_SetPriority(I2C2\_ER\_IRQn,\ 0,\ 0);}
+\DoxyCodeLine{00188\ \ \ \ \ HAL\_NVIC\_EnableIRQ(I2C2\_ER\_IRQn);}
+\DoxyCodeLine{00189\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ I2C2\_MspInit\ 1\ */}}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ I2C2\_MspInit\ 1\ */}}
+\DoxyCodeLine{00192\ \ \ \}}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \}}
+
+\end{DoxyCode}
+\Hypertarget{stm32f4xx__hal__msp_8c_ae4fb8e66865c87d0ebab74a726a6891f}\label{stm32f4xx__hal__msp_8c_ae4fb8e66865c87d0ebab74a726a6891f} 
 \index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_MspInit@{HAL\_MspInit}}
 \index{HAL\_MspInit@{HAL\_MspInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
 \doxysubsubsection{\texorpdfstring{HAL\_MspInit()}{HAL\_MspInit()}}
 {\footnotesize\ttfamily void HAL\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
 
-Initializes the Global MSP. \Hypertarget{stm32f4xx__hal__msp_8c_abadc4d4974af1afd943e8d13589068e1}\label{stm32f4xx__hal__msp_8c_abadc4d4974af1afd943e8d13589068e1} 
+Initializes the Global MSP. 
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00065}{65}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \{}
+\DoxyCodeLine{00067\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ MspInit\ 0\ */}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ MspInit\ 0\ */}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \_\_HAL\_RCC\_SYSCFG\_CLK\_ENABLE();}
+\DoxyCodeLine{00072\ \ \ \_\_HAL\_RCC\_PWR\_CLK\_ENABLE();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \textcolor{comment}{/*\ System\ interrupt\ init*/}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ MspInit\ 1\ */}}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ MspInit\ 1\ */}}
+\DoxyCodeLine{00079\ \}}
+
+\end{DoxyCode}
+\Hypertarget{stm32f4xx__hal__msp_8c_abadc4d4974af1afd943e8d13589068e1}\label{stm32f4xx__hal__msp_8c_abadc4d4974af1afd943e8d13589068e1} 
 \index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_SPI\_MspDeInit@{HAL\_SPI\_MspDeInit}}
 \index{HAL\_SPI\_MspDeInit@{HAL\_SPI\_MspDeInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
 \doxysubsubsection{\texorpdfstring{HAL\_SPI\_MspDeInit()}{HAL\_SPI\_MspDeInit()}}
@@ -160,7 +315,32 @@ SPI MSP De-\/\+Initialization This function freeze the hardware resources used i
 {\em None} & \\
 \hline
 \end{DoxyRetVals}
-SPI2 GPIO Configuration PB13 -\/-\/-\/---\texorpdfstring{$>$}{>} SPI2\+\_\+\+SCK PB14 -\/-\/-\/---\texorpdfstring{$>$}{>} SPI2\+\_\+\+MISO PB15 -\/-\/-\/---\texorpdfstring{$>$}{>} SPI2\+\_\+\+MOSI\Hypertarget{stm32f4xx__hal__msp_8c_a17f583be14b22caffa6c4e56dcd035ef}\label{stm32f4xx__hal__msp_8c_a17f583be14b22caffa6c4e56dcd035ef} 
+SPI2 GPIO Configuration PB13 -\/-\/-\/---\texorpdfstring{$>$}{>} SPI2\+\_\+\+SCK PB14 -\/-\/-\/---\texorpdfstring{$>$}{>} SPI2\+\_\+\+MISO PB15 -\/-\/-\/---\texorpdfstring{$>$}{>} SPI2\+\_\+\+MOSI
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00273}{273}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00274\ \{}
+\DoxyCodeLine{00275\ \ \ \textcolor{keywordflow}{if}(hspi-\/>Instance==SPI2)}
+\DoxyCodeLine{00276\ \ \ \{}
+\DoxyCodeLine{00277\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ SPI2\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00278\ }
+\DoxyCodeLine{00279\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ SPI2\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00280\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ disable\ */}}
+\DoxyCodeLine{00281\ \ \ \ \ \_\_HAL\_RCC\_SPI2\_CLK\_DISABLE();}
+\DoxyCodeLine{00282\ }
+\DoxyCodeLine{00288\ \ \ \ \ HAL\_GPIO\_DeInit(GPIOB,\ GPIO\_PIN\_13|GPIO\_PIN\_14|GPIO\_PIN\_15);}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ SPI2\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ SPI2\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00293\ \ \ \}}
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00295\ \}}
+
+\end{DoxyCode}
+\Hypertarget{stm32f4xx__hal__msp_8c_a17f583be14b22caffa6c4e56dcd035ef}\label{stm32f4xx__hal__msp_8c_a17f583be14b22caffa6c4e56dcd035ef} 
 \index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_SPI\_MspInit@{HAL\_SPI\_MspInit}}
 \index{HAL\_SPI\_MspInit@{HAL\_SPI\_MspInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
 \doxysubsubsection{\texorpdfstring{HAL\_SPI\_MspInit()}{HAL\_SPI\_MspInit()}}
@@ -180,7 +360,39 @@ SPI MSP Initialization This function configures the hardware resources used in t
 {\em None} & \\
 \hline
 \end{DoxyRetVals}
-SPI2 GPIO Configuration PB13 -\/-\/-\/---\texorpdfstring{$>$}{>} SPI2\+\_\+\+SCK PB14 -\/-\/-\/---\texorpdfstring{$>$}{>} SPI2\+\_\+\+MISO PB15 -\/-\/-\/---\texorpdfstring{$>$}{>} SPI2\+\_\+\+MOSI\Hypertarget{stm32f4xx__hal__msp_8c_a555b8a2d3c7a07341f8cb1255318fa2b}\label{stm32f4xx__hal__msp_8c_a555b8a2d3c7a07341f8cb1255318fa2b} 
+SPI2 GPIO Configuration PB13 -\/-\/-\/---\texorpdfstring{$>$}{>} SPI2\+\_\+\+SCK PB14 -\/-\/-\/---\texorpdfstring{$>$}{>} SPI2\+\_\+\+MISO PB15 -\/-\/-\/---\texorpdfstring{$>$}{>} SPI2\+\_\+\+MOSI
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00236}{236}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00237\ \{}
+\DoxyCodeLine{00238\ \ \ GPIO\_InitTypeDef\ GPIO\_InitStruct\ =\ \{0\};}
+\DoxyCodeLine{00239\ \ \ \textcolor{keywordflow}{if}(hspi-\/>Instance==SPI2)}
+\DoxyCodeLine{00240\ \ \ \{}
+\DoxyCodeLine{00241\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ SPI2\_MspInit\ 0\ */}}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ SPI2\_MspInit\ 0\ */}}
+\DoxyCodeLine{00244\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ enable\ */}}
+\DoxyCodeLine{00245\ \ \ \ \ \_\_HAL\_RCC\_SPI2\_CLK\_ENABLE();}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00247\ \ \ \ \ \_\_HAL\_RCC\_GPIOB\_CLK\_ENABLE();}
+\DoxyCodeLine{00253\ \ \ \ \ GPIO\_InitStruct.Pin\ =\ GPIO\_PIN\_13|GPIO\_PIN\_14|GPIO\_PIN\_15;}
+\DoxyCodeLine{00254\ \ \ \ \ GPIO\_InitStruct.Mode\ =\ GPIO\_MODE\_AF\_PP;}
+\DoxyCodeLine{00255\ \ \ \ \ GPIO\_InitStruct.Pull\ =\ GPIO\_NOPULL;}
+\DoxyCodeLine{00256\ \ \ \ \ GPIO\_InitStruct.Speed\ =\ GPIO\_SPEED\_FREQ\_VERY\_HIGH;}
+\DoxyCodeLine{00257\ \ \ \ \ GPIO\_InitStruct.Alternate\ =\ GPIO\_AF5\_SPI2;}
+\DoxyCodeLine{00258\ \ \ \ \ HAL\_GPIO\_Init(GPIOB,\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00260\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ SPI2\_MspInit\ 1\ */}}
+\DoxyCodeLine{00261\ }
+\DoxyCodeLine{00262\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ SPI2\_MspInit\ 1\ */}}
+\DoxyCodeLine{00263\ \ \ \}}
+\DoxyCodeLine{00264\ }
+\DoxyCodeLine{00265\ \}}
+
+\end{DoxyCode}
+\Hypertarget{stm32f4xx__hal__msp_8c_a555b8a2d3c7a07341f8cb1255318fa2b}\label{stm32f4xx__hal__msp_8c_a555b8a2d3c7a07341f8cb1255318fa2b} 
 \index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_TIM\_Base\_MspDeInit@{HAL\_TIM\_Base\_MspDeInit}}
 \index{HAL\_TIM\_Base\_MspDeInit@{HAL\_TIM\_Base\_MspDeInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
 \doxysubsubsection{\texorpdfstring{HAL\_TIM\_Base\_MspDeInit()}{HAL\_TIM\_Base\_MspDeInit()}}
@@ -200,7 +412,43 @@ TIM\+\_\+\+Base MSP De-\/\+Initialization This function freeze the hardware reso
 {\em None} & \\
 \hline
 \end{DoxyRetVals}
-TIM10 GPIO Configuration PB8 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM10\+\_\+\+CH1\Hypertarget{stm32f4xx__hal__msp_8c_abb25ade2f7e3f7aae167bd52270c2b86}\label{stm32f4xx__hal__msp_8c_abb25ade2f7e3f7aae167bd52270c2b86} 
+TIM10 GPIO Configuration PB8 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM10\+\_\+\+CH1
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00532}{532}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00533\ \{}
+\DoxyCodeLine{00534\ \ \ \textcolor{keywordflow}{if}(htim\_base-\/>Instance==TIM1)}
+\DoxyCodeLine{00535\ \ \ \{}
+\DoxyCodeLine{00536\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM1\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00537\ }
+\DoxyCodeLine{00538\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM1\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00539\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ disable\ */}}
+\DoxyCodeLine{00540\ \ \ \ \ \_\_HAL\_RCC\_TIM1\_CLK\_DISABLE();}
+\DoxyCodeLine{00541\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM1\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00542\ }
+\DoxyCodeLine{00543\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM1\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00544\ \ \ \}}
+\DoxyCodeLine{00545\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(htim\_base-\/>Instance==TIM10)}
+\DoxyCodeLine{00546\ \ \ \{}
+\DoxyCodeLine{00547\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM10\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00548\ }
+\DoxyCodeLine{00549\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM10\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00550\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ disable\ */}}
+\DoxyCodeLine{00551\ \ \ \ \ \_\_HAL\_RCC\_TIM10\_CLK\_DISABLE();}
+\DoxyCodeLine{00552\ }
+\DoxyCodeLine{00556\ \ \ \ \ HAL\_GPIO\_DeInit(GPIOB,\ GPIO\_PIN\_8);}
+\DoxyCodeLine{00557\ }
+\DoxyCodeLine{00558\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM10\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00559\ }
+\DoxyCodeLine{00560\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM10\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00561\ \ \ \}}
+\DoxyCodeLine{00562\ }
+\DoxyCodeLine{00563\ \}}
+
+\end{DoxyCode}
+\Hypertarget{stm32f4xx__hal__msp_8c_abb25ade2f7e3f7aae167bd52270c2b86}\label{stm32f4xx__hal__msp_8c_abb25ade2f7e3f7aae167bd52270c2b86} 
 \index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_TIM\_Base\_MspInit@{HAL\_TIM\_Base\_MspInit}}
 \index{HAL\_TIM\_Base\_MspInit@{HAL\_TIM\_Base\_MspInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
 \doxysubsubsection{\texorpdfstring{HAL\_TIM\_Base\_MspInit()}{HAL\_TIM\_Base\_MspInit()}}
@@ -220,7 +468,50 @@ TIM\+\_\+\+Base MSP Initialization This function configures the hardware resourc
 {\em None} & \\
 \hline
 \end{DoxyRetVals}
-TIM10 GPIO Configuration PB8 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM10\+\_\+\+CH1\Hypertarget{stm32f4xx__hal__msp_8c_a9a53eee786f7e7e0217ce5b466c75f8a}\label{stm32f4xx__hal__msp_8c_a9a53eee786f7e7e0217ce5b466c75f8a} 
+TIM10 GPIO Configuration PB8 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM10\+\_\+\+CH1
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00303}{303}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00304\ \{}
+\DoxyCodeLine{00305\ \ \ GPIO\_InitTypeDef\ GPIO\_InitStruct\ =\ \{0\};}
+\DoxyCodeLine{00306\ \ \ \textcolor{keywordflow}{if}(htim\_base-\/>Instance==TIM1)}
+\DoxyCodeLine{00307\ \ \ \{}
+\DoxyCodeLine{00308\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM1\_MspInit\ 0\ */}}
+\DoxyCodeLine{00309\ }
+\DoxyCodeLine{00310\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM1\_MspInit\ 0\ */}}
+\DoxyCodeLine{00311\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ enable\ */}}
+\DoxyCodeLine{00312\ \ \ \ \ \_\_HAL\_RCC\_TIM1\_CLK\_ENABLE();}
+\DoxyCodeLine{00313\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM1\_MspInit\ 1\ */}}
+\DoxyCodeLine{00314\ }
+\DoxyCodeLine{00315\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM1\_MspInit\ 1\ */}}
+\DoxyCodeLine{00316\ \ \ \}}
+\DoxyCodeLine{00317\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(htim\_base-\/>Instance==TIM10)}
+\DoxyCodeLine{00318\ \ \ \{}
+\DoxyCodeLine{00319\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM10\_MspInit\ 0\ */}}
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00321\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM10\_MspInit\ 0\ */}}
+\DoxyCodeLine{00322\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ enable\ */}}
+\DoxyCodeLine{00323\ \ \ \ \ \_\_HAL\_RCC\_TIM10\_CLK\_ENABLE();}
+\DoxyCodeLine{00324\ }
+\DoxyCodeLine{00325\ \ \ \ \ \_\_HAL\_RCC\_GPIOB\_CLK\_ENABLE();}
+\DoxyCodeLine{00329\ \ \ \ \ GPIO\_InitStruct.Pin\ =\ GPIO\_PIN\_8;}
+\DoxyCodeLine{00330\ \ \ \ \ GPIO\_InitStruct.Mode\ =\ GPIO\_MODE\_AF\_PP;}
+\DoxyCodeLine{00331\ \ \ \ \ GPIO\_InitStruct.Pull\ =\ GPIO\_NOPULL;}
+\DoxyCodeLine{00332\ \ \ \ \ GPIO\_InitStruct.Speed\ =\ GPIO\_SPEED\_FREQ\_LOW;}
+\DoxyCodeLine{00333\ \ \ \ \ GPIO\_InitStruct.Alternate\ =\ GPIO\_AF3\_TIM10;}
+\DoxyCodeLine{00334\ \ \ \ \ HAL\_GPIO\_Init(GPIOB,\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{00335\ }
+\DoxyCodeLine{00336\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM10\_MspInit\ 1\ */}}
+\DoxyCodeLine{00337\ }
+\DoxyCodeLine{00338\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM10\_MspInit\ 1\ */}}
+\DoxyCodeLine{00339\ \ \ \}}
+\DoxyCodeLine{00340\ }
+\DoxyCodeLine{00341\ \}}
+
+\end{DoxyCode}
+\Hypertarget{stm32f4xx__hal__msp_8c_a9a53eee786f7e7e0217ce5b466c75f8a}\label{stm32f4xx__hal__msp_8c_a9a53eee786f7e7e0217ce5b466c75f8a} 
 \index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_TIM\_Encoder\_MspDeInit@{HAL\_TIM\_Encoder\_MspDeInit}}
 \index{HAL\_TIM\_Encoder\_MspDeInit@{HAL\_TIM\_Encoder\_MspDeInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
 \doxysubsubsection{\texorpdfstring{HAL\_TIM\_Encoder\_MspDeInit()}{HAL\_TIM\_Encoder\_MspDeInit()}}
@@ -242,7 +533,46 @@ TIM\+\_\+\+Encoder MSP De-\/\+Initialization This function freeze the hardware r
 \end{DoxyRetVals}
 TIM3 GPIO Configuration PB4 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM3\+\_\+\+CH1 PB5 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM3\+\_\+\+CH2
 
-TIM4 GPIO Configuration PB6 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM4\+\_\+\+CH1 PB7 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM4\+\_\+\+CH2\Hypertarget{stm32f4xx__hal__msp_8c_a8cc723aedb4c01bc57cbe38c21f0b0a3}\label{stm32f4xx__hal__msp_8c_a8cc723aedb4c01bc57cbe38c21f0b0a3} 
+TIM4 GPIO Configuration PB6 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM4\+\_\+\+CH1 PB7 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM4\+\_\+\+CH2
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00604}{604}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00605\ \{}
+\DoxyCodeLine{00606\ \ \ \textcolor{keywordflow}{if}(htim\_encoder-\/>Instance==TIM3)}
+\DoxyCodeLine{00607\ \ \ \{}
+\DoxyCodeLine{00608\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM3\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00609\ }
+\DoxyCodeLine{00610\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM3\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00611\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ disable\ */}}
+\DoxyCodeLine{00612\ \ \ \ \ \_\_HAL\_RCC\_TIM3\_CLK\_DISABLE();}
+\DoxyCodeLine{00613\ }
+\DoxyCodeLine{00618\ \ \ \ \ HAL\_GPIO\_DeInit(GPIOB,\ GPIO\_PIN\_4|GPIO\_PIN\_5);}
+\DoxyCodeLine{00619\ }
+\DoxyCodeLine{00620\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM3\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00621\ }
+\DoxyCodeLine{00622\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM3\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00623\ \ \ \}}
+\DoxyCodeLine{00624\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(htim\_encoder-\/>Instance==TIM4)}
+\DoxyCodeLine{00625\ \ \ \{}
+\DoxyCodeLine{00626\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM4\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00627\ }
+\DoxyCodeLine{00628\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM4\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00629\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ disable\ */}}
+\DoxyCodeLine{00630\ \ \ \ \ \_\_HAL\_RCC\_TIM4\_CLK\_DISABLE();}
+\DoxyCodeLine{00631\ }
+\DoxyCodeLine{00636\ \ \ \ \ HAL\_GPIO\_DeInit(GPIOB,\ GPIO\_PIN\_6|GPIO\_PIN\_7);}
+\DoxyCodeLine{00637\ }
+\DoxyCodeLine{00638\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM4\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00639\ }
+\DoxyCodeLine{00640\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM4\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00641\ \ \ \}}
+\DoxyCodeLine{00642\ }
+\DoxyCodeLine{00643\ \}}
+
+\end{DoxyCode}
+\Hypertarget{stm32f4xx__hal__msp_8c_a8cc723aedb4c01bc57cbe38c21f0b0a3}\label{stm32f4xx__hal__msp_8c_a8cc723aedb4c01bc57cbe38c21f0b0a3} 
 \index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_TIM\_Encoder\_MspInit@{HAL\_TIM\_Encoder\_MspInit}}
 \index{HAL\_TIM\_Encoder\_MspInit@{HAL\_TIM\_Encoder\_MspInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
 \doxysubsubsection{\texorpdfstring{HAL\_TIM\_Encoder\_MspInit()}{HAL\_TIM\_Encoder\_MspInit()}}
@@ -264,7 +594,59 @@ TIM\+\_\+\+Encoder MSP Initialization This function configures the hardware reso
 \end{DoxyRetVals}
 TIM3 GPIO Configuration PB4 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM3\+\_\+\+CH1 PB5 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM3\+\_\+\+CH2
 
-TIM4 GPIO Configuration PB6 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM4\+\_\+\+CH1 PB7 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM4\+\_\+\+CH2\Hypertarget{stm32f4xx__hal__msp_8c_ae70bce6c39d0b570a7523b86738cec4b}\label{stm32f4xx__hal__msp_8c_ae70bce6c39d0b570a7523b86738cec4b} 
+TIM4 GPIO Configuration PB6 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM4\+\_\+\+CH1 PB7 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM4\+\_\+\+CH2
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00382}{382}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00383\ \{}
+\DoxyCodeLine{00384\ \ \ GPIO\_InitTypeDef\ GPIO\_InitStruct\ =\ \{0\};}
+\DoxyCodeLine{00385\ \ \ \textcolor{keywordflow}{if}(htim\_encoder-\/>Instance==TIM3)}
+\DoxyCodeLine{00386\ \ \ \{}
+\DoxyCodeLine{00387\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM3\_MspInit\ 0\ */}}
+\DoxyCodeLine{00388\ }
+\DoxyCodeLine{00389\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM3\_MspInit\ 0\ */}}
+\DoxyCodeLine{00390\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ enable\ */}}
+\DoxyCodeLine{00391\ \ \ \ \ \_\_HAL\_RCC\_TIM3\_CLK\_ENABLE();}
+\DoxyCodeLine{00392\ }
+\DoxyCodeLine{00393\ \ \ \ \ \_\_HAL\_RCC\_GPIOB\_CLK\_ENABLE();}
+\DoxyCodeLine{00398\ \ \ \ \ GPIO\_InitStruct.Pin\ =\ GPIO\_PIN\_4|GPIO\_PIN\_5;}
+\DoxyCodeLine{00399\ \ \ \ \ GPIO\_InitStruct.Mode\ =\ GPIO\_MODE\_AF\_PP;}
+\DoxyCodeLine{00400\ \ \ \ \ GPIO\_InitStruct.Pull\ =\ GPIO\_NOPULL;}
+\DoxyCodeLine{00401\ \ \ \ \ GPIO\_InitStruct.Speed\ =\ GPIO\_SPEED\_FREQ\_LOW;}
+\DoxyCodeLine{00402\ \ \ \ \ GPIO\_InitStruct.Alternate\ =\ GPIO\_AF2\_TIM3;}
+\DoxyCodeLine{00403\ \ \ \ \ HAL\_GPIO\_Init(GPIOB,\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{00404\ }
+\DoxyCodeLine{00405\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM3\_MspInit\ 1\ */}}
+\DoxyCodeLine{00406\ }
+\DoxyCodeLine{00407\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM3\_MspInit\ 1\ */}}
+\DoxyCodeLine{00408\ \ \ \}}
+\DoxyCodeLine{00409\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(htim\_encoder-\/>Instance==TIM4)}
+\DoxyCodeLine{00410\ \ \ \{}
+\DoxyCodeLine{00411\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM4\_MspInit\ 0\ */}}
+\DoxyCodeLine{00412\ }
+\DoxyCodeLine{00413\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM4\_MspInit\ 0\ */}}
+\DoxyCodeLine{00414\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ enable\ */}}
+\DoxyCodeLine{00415\ \ \ \ \ \_\_HAL\_RCC\_TIM4\_CLK\_ENABLE();}
+\DoxyCodeLine{00416\ }
+\DoxyCodeLine{00417\ \ \ \ \ \_\_HAL\_RCC\_GPIOB\_CLK\_ENABLE();}
+\DoxyCodeLine{00422\ \ \ \ \ GPIO\_InitStruct.Pin\ =\ GPIO\_PIN\_6|GPIO\_PIN\_7;}
+\DoxyCodeLine{00423\ \ \ \ \ GPIO\_InitStruct.Mode\ =\ GPIO\_MODE\_AF\_PP;}
+\DoxyCodeLine{00424\ \ \ \ \ GPIO\_InitStruct.Pull\ =\ GPIO\_NOPULL;}
+\DoxyCodeLine{00425\ \ \ \ \ GPIO\_InitStruct.Speed\ =\ GPIO\_SPEED\_FREQ\_LOW;}
+\DoxyCodeLine{00426\ \ \ \ \ GPIO\_InitStruct.Alternate\ =\ GPIO\_AF2\_TIM4;}
+\DoxyCodeLine{00427\ \ \ \ \ HAL\_GPIO\_Init(GPIOB,\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{00428\ }
+\DoxyCodeLine{00429\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM4\_MspInit\ 1\ */}}
+\DoxyCodeLine{00430\ }
+\DoxyCodeLine{00431\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM4\_MspInit\ 1\ */}}
+\DoxyCodeLine{00432\ \ \ \}}
+\DoxyCodeLine{00433\ }
+\DoxyCodeLine{00434\ \}}
+
+\end{DoxyCode}
+\Hypertarget{stm32f4xx__hal__msp_8c_ae70bce6c39d0b570a7523b86738cec4b}\label{stm32f4xx__hal__msp_8c_ae70bce6c39d0b570a7523b86738cec4b} 
 \index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_TIM\_MspPostInit@{HAL\_TIM\_MspPostInit}}
 \index{HAL\_TIM\_MspPostInit@{HAL\_TIM\_MspPostInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
 \doxysubsubsection{\texorpdfstring{HAL\_TIM\_MspPostInit()}{HAL\_TIM\_MspPostInit()}}
@@ -274,7 +656,88 @@ TIM1 GPIO Configuration PB0 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM1\+\_\+\+CH2N
 
 TIM2 GPIO Configuration PA15 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM2\+\_\+\+CH1 PB3 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM2\+\_\+\+CH2
 
-TIM5 GPIO Configuration PA0-\/\+WKUP -\/-\/-\/---\texorpdfstring{$>$}{>} TIM5\+\_\+\+CH1 PA1 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM5\+\_\+\+CH2 PA2 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM5\+\_\+\+CH3 PA3 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM5\+\_\+\+CH4\Hypertarget{stm32f4xx__hal__msp_8c_af5f524564b3a99a9f87f45227309e866}\label{stm32f4xx__hal__msp_8c_af5f524564b3a99a9f87f45227309e866} 
+TIM5 GPIO Configuration PA0-\/\+WKUP -\/-\/-\/---\texorpdfstring{$>$}{>} TIM5\+\_\+\+CH1 PA1 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM5\+\_\+\+CH2 PA2 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM5\+\_\+\+CH3 PA3 -\/-\/-\/---\texorpdfstring{$>$}{>} TIM5\+\_\+\+CH4
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00436}{436}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00437\ \{}
+\DoxyCodeLine{00438\ \ \ GPIO\_InitTypeDef\ GPIO\_InitStruct\ =\ \{0\};}
+\DoxyCodeLine{00439\ \ \ \textcolor{keywordflow}{if}(htim-\/>Instance==TIM1)}
+\DoxyCodeLine{00440\ \ \ \{}
+\DoxyCodeLine{00441\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM1\_MspPostInit\ 0\ */}}
+\DoxyCodeLine{00442\ }
+\DoxyCodeLine{00443\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM1\_MspPostInit\ 0\ */}}
+\DoxyCodeLine{00444\ \ \ \ \ \_\_HAL\_RCC\_GPIOB\_CLK\_ENABLE();}
+\DoxyCodeLine{00445\ \ \ \ \ \_\_HAL\_RCC\_GPIOA\_CLK\_ENABLE();}
+\DoxyCodeLine{00452\ \ \ \ \ GPIO\_InitStruct.Pin\ =\ GPIO\_PIN\_0|GPIO\_PIN\_1;}
+\DoxyCodeLine{00453\ \ \ \ \ GPIO\_InitStruct.Mode\ =\ GPIO\_MODE\_AF\_PP;}
+\DoxyCodeLine{00454\ \ \ \ \ GPIO\_InitStruct.Pull\ =\ GPIO\_NOPULL;}
+\DoxyCodeLine{00455\ \ \ \ \ GPIO\_InitStruct.Speed\ =\ GPIO\_SPEED\_FREQ\_LOW;}
+\DoxyCodeLine{00456\ \ \ \ \ GPIO\_InitStruct.Alternate\ =\ GPIO\_AF1\_TIM1;}
+\DoxyCodeLine{00457\ \ \ \ \ HAL\_GPIO\_Init(GPIOB,\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{00458\ }
+\DoxyCodeLine{00459\ \ \ \ \ GPIO\_InitStruct.Pin\ =\ GPIO\_PIN\_8|GPIO\_PIN\_11;}
+\DoxyCodeLine{00460\ \ \ \ \ GPIO\_InitStruct.Mode\ =\ GPIO\_MODE\_AF\_PP;}
+\DoxyCodeLine{00461\ \ \ \ \ GPIO\_InitStruct.Pull\ =\ GPIO\_NOPULL;}
+\DoxyCodeLine{00462\ \ \ \ \ GPIO\_InitStruct.Speed\ =\ GPIO\_SPEED\_FREQ\_LOW;}
+\DoxyCodeLine{00463\ \ \ \ \ GPIO\_InitStruct.Alternate\ =\ GPIO\_AF1\_TIM1;}
+\DoxyCodeLine{00464\ \ \ \ \ HAL\_GPIO\_Init(GPIOA,\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{00465\ }
+\DoxyCodeLine{00466\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM1\_MspPostInit\ 1\ */}}
+\DoxyCodeLine{00467\ }
+\DoxyCodeLine{00468\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM1\_MspPostInit\ 1\ */}}
+\DoxyCodeLine{00469\ \ \ \}}
+\DoxyCodeLine{00470\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(htim-\/>Instance==TIM2)}
+\DoxyCodeLine{00471\ \ \ \{}
+\DoxyCodeLine{00472\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM2\_MspPostInit\ 0\ */}}
+\DoxyCodeLine{00473\ }
+\DoxyCodeLine{00474\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM2\_MspPostInit\ 0\ */}}
+\DoxyCodeLine{00475\ }
+\DoxyCodeLine{00476\ \ \ \ \ \_\_HAL\_RCC\_GPIOA\_CLK\_ENABLE();}
+\DoxyCodeLine{00477\ \ \ \ \ \_\_HAL\_RCC\_GPIOB\_CLK\_ENABLE();}
+\DoxyCodeLine{00482\ \ \ \ \ GPIO\_InitStruct.Pin\ =\ GPIO\_PIN\_15;}
+\DoxyCodeLine{00483\ \ \ \ \ GPIO\_InitStruct.Mode\ =\ GPIO\_MODE\_AF\_PP;}
+\DoxyCodeLine{00484\ \ \ \ \ GPIO\_InitStruct.Pull\ =\ GPIO\_NOPULL;}
+\DoxyCodeLine{00485\ \ \ \ \ GPIO\_InitStruct.Speed\ =\ GPIO\_SPEED\_FREQ\_LOW;}
+\DoxyCodeLine{00486\ \ \ \ \ GPIO\_InitStruct.Alternate\ =\ GPIO\_AF1\_TIM2;}
+\DoxyCodeLine{00487\ \ \ \ \ HAL\_GPIO\_Init(GPIOA,\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{00488\ }
+\DoxyCodeLine{00489\ \ \ \ \ GPIO\_InitStruct.Pin\ =\ GPIO\_PIN\_3;}
+\DoxyCodeLine{00490\ \ \ \ \ GPIO\_InitStruct.Mode\ =\ GPIO\_MODE\_AF\_PP;}
+\DoxyCodeLine{00491\ \ \ \ \ GPIO\_InitStruct.Pull\ =\ GPIO\_NOPULL;}
+\DoxyCodeLine{00492\ \ \ \ \ GPIO\_InitStruct.Speed\ =\ GPIO\_SPEED\_FREQ\_LOW;}
+\DoxyCodeLine{00493\ \ \ \ \ GPIO\_InitStruct.Alternate\ =\ GPIO\_AF1\_TIM2;}
+\DoxyCodeLine{00494\ \ \ \ \ HAL\_GPIO\_Init(GPIOB,\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{00495\ }
+\DoxyCodeLine{00496\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM2\_MspPostInit\ 1\ */}}
+\DoxyCodeLine{00497\ }
+\DoxyCodeLine{00498\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM2\_MspPostInit\ 1\ */}}
+\DoxyCodeLine{00499\ \ \ \}}
+\DoxyCodeLine{00500\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(htim-\/>Instance==TIM5)}
+\DoxyCodeLine{00501\ \ \ \{}
+\DoxyCodeLine{00502\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM5\_MspPostInit\ 0\ */}}
+\DoxyCodeLine{00503\ }
+\DoxyCodeLine{00504\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM5\_MspPostInit\ 0\ */}}
+\DoxyCodeLine{00505\ }
+\DoxyCodeLine{00506\ \ \ \ \ \_\_HAL\_RCC\_GPIOA\_CLK\_ENABLE();}
+\DoxyCodeLine{00513\ \ \ \ \ GPIO\_InitStruct.Pin\ =\ GPIO\_PIN\_0|GPIO\_PIN\_1|GPIO\_PIN\_2|GPIO\_PIN\_3;}
+\DoxyCodeLine{00514\ \ \ \ \ GPIO\_InitStruct.Mode\ =\ GPIO\_MODE\_AF\_PP;}
+\DoxyCodeLine{00515\ \ \ \ \ GPIO\_InitStruct.Pull\ =\ GPIO\_NOPULL;}
+\DoxyCodeLine{00516\ \ \ \ \ GPIO\_InitStruct.Speed\ =\ GPIO\_SPEED\_FREQ\_LOW;}
+\DoxyCodeLine{00517\ \ \ \ \ GPIO\_InitStruct.Alternate\ =\ GPIO\_AF2\_TIM5;}
+\DoxyCodeLine{00518\ \ \ \ \ HAL\_GPIO\_Init(GPIOA,\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{00519\ }
+\DoxyCodeLine{00520\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM5\_MspPostInit\ 1\ */}}
+\DoxyCodeLine{00521\ }
+\DoxyCodeLine{00522\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM5\_MspPostInit\ 1\ */}}
+\DoxyCodeLine{00523\ \ \ \}}
+\DoxyCodeLine{00524\ }
+\DoxyCodeLine{00525\ \}}
+
+\end{DoxyCode}
+\Hypertarget{stm32f4xx__hal__msp_8c_af5f524564b3a99a9f87f45227309e866}\label{stm32f4xx__hal__msp_8c_af5f524564b3a99a9f87f45227309e866} 
 \index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_TIM\_PWM\_MspDeInit@{HAL\_TIM\_PWM\_MspDeInit}}
 \index{HAL\_TIM\_PWM\_MspDeInit@{HAL\_TIM\_PWM\_MspDeInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
 \doxysubsubsection{\texorpdfstring{HAL\_TIM\_PWM\_MspDeInit()}{HAL\_TIM\_PWM\_MspDeInit()}}
@@ -294,6 +757,39 @@ TIM\+\_\+\+PWM MSP De-\/\+Initialization This function freeze the hardware resou
 {\em None} & \\
 \hline
 \end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00571}{571}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00572\ \{}
+\DoxyCodeLine{00573\ \ \ \textcolor{keywordflow}{if}(htim\_pwm-\/>Instance==TIM2)}
+\DoxyCodeLine{00574\ \ \ \{}
+\DoxyCodeLine{00575\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM2\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00576\ }
+\DoxyCodeLine{00577\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM2\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00578\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ disable\ */}}
+\DoxyCodeLine{00579\ \ \ \ \ \_\_HAL\_RCC\_TIM2\_CLK\_DISABLE();}
+\DoxyCodeLine{00580\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM2\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00581\ }
+\DoxyCodeLine{00582\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM2\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00583\ \ \ \}}
+\DoxyCodeLine{00584\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(htim\_pwm-\/>Instance==TIM5)}
+\DoxyCodeLine{00585\ \ \ \{}
+\DoxyCodeLine{00586\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM5\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00587\ }
+\DoxyCodeLine{00588\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM5\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00589\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ disable\ */}}
+\DoxyCodeLine{00590\ \ \ \ \ \_\_HAL\_RCC\_TIM5\_CLK\_DISABLE();}
+\DoxyCodeLine{00591\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM5\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00592\ }
+\DoxyCodeLine{00593\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM5\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00594\ \ \ \}}
+\DoxyCodeLine{00595\ }
+\DoxyCodeLine{00596\ \}}
+
+\end{DoxyCode}
 \Hypertarget{stm32f4xx__hal__msp_8c_a24d5b9c609d8b753d95508419f4c1901}\label{stm32f4xx__hal__msp_8c_a24d5b9c609d8b753d95508419f4c1901} 
 \index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_TIM\_PWM\_MspInit@{HAL\_TIM\_PWM\_MspInit}}
 \index{HAL\_TIM\_PWM\_MspInit@{HAL\_TIM\_PWM\_MspInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
@@ -314,6 +810,39 @@ TIM\+\_\+\+PWM MSP Initialization This function configures the hardware resource
 {\em None} & \\
 \hline
 \end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00349}{349}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00350\ \{}
+\DoxyCodeLine{00351\ \ \ \textcolor{keywordflow}{if}(htim\_pwm-\/>Instance==TIM2)}
+\DoxyCodeLine{00352\ \ \ \{}
+\DoxyCodeLine{00353\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM2\_MspInit\ 0\ */}}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00355\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM2\_MspInit\ 0\ */}}
+\DoxyCodeLine{00356\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ enable\ */}}
+\DoxyCodeLine{00357\ \ \ \ \ \_\_HAL\_RCC\_TIM2\_CLK\_ENABLE();}
+\DoxyCodeLine{00358\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM2\_MspInit\ 1\ */}}
+\DoxyCodeLine{00359\ }
+\DoxyCodeLine{00360\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM2\_MspInit\ 1\ */}}
+\DoxyCodeLine{00361\ \ \ \}}
+\DoxyCodeLine{00362\ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(htim\_pwm-\/>Instance==TIM5)}
+\DoxyCodeLine{00363\ \ \ \{}
+\DoxyCodeLine{00364\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM5\_MspInit\ 0\ */}}
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00366\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM5\_MspInit\ 0\ */}}
+\DoxyCodeLine{00367\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ enable\ */}}
+\DoxyCodeLine{00368\ \ \ \ \ \_\_HAL\_RCC\_TIM5\_CLK\_ENABLE();}
+\DoxyCodeLine{00369\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ TIM5\_MspInit\ 1\ */}}
+\DoxyCodeLine{00370\ }
+\DoxyCodeLine{00371\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ TIM5\_MspInit\ 1\ */}}
+\DoxyCodeLine{00372\ \ \ \}}
+\DoxyCodeLine{00373\ }
+\DoxyCodeLine{00374\ \}}
+
+\end{DoxyCode}
 \Hypertarget{stm32f4xx__hal__msp_8c_a718f39804e3b910d738a0e1e46151188}\label{stm32f4xx__hal__msp_8c_a718f39804e3b910d738a0e1e46151188} 
 \index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_UART\_MspDeInit@{HAL\_UART\_MspDeInit}}
 \index{HAL\_UART\_MspDeInit@{HAL\_UART\_MspDeInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
@@ -334,7 +863,34 @@ UART MSP De-\/\+Initialization This function freeze the hardware resources used 
 {\em None} & \\
 \hline
 \end{DoxyRetVals}
-USART1 GPIO Configuration PA9 -\/-\/-\/---\texorpdfstring{$>$}{>} USART1\+\_\+\+TX PA10 -\/-\/-\/---\texorpdfstring{$>$}{>} USART1\+\_\+\+RX\Hypertarget{stm32f4xx__hal__msp_8c_a0e553b32211877322f949b14801bbfa7}\label{stm32f4xx__hal__msp_8c_a0e553b32211877322f949b14801bbfa7} 
+USART1 GPIO Configuration PA9 -\/-\/-\/---\texorpdfstring{$>$}{>} USART1\+\_\+\+TX PA10 -\/-\/-\/---\texorpdfstring{$>$}{>} USART1\+\_\+\+RX
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00690}{690}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00691\ \{}
+\DoxyCodeLine{00692\ \ \ \textcolor{keywordflow}{if}(huart-\/>Instance==USART1)}
+\DoxyCodeLine{00693\ \ \ \{}
+\DoxyCodeLine{00694\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ USART1\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00695\ }
+\DoxyCodeLine{00696\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ USART1\_MspDeInit\ 0\ */}}
+\DoxyCodeLine{00697\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ disable\ */}}
+\DoxyCodeLine{00698\ \ \ \ \ \_\_HAL\_RCC\_USART1\_CLK\_DISABLE();}
+\DoxyCodeLine{00699\ }
+\DoxyCodeLine{00704\ \ \ \ \ HAL\_GPIO\_DeInit(GPIOA,\ GPIO\_PIN\_9|GPIO\_PIN\_10);}
+\DoxyCodeLine{00705\ }
+\DoxyCodeLine{00706\ \ \ \ \ \textcolor{comment}{/*\ USART1\ interrupt\ DeInit\ */}}
+\DoxyCodeLine{00707\ \ \ \ \ HAL\_NVIC\_DisableIRQ(USART1\_IRQn);}
+\DoxyCodeLine{00708\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ USART1\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00709\ }
+\DoxyCodeLine{00710\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ USART1\_MspDeInit\ 1\ */}}
+\DoxyCodeLine{00711\ \ \ \}}
+\DoxyCodeLine{00712\ }
+\DoxyCodeLine{00713\ \}}
+
+\end{DoxyCode}
+\Hypertarget{stm32f4xx__hal__msp_8c_a0e553b32211877322f949b14801bbfa7}\label{stm32f4xx__hal__msp_8c_a0e553b32211877322f949b14801bbfa7} 
 \index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_UART\_MspInit@{HAL\_UART\_MspInit}}
 \index{HAL\_UART\_MspInit@{HAL\_UART\_MspInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
 \doxysubsubsection{\texorpdfstring{HAL\_UART\_MspInit()}{HAL\_UART\_MspInit()}}
@@ -355,3 +911,37 @@ UART MSP Initialization This function configures the hardware resources used in 
 \hline
 \end{DoxyRetVals}
 USART1 GPIO Configuration PA9 -\/-\/-\/---\texorpdfstring{$>$}{>} USART1\+\_\+\+TX PA10 -\/-\/-\/---\texorpdfstring{$>$}{>} USART1\+\_\+\+RX
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00651}{651}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00652\ \{}
+\DoxyCodeLine{00653\ \ \ GPIO\_InitTypeDef\ GPIO\_InitStruct\ =\ \{0\};}
+\DoxyCodeLine{00654\ \ \ \textcolor{keywordflow}{if}(huart-\/>Instance==USART1)}
+\DoxyCodeLine{00655\ \ \ \{}
+\DoxyCodeLine{00656\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ USART1\_MspInit\ 0\ */}}
+\DoxyCodeLine{00657\ }
+\DoxyCodeLine{00658\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ USART1\_MspInit\ 0\ */}}
+\DoxyCodeLine{00659\ \ \ \ \ \textcolor{comment}{/*\ Peripheral\ clock\ enable\ */}}
+\DoxyCodeLine{00660\ \ \ \ \ \_\_HAL\_RCC\_USART1\_CLK\_ENABLE();}
+\DoxyCodeLine{00661\ }
+\DoxyCodeLine{00662\ \ \ \ \ \_\_HAL\_RCC\_GPIOA\_CLK\_ENABLE();}
+\DoxyCodeLine{00667\ \ \ \ \ GPIO\_InitStruct.Pin\ =\ GPIO\_PIN\_9|GPIO\_PIN\_10;}
+\DoxyCodeLine{00668\ \ \ \ \ GPIO\_InitStruct.Mode\ =\ GPIO\_MODE\_AF\_PP;}
+\DoxyCodeLine{00669\ \ \ \ \ GPIO\_InitStruct.Pull\ =\ GPIO\_NOPULL;}
+\DoxyCodeLine{00670\ \ \ \ \ GPIO\_InitStruct.Speed\ =\ GPIO\_SPEED\_FREQ\_VERY\_HIGH;}
+\DoxyCodeLine{00671\ \ \ \ \ GPIO\_InitStruct.Alternate\ =\ GPIO\_AF7\_USART1;}
+\DoxyCodeLine{00672\ \ \ \ \ HAL\_GPIO\_Init(GPIOA,\ \&GPIO\_InitStruct);}
+\DoxyCodeLine{00673\ }
+\DoxyCodeLine{00674\ \ \ \ \ \textcolor{comment}{/*\ USART1\ interrupt\ Init\ */}}
+\DoxyCodeLine{00675\ \ \ \ \ HAL\_NVIC\_SetPriority(USART1\_IRQn,\ 0,\ 0);}
+\DoxyCodeLine{00676\ \ \ \ \ HAL\_NVIC\_EnableIRQ(USART1\_IRQn);}
+\DoxyCodeLine{00677\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ USART1\_MspInit\ 1\ */}}
+\DoxyCodeLine{00678\ }
+\DoxyCodeLine{00679\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ USART1\_MspInit\ 1\ */}}
+\DoxyCodeLine{00680\ \ \ \}}
+\DoxyCodeLine{00681\ }
+\DoxyCodeLine{00682\ \}}
+
+\end{DoxyCode}

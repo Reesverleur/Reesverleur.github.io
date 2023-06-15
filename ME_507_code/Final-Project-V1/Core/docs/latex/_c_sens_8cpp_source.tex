@@ -1,0 +1,32 @@
+\doxysection{CSens.\+cpp}
+\hypertarget{_c_sens_8cpp_source}{}\label{_c_sens_8cpp_source}\index{Src/CSens.cpp@{Src/CSens.cpp}}
+\mbox{\hyperlink{_c_sens_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_c_sens_8h}{CSens.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00030}\mbox{\hyperlink{class_c_sens_ae46e479c302727c5c0b9d255f53dc525}{00030}}\ \mbox{\hyperlink{class_c_sens_ae46e479c302727c5c0b9d255f53dc525}{CSens::CSens}}(I2C\_HandleTypeDef*\ hi2c)\{}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{class_c_sens_aa66efdc9555b448606dc65cea90795cc}{i2c}}\ =\ hi2c;}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00032}00032\ \ \ \ \ HAL\_I2C\_Mem\_Write(\mbox{\hyperlink{class_c_sens_aa66efdc9555b448606dc65cea90795cc}{i2c}},\mbox{\hyperlink{class_c_sens_ad7bf06677399ec1ed5a406aa537f61b3}{Address}},0x00,I2C\_MEMADD\_SIZE\_8BIT,\mbox{\hyperlink{class_c_sens_a954998c99aaddec66864fae3ac90ff60}{Init}},1,1000);}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00033}00033\ \ \ \ \ HAL\_Delay(5);}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00046}\mbox{\hyperlink{class_c_sens_a4f6a194a321d5e50883bc19add1067b4}{00046}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_c_sens_a4f6a194a321d5e50883bc19add1067b4}{CSens::getCdata}}()\{}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00047}00047\ \ \ \ \ HAL\_I2C\_Mem\_Read\_IT(\mbox{\hyperlink{class_c_sens_aa66efdc9555b448606dc65cea90795cc}{i2c}},\mbox{\hyperlink{class_c_sens_ad7bf06677399ec1ed5a406aa537f61b3}{Address}},\mbox{\hyperlink{class_c_sens_af53cda980242c8157481250149f9f64e}{MemAddr}},I2C\_MEMADD\_SIZE\_8BIT,\mbox{\hyperlink{class_c_sens_abde882476a99649f3ab7e77de065964f}{Cdata}},\mbox{\hyperlink{class_c_sens_a482786ce0e9d5da99ce243c13500374a}{Length}});}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00048}00048\ \}}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00061}\mbox{\hyperlink{_c_sens_8cpp_ac16a95413b35f05c5ce725fefd8531a5}{00061}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_c_sens_8cpp_ac16a95413b35f05c5ce725fefd8531a5}{HAL\_I2C\_MemRxCpltCallback}}(I2C\_HandleTypeDef*\ hi2c)\{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Memory\ read\ callback\ function}}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(hi2c\ ==\ \mbox{\hyperlink{class_c_sens_aa66efdc9555b448606dc65cea90795cc}{CSens::i2c}})\{}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sens_a96bf5467865d3114c8615064c7819b28}{CSens::Clr\_Val}}\ =\ (\mbox{\hyperlink{class_c_sens_abde882476a99649f3ab7e77de065964f}{CSens::Cdata}}[20]<<8)+\mbox{\hyperlink{class_c_sens_abde882476a99649f3ab7e77de065964f}{CSens::Cdata}}[19];\ \ \textcolor{comment}{//\ Clear\ data\ is\ little\ endian}}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sens_a5ecef084ece6e281c72789920f7412dc}{CSens::Red\_Val}}\ =\ (\mbox{\hyperlink{class_c_sens_abde882476a99649f3ab7e77de065964f}{CSens::Cdata}}[21]<<8)+\mbox{\hyperlink{class_c_sens_abde882476a99649f3ab7e77de065964f}{CSens::Cdata}}[22];\ \ \textcolor{comment}{//\ RGB\ data\ is\ big\ endian}}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sens_abf222dae6f684d88df32237e3a8315be}{CSens::Grn\_Val}}\ =\ (\mbox{\hyperlink{class_c_sens_abde882476a99649f3ab7e77de065964f}{CSens::Cdata}}[23]<<8)+\mbox{\hyperlink{class_c_sens_abde882476a99649f3ab7e77de065964f}{CSens::Cdata}}[24];}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sens_aa99d02835daf65e4baa53f817778a4af}{CSens::Blu\_Val}}\ =\ (\mbox{\hyperlink{class_c_sens_abde882476a99649f3ab7e77de065964f}{CSens::Cdata}}[25]<<8)+\mbox{\hyperlink{class_c_sens_abde882476a99649f3ab7e77de065964f}{CSens::Cdata}}[26];}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00068}00068\ \}}
+\DoxyCodeLine{\Hypertarget{_c_sens_8cpp_source_l00069}00069\ }
+
+\end{DoxyCode}

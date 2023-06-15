@@ -5,10 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Final Project V1: CSens Class Reference</title>
+<title>Final Project: CSens Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Final Project V1
+   <div id="projectname">Final Project
    </div>
   </td>
  </tr>
@@ -46,6 +50,23 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_c_sens.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,7 +88,6 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -94,48 +114,38 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:abde882476a99649f3ab7e77de065964f"><td class="memItemLeft" align="right" valign="top"><a id="abde882476a99649f3ab7e77de065964f" name="abde882476a99649f3ab7e77de065964f"></a>
-static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>Cdata</b> [27]</td></tr>
-<tr class="memdesc:abde882476a99649f3ab7e77de065964f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data collected from device. <br /></td></tr>
+<tr class="memitem:abde882476a99649f3ab7e77de065964f"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sens.html#abde882476a99649f3ab7e77de065964f">Cdata</a> [27]</td></tr>
+<tr class="memdesc:abde882476a99649f3ab7e77de065964f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data collected from device.  <br /></td></tr>
 <tr class="separator:abde882476a99649f3ab7e77de065964f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa66efdc9555b448606dc65cea90795cc"><td class="memItemLeft" align="right" valign="top"><a id="aa66efdc9555b448606dc65cea90795cc" name="aa66efdc9555b448606dc65cea90795cc"></a>
-static I2C_HandleTypeDef *&#160;</td><td class="memItemRight" valign="bottom"><b>i2c</b></td></tr>
-<tr class="memdesc:aa66efdc9555b448606dc65cea90795cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to i2c object. <br /></td></tr>
+<tr class="memitem:aa66efdc9555b448606dc65cea90795cc"><td class="memItemLeft" align="right" valign="top">static I2C_HandleTypeDef *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sens.html#aa66efdc9555b448606dc65cea90795cc">i2c</a></td></tr>
+<tr class="memdesc:aa66efdc9555b448606dc65cea90795cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to i2c object.  <br /></td></tr>
 <tr class="separator:aa66efdc9555b448606dc65cea90795cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96bf5467865d3114c8615064c7819b28"><td class="memItemLeft" align="right" valign="top"><a id="a96bf5467865d3114c8615064c7819b28" name="a96bf5467865d3114c8615064c7819b28"></a>
-static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Clr_Val</b></td></tr>
-<tr class="memdesc:a96bf5467865d3114c8615064c7819b28"><td class="mdescLeft">&#160;</td><td class="mdescRight">16 bit color value for clear channel <br /></td></tr>
+<tr class="memitem:a96bf5467865d3114c8615064c7819b28"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sens.html#a96bf5467865d3114c8615064c7819b28">Clr_Val</a></td></tr>
+<tr class="memdesc:a96bf5467865d3114c8615064c7819b28"><td class="mdescLeft">&#160;</td><td class="mdescRight">16 bit color value for clear channel  <br /></td></tr>
 <tr class="separator:a96bf5467865d3114c8615064c7819b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ecef084ece6e281c72789920f7412dc"><td class="memItemLeft" align="right" valign="top"><a id="a5ecef084ece6e281c72789920f7412dc" name="a5ecef084ece6e281c72789920f7412dc"></a>
-static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Red_Val</b></td></tr>
-<tr class="memdesc:a5ecef084ece6e281c72789920f7412dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">16 bit color value for red channel <br /></td></tr>
+<tr class="memitem:a5ecef084ece6e281c72789920f7412dc"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sens.html#a5ecef084ece6e281c72789920f7412dc">Red_Val</a></td></tr>
+<tr class="memdesc:a5ecef084ece6e281c72789920f7412dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">16 bit color value for red channel  <br /></td></tr>
 <tr class="separator:a5ecef084ece6e281c72789920f7412dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf222dae6f684d88df32237e3a8315be"><td class="memItemLeft" align="right" valign="top"><a id="abf222dae6f684d88df32237e3a8315be" name="abf222dae6f684d88df32237e3a8315be"></a>
-static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Grn_Val</b></td></tr>
-<tr class="memdesc:abf222dae6f684d88df32237e3a8315be"><td class="mdescLeft">&#160;</td><td class="mdescRight">16 bit color value for green channel <br /></td></tr>
+<tr class="memitem:abf222dae6f684d88df32237e3a8315be"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sens.html#abf222dae6f684d88df32237e3a8315be">Grn_Val</a></td></tr>
+<tr class="memdesc:abf222dae6f684d88df32237e3a8315be"><td class="mdescLeft">&#160;</td><td class="mdescRight">16 bit color value for green channel  <br /></td></tr>
 <tr class="separator:abf222dae6f684d88df32237e3a8315be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa99d02835daf65e4baa53f817778a4af"><td class="memItemLeft" align="right" valign="top"><a id="aa99d02835daf65e4baa53f817778a4af" name="aa99d02835daf65e4baa53f817778a4af"></a>
-static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Blu_Val</b></td></tr>
-<tr class="memdesc:aa99d02835daf65e4baa53f817778a4af"><td class="mdescLeft">&#160;</td><td class="mdescRight">16 bit color value for blue channel <br /></td></tr>
+<tr class="memitem:aa99d02835daf65e4baa53f817778a4af"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sens.html#aa99d02835daf65e4baa53f817778a4af">Blu_Val</a></td></tr>
+<tr class="memdesc:aa99d02835daf65e4baa53f817778a4af"><td class="mdescLeft">&#160;</td><td class="mdescRight">16 bit color value for blue channel  <br /></td></tr>
 <tr class="separator:aa99d02835daf65e4baa53f817778a4af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ad7bf06677399ec1ed5a406aa537f61b3"><td class="memItemLeft" align="right" valign="top"><a id="ad7bf06677399ec1ed5a406aa537f61b3" name="ad7bf06677399ec1ed5a406aa537f61b3"></a>
-int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Address</b> = 0x0029 &lt;&lt; 1</td></tr>
-<tr class="memdesc:ad7bf06677399ec1ed5a406aa537f61b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Address of color sensor. <br /></td></tr>
+<tr class="memitem:ad7bf06677399ec1ed5a406aa537f61b3"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sens.html#ad7bf06677399ec1ed5a406aa537f61b3">Address</a> = 0x0029 &lt;&lt; 1</td></tr>
+<tr class="memdesc:ad7bf06677399ec1ed5a406aa537f61b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C Address of color sensor.  <br /></td></tr>
 <tr class="separator:ad7bf06677399ec1ed5a406aa537f61b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af53cda980242c8157481250149f9f64e"><td class="memItemLeft" align="right" valign="top"><a id="af53cda980242c8157481250149f9f64e" name="af53cda980242c8157481250149f9f64e"></a>
-int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>MemAddr</b> = 0x0003</td></tr>
-<tr class="memdesc:af53cda980242c8157481250149f9f64e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory address to request data from. <br /></td></tr>
+<tr class="memitem:af53cda980242c8157481250149f9f64e"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sens.html#af53cda980242c8157481250149f9f64e">MemAddr</a> = 0x0003</td></tr>
+<tr class="memdesc:af53cda980242c8157481250149f9f64e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Memory address to request data from.  <br /></td></tr>
 <tr class="separator:af53cda980242c8157481250149f9f64e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a482786ce0e9d5da99ce243c13500374a"><td class="memItemLeft" align="right" valign="top"><a id="a482786ce0e9d5da99ce243c13500374a" name="a482786ce0e9d5da99ce243c13500374a"></a>
-int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>Length</b> = 27</td></tr>
-<tr class="memdesc:a482786ce0e9d5da99ce243c13500374a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of bytes to fetch. <br /></td></tr>
+<tr class="memitem:a482786ce0e9d5da99ce243c13500374a"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sens.html#a482786ce0e9d5da99ce243c13500374a">Length</a> = 27</td></tr>
+<tr class="memdesc:a482786ce0e9d5da99ce243c13500374a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of bytes to fetch.  <br /></td></tr>
 <tr class="separator:a482786ce0e9d5da99ce243c13500374a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a954998c99aaddec66864fae3ac90ff60"><td class="memItemLeft" align="right" valign="top"><a id="a954998c99aaddec66864fae3ac90ff60" name="a954998c99aaddec66864fae3ac90ff60"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> [1] = {0b00000011}</td></tr>
-<tr class="memdesc:a954998c99aaddec66864fae3ac90ff60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization byte to be written to 0x00. <br /></td></tr>
+<tr class="memitem:a954998c99aaddec66864fae3ac90ff60"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sens.html#a954998c99aaddec66864fae3ac90ff60">Init</a> [1] = {0b00000011}</td></tr>
+<tr class="memdesc:a954998c99aaddec66864fae3ac90ff60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization byte to be written to 0x00.  <br /></td></tr>
 <tr class="separator:a954998c99aaddec66864fae3ac90ff60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -143,6 +153,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> [1] = {0b
 <p>This contains the attribute definitions and the function prototypes for the I2C based color sensor driver. The color sensor gives 16 bit numbers for each of 4 channels (clear, red, green, blue). The class accesses the appropriate locations in the memory of the I2C device and sets class attributes accordingly.</p>
 <p>The communication protocol for this class does not appear to match the standard I2C protocol. It appears that memory can only be accessed starting from byte 0. Additionally the memory read command must request data starting from byte 3 in order for the last 8 bytes (which contain the color data) to be populated.</p>
 <p>The color scales also appear to be very non-linear with the red channel having a much higher response than the blue and green. </p>
+
+<p class="definition">Definition at line <a class="el" href="_c_sens_8h_source.html#l00046">46</a> of file <a class="el" href="_c_sens_8h_source.html">CSens.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae46e479c302727c5c0b9d255f53dc525" name="ae46e479c302727c5c0b9d255f53dc525"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae46e479c302727c5c0b9d255f53dc525">&#9670;&#160;</a></span>CSens()</h2>
@@ -168,6 +180,16 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> [1] = {0b
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="_c_sens_8cpp_source.html#l00030">30</a> of file <a class="el" href="_c_sens_8cpp_source.html">CSens.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   30</span>                                   {</div>
+<div class="line"><span class="lineno">   31</span>    <a class="code hl_variable" href="class_c_sens.html#aa66efdc9555b448606dc65cea90795cc">i2c</a> = hi2c;</div>
+<div class="line"><span class="lineno">   32</span>    HAL_I2C_Mem_Write(<a class="code hl_variable" href="class_c_sens.html#aa66efdc9555b448606dc65cea90795cc">i2c</a>,<a class="code hl_variable" href="class_c_sens.html#ad7bf06677399ec1ed5a406aa537f61b3">Address</a>,0x00,I2C_MEMADD_SIZE_8BIT,<a class="code hl_variable" href="class_c_sens.html#a954998c99aaddec66864fae3ac90ff60">Init</a>,1,1000);</div>
+<div class="line"><span class="lineno">   33</span>    HAL_Delay(5);</div>
+<div class="line"><span class="lineno">   34</span>}</div>
+<div class="ttc" id="aclass_c_sens_html_a954998c99aaddec66864fae3ac90ff60"><div class="ttname"><a href="class_c_sens.html#a954998c99aaddec66864fae3ac90ff60">CSens::Init</a></div><div class="ttdeci">uint8_t Init[1]</div><div class="ttdoc">Initialization byte to be written to 0x00.</div><div class="ttdef"><b>Definition</b> <a href="_c_sens_8h_source.html#l00052">CSens.h:52</a></div></div>
+<div class="ttc" id="aclass_c_sens_html_aa66efdc9555b448606dc65cea90795cc"><div class="ttname"><a href="class_c_sens.html#aa66efdc9555b448606dc65cea90795cc">CSens::i2c</a></div><div class="ttdeci">static I2C_HandleTypeDef * i2c</div><div class="ttdoc">Pointer to i2c object.</div><div class="ttdef"><b>Definition</b> <a href="_c_sens_8h_source.html#l00056">CSens.h:56</a></div></div>
+<div class="ttc" id="aclass_c_sens_html_ad7bf06677399ec1ed5a406aa537f61b3"><div class="ttname"><a href="class_c_sens.html#ad7bf06677399ec1ed5a406aa537f61b3">CSens::Address</a></div><div class="ttdeci">int16_t Address</div><div class="ttdoc">I2C Address of color sensor.</div><div class="ttdef"><b>Definition</b> <a href="_c_sens_8h_source.html#l00049">CSens.h:49</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -189,16 +211,289 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> [1] = {0b
 <p>Method to get new color data from the sensor. </p>
 <p>This retrieves the data from the color sensor by using the HAL implementation of the I2C communication protocol. </p>
 
+<p class="definition">Definition at line <a class="el" href="_c_sens_8cpp_source.html#l00046">46</a> of file <a class="el" href="_c_sens_8cpp_source.html">CSens.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>                    {</div>
+<div class="line"><span class="lineno">   47</span>    HAL_I2C_Mem_Read_IT(<a class="code hl_variable" href="class_c_sens.html#aa66efdc9555b448606dc65cea90795cc">i2c</a>,<a class="code hl_variable" href="class_c_sens.html#ad7bf06677399ec1ed5a406aa537f61b3">Address</a>,<a class="code hl_variable" href="class_c_sens.html#af53cda980242c8157481250149f9f64e">MemAddr</a>,I2C_MEMADD_SIZE_8BIT,<a class="code hl_variable" href="class_c_sens.html#abde882476a99649f3ab7e77de065964f">Cdata</a>,<a class="code hl_variable" href="class_c_sens.html#a482786ce0e9d5da99ce243c13500374a">Length</a>);</div>
+<div class="line"><span class="lineno">   48</span>}</div>
+<div class="ttc" id="aclass_c_sens_html_a482786ce0e9d5da99ce243c13500374a"><div class="ttname"><a href="class_c_sens.html#a482786ce0e9d5da99ce243c13500374a">CSens::Length</a></div><div class="ttdeci">int16_t Length</div><div class="ttdoc">Number of bytes to fetch.</div><div class="ttdef"><b>Definition</b> <a href="_c_sens_8h_source.html#l00051">CSens.h:51</a></div></div>
+<div class="ttc" id="aclass_c_sens_html_abde882476a99649f3ab7e77de065964f"><div class="ttname"><a href="class_c_sens.html#abde882476a99649f3ab7e77de065964f">CSens::Cdata</a></div><div class="ttdeci">static uint8_t Cdata[27]</div><div class="ttdoc">Data collected from device.</div><div class="ttdef"><b>Definition</b> <a href="_c_sens_8h_source.html#l00055">CSens.h:55</a></div></div>
+<div class="ttc" id="aclass_c_sens_html_af53cda980242c8157481250149f9f64e"><div class="ttname"><a href="class_c_sens.html#af53cda980242c8157481250149f9f64e">CSens::MemAddr</a></div><div class="ttdeci">int16_t MemAddr</div><div class="ttdoc">Memory address to request data from.</div><div class="ttdef"><b>Definition</b> <a href="_c_sens_8h_source.html#l00050">CSens.h:50</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad7bf06677399ec1ed5a406aa537f61b3" name="ad7bf06677399ec1ed5a406aa537f61b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7bf06677399ec1ed5a406aa537f61b3">&#9670;&#160;</a></span>Address</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t CSens::Address = 0x0029 &lt;&lt; 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>I2C Address of color sensor. </p>
+
+<p class="definition">Definition at line <a class="el" href="_c_sens_8h_source.html#l00049">49</a> of file <a class="el" href="_c_sens_8h_source.html">CSens.h</a>.</p>
+
+</div>
+</div>
+<a id="aa99d02835daf65e4baa53f817778a4af" name="aa99d02835daf65e4baa53f817778a4af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa99d02835daf65e4baa53f817778a4af">&#9670;&#160;</a></span>Blu_Val</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t CSens::Blu_Val</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>16 bit color value for blue channel </p>
+
+<p class="definition">Definition at line <a class="el" href="_c_sens_8h_source.html#l00060">60</a> of file <a class="el" href="_c_sens_8h_source.html">CSens.h</a>.</p>
+
+</div>
+</div>
+<a id="abde882476a99649f3ab7e77de065964f" name="abde882476a99649f3ab7e77de065964f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abde882476a99649f3ab7e77de065964f">&#9670;&#160;</a></span>Cdata</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t CSens::Cdata[27]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Data collected from device. </p>
+
+<p class="definition">Definition at line <a class="el" href="_c_sens_8h_source.html#l00055">55</a> of file <a class="el" href="_c_sens_8h_source.html">CSens.h</a>.</p>
+
+</div>
+</div>
+<a id="a96bf5467865d3114c8615064c7819b28" name="a96bf5467865d3114c8615064c7819b28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96bf5467865d3114c8615064c7819b28">&#9670;&#160;</a></span>Clr_Val</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t CSens::Clr_Val</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>16 bit color value for clear channel </p>
+
+<p class="definition">Definition at line <a class="el" href="_c_sens_8h_source.html#l00057">57</a> of file <a class="el" href="_c_sens_8h_source.html">CSens.h</a>.</p>
+
+</div>
+</div>
+<a id="abf222dae6f684d88df32237e3a8315be" name="abf222dae6f684d88df32237e3a8315be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf222dae6f684d88df32237e3a8315be">&#9670;&#160;</a></span>Grn_Val</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t CSens::Grn_Val</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>16 bit color value for green channel </p>
+
+<p class="definition">Definition at line <a class="el" href="_c_sens_8h_source.html#l00059">59</a> of file <a class="el" href="_c_sens_8h_source.html">CSens.h</a>.</p>
+
+</div>
+</div>
+<a id="aa66efdc9555b448606dc65cea90795cc" name="aa66efdc9555b448606dc65cea90795cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa66efdc9555b448606dc65cea90795cc">&#9670;&#160;</a></span>i2c</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">I2C_HandleTypeDef* CSens::i2c</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to i2c object. </p>
+
+<p class="definition">Definition at line <a class="el" href="_c_sens_8h_source.html#l00056">56</a> of file <a class="el" href="_c_sens_8h_source.html">CSens.h</a>.</p>
+
+</div>
+</div>
+<a id="a954998c99aaddec66864fae3ac90ff60" name="a954998c99aaddec66864fae3ac90ff60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a954998c99aaddec66864fae3ac90ff60">&#9670;&#160;</a></span>Init</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t CSens::Init[1] = {0b00000011}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialization byte to be written to 0x00. </p>
+
+<p class="definition">Definition at line <a class="el" href="_c_sens_8h_source.html#l00052">52</a> of file <a class="el" href="_c_sens_8h_source.html">CSens.h</a>.</p>
+
+</div>
+</div>
+<a id="a482786ce0e9d5da99ce243c13500374a" name="a482786ce0e9d5da99ce243c13500374a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a482786ce0e9d5da99ce243c13500374a">&#9670;&#160;</a></span>Length</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t CSens::Length = 27</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of bytes to fetch. </p>
+
+<p class="definition">Definition at line <a class="el" href="_c_sens_8h_source.html#l00051">51</a> of file <a class="el" href="_c_sens_8h_source.html">CSens.h</a>.</p>
+
+</div>
+</div>
+<a id="af53cda980242c8157481250149f9f64e" name="af53cda980242c8157481250149f9f64e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af53cda980242c8157481250149f9f64e">&#9670;&#160;</a></span>MemAddr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t CSens::MemAddr = 0x0003</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Memory address to request data from. </p>
+
+<p class="definition">Definition at line <a class="el" href="_c_sens_8h_source.html#l00050">50</a> of file <a class="el" href="_c_sens_8h_source.html">CSens.h</a>.</p>
+
+</div>
+</div>
+<a id="a5ecef084ece6e281c72789920f7412dc" name="a5ecef084ece6e281c72789920f7412dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ecef084ece6e281c72789920f7412dc">&#9670;&#160;</a></span>Red_Val</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t CSens::Red_Val</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>16 bit color value for red channel </p>
+
+<p class="definition">Definition at line <a class="el" href="_c_sens_8h_source.html#l00058">58</a> of file <a class="el" href="_c_sens_8h_source.html">CSens.h</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Src/<a class="el" href="_c_sens_8h_source.html">CSens.h</a></li>
-<li>Src/<a class="el" href="_c_sens_8cpp.html">CSens.cpp</a></li>
+<li>Src/<a class="el" href="_c_sens_8cpp_source.html">CSens.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_c_sens.html">CSens</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7 </li>
+  </ul>
+</div>
 </body>
 </html>

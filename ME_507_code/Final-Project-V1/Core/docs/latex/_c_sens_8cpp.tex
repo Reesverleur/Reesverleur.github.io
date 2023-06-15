@@ -24,6 +24,10 @@ Rees P. Verleur
 \end{DoxyAuthor}
 This contains the method definitions for the \doxylink{class_c_sens}{CSens} class. It also includes the I2C memory read callback function definition 
 
+Definition in file \mbox{\hyperlink{_c_sens_8cpp_source}{CSens.\+cpp}}.
+
+
+
 \doxysubsection{Function Documentation}
 \Hypertarget{_c_sens_8cpp_ac16a95413b35f05c5ce725fefd8531a5}\label{_c_sens_8cpp_ac16a95413b35f05c5ce725fefd8531a5} 
 \index{CSens.cpp@{CSens.cpp}!HAL\_I2C\_MemRxCpltCallback@{HAL\_I2C\_MemRxCpltCallback}}
@@ -42,3 +46,19 @@ This is called when the memory read operation is complete. It processes the read
 {\em hi2c} & A pointer to the I2C object which triggered the interrupt \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_c_sens_8cpp_source_l00061}{61}} of file \mbox{\hyperlink{_c_sens_8cpp_source}{CSens.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Memory\ read\ callback\ function}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(hi2c\ ==\ \mbox{\hyperlink{class_c_sens_aa66efdc9555b448606dc65cea90795cc}{CSens::i2c}})\{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sens_a96bf5467865d3114c8615064c7819b28}{CSens::Clr\_Val}}\ =\ (\mbox{\hyperlink{class_c_sens_abde882476a99649f3ab7e77de065964f}{CSens::Cdata}}[20]<<8)+\mbox{\hyperlink{class_c_sens_abde882476a99649f3ab7e77de065964f}{CSens::Cdata}}[19];\ \ \textcolor{comment}{//\ Clear\ data\ is\ little\ endian}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sens_a5ecef084ece6e281c72789920f7412dc}{CSens::Red\_Val}}\ =\ (\mbox{\hyperlink{class_c_sens_abde882476a99649f3ab7e77de065964f}{CSens::Cdata}}[21]<<8)+\mbox{\hyperlink{class_c_sens_abde882476a99649f3ab7e77de065964f}{CSens::Cdata}}[22];\ \ \textcolor{comment}{//\ RGB\ data\ is\ big\ endian}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sens_abf222dae6f684d88df32237e3a8315be}{CSens::Grn\_Val}}\ =\ (\mbox{\hyperlink{class_c_sens_abde882476a99649f3ab7e77de065964f}{CSens::Cdata}}[23]<<8)+\mbox{\hyperlink{class_c_sens_abde882476a99649f3ab7e77de065964f}{CSens::Cdata}}[24];}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_c_sens_aa99d02835daf65e4baa53f817778a4af}{CSens::Blu\_Val}}\ =\ (\mbox{\hyperlink{class_c_sens_abde882476a99649f3ab7e77de065964f}{CSens::Cdata}}[25]<<8)+\mbox{\hyperlink{class_c_sens_abde882476a99649f3ab7e77de065964f}{CSens::Cdata}}[26];}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \}}
+
+\end{DoxyCode}

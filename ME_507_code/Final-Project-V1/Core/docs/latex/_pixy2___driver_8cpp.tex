@@ -27,6 +27,10 @@ Rees P. Verleur
 \end{DoxyAuthor}
 This contains the method definitions for the \doxylink{class_pixy2}{Pixy2} class. It also includes the SPI Transmit and Receive callback function definitions 
 
+Definition in file \mbox{\hyperlink{_pixy2___driver_8cpp_source}{Pixy2\+\_\+\+Driver.\+cpp}}.
+
+
+
 \doxysubsection{Function Documentation}
 \Hypertarget{_pixy2___driver_8cpp_a3df7021fe24cf874f8b1eec5bd5f4cb3}\label{_pixy2___driver_8cpp_a3df7021fe24cf874f8b1eec5bd5f4cb3} 
 \index{Pixy2\_Driver.cpp@{Pixy2\_Driver.cpp}!HAL\_SPI\_RxCpltCallback@{HAL\_SPI\_RxCpltCallback}}
@@ -43,6 +47,19 @@ This function runs on the completion of the receive operation for the SPI compon
 {\em hspi} & A pointer to the spi object which triggered the interrupt this is passed into the function by the system. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_pixy2___driver_8cpp_source_l00130}{130}} of file \mbox{\hyperlink{_pixy2___driver_8cpp_source}{Pixy2\+\_\+\+Driver.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Receive\ callback\ function}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (hspi\ ==\ \mbox{\hyperlink{class_pixy2_a49f19b0f16a7f2aac4ed828f308c547d}{Pixy2::spi}})\{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ HAL\_GPIO\_WritePin(\mbox{\hyperlink{class_pixy2_a75a4ee39e2cecd3391825d84cfbb5020}{Pixy2::SS\_Port}},\mbox{\hyperlink{class_pixy2_af55d898a6bde47ead0588ea66aed2b1c}{Pixy2::SS\_Pin}},GPIO\_PIN\_SET);\ \ \ \ \textcolor{comment}{//\ Write\ ss\ pin\ high\ to\ disable\ communication}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \}}
+
+\end{DoxyCode}
 \Hypertarget{_pixy2___driver_8cpp_a0a99ab4f6aa6ee7dc2abca5483910dde}\label{_pixy2___driver_8cpp_a0a99ab4f6aa6ee7dc2abca5483910dde} 
 \index{Pixy2\_Driver.cpp@{Pixy2\_Driver.cpp}!HAL\_SPI\_TxCpltCallback@{HAL\_SPI\_TxCpltCallback}}
 \index{HAL\_SPI\_TxCpltCallback@{HAL\_SPI\_TxCpltCallback}!Pixy2\_Driver.cpp@{Pixy2\_Driver.cpp}}
@@ -58,3 +75,16 @@ This function runs on the completion of the transmit operation for the SPI compo
 {\em hspi} & A pointer to the spi object which triggered the interrupt this is passed into the function by the system. \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_pixy2___driver_8cpp_source_l00113}{113}} of file \mbox{\hyperlink{_pixy2___driver_8cpp_source}{Pixy2\+\_\+\+Driver.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Transmit\ callback\ function}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(hspi\ ==\ \mbox{\hyperlink{class_pixy2_a49f19b0f16a7f2aac4ed828f308c547d}{Pixy2::spi}})\{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ HAL\_SPI\_Receive\_IT(hspi,(uint8\_t*)\ \&(\mbox{\hyperlink{class_pixy2_aa8af39f57cd9f4fe191fc560ef761926}{Pixy2::Data}}),100);\ \ \textcolor{comment}{//\ Start\ a\ receive\ command\ and\ put\ return\ data\ in\ Data}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+
+\end{DoxyCode}
