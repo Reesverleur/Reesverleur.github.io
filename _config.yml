@@ -10,7 +10,7 @@
 ############################
 
 # Name of website
-title: ME 507 Portfolio
+title: Rees Verleur
 
 # Your name to show in the footer
 author: Rees Verleur
@@ -21,9 +21,9 @@ author: Rees Verleur
 
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
+#  Resources:
+#    - Beautiful Jekyll: "https://beautifuljekyll.com"
+#    - Learn markdown: "https://www.markdowntutorial.com/"
   #Author's home: "https://deanattali.com"
 
 ################
@@ -59,7 +59,7 @@ social-network-links:
 #  youtube: c/daattali
 #  medium: yourname
 #  reddit: yourname
-#  linkedin: daattali
+  linkedin: rees-verleur
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
