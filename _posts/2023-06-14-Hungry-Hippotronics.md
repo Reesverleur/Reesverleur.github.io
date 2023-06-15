@@ -23,7 +23,7 @@ Finally, the time came to design the final board. Using what I had learned so fa
 
 After receiving this board from the manufacturer, we added all the components we selected to get the final result.
 
-![Circuit Board](https://github.com/Reesverleur/Reesverleur.github.io/blob/master/assets/img/circuit%20board.png)
+![Circuit Board](https://github.com/Reesverleur/Reesverleur.github.io/blob/master/assets/img/circuit%20board.jpg)
 
 After testing we determined that this board worked exactly as expected with all the voltage rails at the correct values, and the MCU running code as expected.
 
