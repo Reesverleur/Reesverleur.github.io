@@ -31,7 +31,9 @@ The code for this project was written in C++ and made use of the HAL API for the
 
 To allow for the easy polling of sensor data and control of peripherals, I wrote several C++ classes for sensor and motor control. 
 
-The first of these was a class to allow for the use of a Pixy2 camera. This camera performs on-board image processing and can detect objects based on their color. I wrote a simple class that sends the correct request data over a Serial Peripheral Interface (SPI) connection, and listens for a response. When a response is captured the data can be checked using a checksum to be sure of fidelity, and then the data is processed and can be stored in public variables to be accessed by the main program loop at a later time. I gave this code to several of my classmates since others also used a Pixy2 camera.
+The first of these was a class to allow for the use of a Pixy2 camera. This camera performs on-board image processing and can detect objects based on their color. I wrote a simple class that sends the correct request data over a Serial Peripheral Interface (SPI) connection, and listens for a response. When a response is captured the data can be checked using a checksum to be sure of fidelity, and then the data is processed and can be stored in public variables to be accessed by the main program loop at a later time. I gave this code to several of my classmates since others also used a Pixy2 camera. This class can be seen in action in the video below.
+
+![Pixy2 Camera Demonstration][pixy2 video]
 
 I also wrote a driver for an I2C based color sensor. This was presented a challenge because the I2C protocol appeared to be incorrectly implemented on the device I was using. This deviation from the standard was not noted in the documentation and was extremely difficult to find/correct for. Eventually I was able to get the sensor to return color data which seemed to correlate correctly with the color placed in front of the sensor.
 
@@ -61,6 +63,7 @@ Despite the status of the project, I learned a lot in this class. I had never de
 [Final Schematic]: /assets/img/Final-Board-Schematic.png
 [Board Image]: /assets/img/circuit-board.jpg
 [fsm]: /assets/img/fsm.png
+[pixy2 video]: /assets/img/Pixy2.mp4
 [CAD]: /assets/img/CAD.png
 [nathanurl]: www.google.com
 [jackurl]:  www.google.com
