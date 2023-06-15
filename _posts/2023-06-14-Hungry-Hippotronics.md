@@ -33,7 +33,7 @@ To allow for the easy polling of sensor data and control of peripherals, I wrote
 
 The first of these was a class to allow for the use of a Pixy2 camera. This camera performs on-board image processing and can detect objects based on their color. I wrote a simple class that sends the correct request data over a Serial Peripheral Interface (SPI) connection, and listens for a response. When a response is captured the data can be checked using a checksum to be sure of fidelity, and then the data is processed and can be stored in public variables to be accessed by the main program loop at a later time. I gave this code to several of my classmates since others also used a Pixy2 camera. This class can be seen in action in the video below.
 
-![Pixy2 Camera Demonstration][pixy2 video]
+{% include youtube.html id="Dv3oLQeqjDw" %}
 
 I also wrote a driver for an I2C based color sensor. This was presented a challenge because the I2C protocol appeared to be incorrectly implemented on the device I was using. This deviation from the standard was not noted in the documentation and was extremely difficult to find/correct for. Eventually I was able to get the sensor to return color data which seemed to correlate correctly with the color placed in front of the sensor.
 
