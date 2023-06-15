@@ -14,3 +14,4 @@ The project began by learning how to use Fusion 360 to create an electrical desi
 This circuit is very simple, and my routing is not at all optimal, but as my first try using electrical CAD software, I am happy with the results.
 
 Next, we moved on to creating custom parts by making a minimum functional module for the microcontroller we planned to use, an STM32F411. The minimum functional module provided a good stepping off point for the creation of our final design. The feedback I got from the instructor on this design largely informed my final design for the class. This schematic is shown below.
+![Homework 4 Routing](https://github.com/Reesverleur/Reesverleur.github.io/blob/master/assets/img/Homework%204%20Schematic.png)
