@@ -35,9 +35,13 @@ The first of these was a class to allow for the use of a Pixy2 camera. This came
 
 {% include youtube.html id="Dv3oLQeqjDw" %}
 
-I also wrote a driver for an I2C based color sensor. This was presented a challenge because the I2C protocol appeared to be incorrectly implemented on the device I was using. This deviation from the standard was not noted in the documentation and was extremely difficult to find/correct for. Eventually I was able to get the sensor to return color data which seemed to correlate correctly with the color placed in front of the sensor.
+I also wrote a driver for an I2C based color sensor. This was presented a challenge because the I2C protocol appeared to be incorrectly implemented on the device I was using. This deviation from the standard was not noted in the documentation and was extremely difficult to find/correct for. Eventually I was able to get the sensor to return color data which seemed to correlate correctly with the color placed in front of the sensor. This class can be see in the video below along with a bluetooth UART debugging line.
 
-To control the motors I created a motor driver to work with the motor driver ICs I chose when designing the board. This driver allows for directly controlling the motor effort (-100% - 100%). Or allows for position control with one of two algorithms. The first is a standard PID controller. The second implements a two-state controller which allows for the integral action to be turned on only when the system gets close to the final position. This means that the integral error term does not accrue while the system is saturated from the proportional gain. Testing showed that the two-state system had a significantly better response and did not overshoot as the more traditional system was prone to do.
+{% include youtube.html id="gWmsTxVh03Y" %}
+
+To control the motors I created a motor driver to work with the motor driver ICs I chose when designing the board. This driver allows for directly controlling the motor effort (-100% - 100%). Or allows for position control with one of two algorithms. The first is a standard PID controller. The second implements a two-state controller which allows for the integral action to be turned on only when the system gets close to the final position. This means that the integral error term does not accrue while the system is saturated from the proportional gain. Testing showed that the two-state system had a significantly better response and did not overshoot as the more traditional system was prone to do. This motor driver class can be seen in the below video.
+
+{% include youtube.html id="QQV3AZaJCNU" %}
 
 Finally, to communicate with the board, I wrote a class which used a standard communication protocol over UART to communicate with a python program running on my laptop which could ping a [classmates][nathanurl] system to detect ball locations over the entire arena. This system provided the thumbnail image for this project.
 
