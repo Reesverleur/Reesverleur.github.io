@@ -30,7 +30,7 @@ After receiving this board from the manufacturer, we added all the selected comp
 
 ![Circuit Board][Board Image]
 
-After assembling, I tested the board to determine that it worked exactly as expected, with all the voltage rails at the correct values and the MCU running code as expected. After everything checked out, I moved on to developing the code for the project.
+After assembling, I tested the board to determine that it worked exactly as expected, with all the voltage rails at the correct values and the MCU running code as expected. This testing was done with the aid of testpoints which were liberally spread throughout the board so that every signal could be easily inspected with a multimeter or an oscilloscope. After everything checked out, I moved on to developing the code for the project.
 
 ## Software Development ##
 
