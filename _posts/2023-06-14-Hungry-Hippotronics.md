@@ -52,7 +52,7 @@ To control the motors, I created a motor driver to work with the motor driver IC
 
 {% include youtube.html id="QQV3AZaJCNU" %}
 
-Finally, to communicate with the board, I wrote a class that used a standard communication protocol over UART to communicate with a Python program running on my laptop which could ping a classmates system to detect ball locations over the entire arena. This system provided the thumbnail image for this project.
+Finally, to communicate with the board, I wrote a class that used a standard communication protocol over UART to communicate with a Python program running on my laptop which could ping a [classmates][nathanurl] system to detect ball locations over the entire arena. This system provided the thumbnail image for this project.
 
 A full [**code listing is available here**][code], and [**complete documentation can be found here**][docs]
 
@@ -85,7 +85,7 @@ Despite the status of the project, I learned a lot in this class. I had never de
 [Board Image]: /assets/img/circuit-board.jpg
 [fsm]: /assets/img/fsm.png
 [CAD]: /assets/img/CAD.png
-[nathanurl]: www.google.com
+[nathanurl]: https://nathanburtnett.com/autonomous-sweep-robot/
 [jackurl]:  www.google.com
 [code]: https://github.com/Reesverleur/Reesverleur.github.io/tree/master/ME_507_code/Final-Project-V1
 [docs]: /ME_507_code/Final-Project-V1/Core/docs/html/index.html
